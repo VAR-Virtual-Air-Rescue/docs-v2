@@ -3,7 +3,8 @@ on:
   push:
     branches:
       - main
-      
+  workflow_dispatch:
+
 jobs:
   deploy:
     name: Deploy to Staging
@@ -12,17 +13,17 @@ jobs:
       - name: Pull latest code
         uses: appleboy/ssh-action@v1
         with:
-          host: ${{ vars.STAGING_HOST }}
+          host: ${{ vars.HOST }}
           username: ${{ secrets.SSH_USERNAME }}
           password: ${{ secrets.SSH_PASSWORD }}
           port: 22
           script: |
-            cd ~/docker/docs
+            cd ~/docker/docs-v2
             git pull
       - name: Build and start containers
         uses: appleboy/ssh-action@v1
         with:
-          host: ${{ vars.STAGING_HOST }}
+          host: ${{ vars.HOST }}
           username: ${{ secrets.SSH_USERNAME }}
           password: ${{ secrets.SSH_PASSWORD }}
           port: 22
@@ -30,5 +31,5 @@ jobs:
           script: |
             export NVM_DIR="$HOME/.nvm"
             source "$NVM_DIR/nvm.sh"
-            cd ~/docker/docs
+            cd ~/docker/docs-v2
             docker-compose up -d --build
