@@ -2,18 +2,19 @@
 FROM node:24-alpine3.21 AS builder
 # Consider using the latest patch version for security updates
 RUN apk update && apk upgrade
+RUN apk add --no-cache git
 
 # Set workdir
 WORKDIR /app
 
 # Copy project files
-COPY . .
+COPY ./ .
 
 # Install dependencies
 RUN npm install
 
 # Build VitePress site
-RUN npm build
+RUN npm run build
 
 # --- Serve stage ---
 FROM nginx:alpine
