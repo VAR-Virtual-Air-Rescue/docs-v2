@@ -1,0 +1,63 @@
+# Hier eine Übersicht über alle Hubschraubertypen mit ICAO Code
+
+Folgend bieten wir euch eine Liste an Hubschraubertypen samt dazugehörigen ICAO Code an. Dieser ICAO Code ist zum Beispiel wichtig für die Aufgabe eines Flugplans oder beim einloggen auf dem Online Netwerk VATSIM.
+
+| Hubschrauber             | ICAO Code |
+| ------------------------ | --------- |
+| **AGUSTA**               | A109      |
+| **AGUSTA**               | A119      |
+| **AGUSTA**               | A129      |
+| **AGUSTA**               | A139      |
+| **AGUSTA**               | A149      |
+| **EUROCOPTER**           | AS32      |
+| **EUROCOPTER**           | AS3B      |
+| **EUROCOPTER**           | AS50      |
+| **EUROCOPTER**           | AS55      |
+| **EUROCOPTER**           | AS65      |
+| **BELL**                 | B06       |
+| **BELL**                 | B06T      |
+| **EUROCOPTER**           | B105      |
+| **MESSERSCHMITT-BOLKOW** | B105      |
+| **BELL**                 | B212      |
+| **BELL**                 | B214      |
+| **BELL**                 | B222      |
+| **BELL**                 | B230      |
+| **BELL**                 | B407      |
+| **BELL**                 | B412      |
+| **BELL**                 | B427      |
+| **BELL**                 | B429      |
+| **BELL**                 | B430      |
+| **BELL**                 | B47G      |
+| **BELL**                 | B47J      |
+| **SOLOY**                | B47T      |
+| **EUROCOPTER-KAWASAKI**  | BK17      |
+| **EUROCOPTER**           | EC20      |
+| **EUROCOPTER**           | EC25      |
+| **EUROCOPTER**           | EC30      |
+| **EUROCOPTER**           | EC35      |
+| **EUROCOPTER**           | EC45      |
+| **EUROCOPTER**           | EC55      |
+| **BOEING**               | EXPL      |
+| **EUROCOPTER**           | GAZL      |
+| **KAWASAKI**             | H269      |
+| **BOEING**               | H47       |
+| **BOEING**               | H500      |
+| **SIKORSKY**             | H53       |
+| **BOEING**               | H64       |
+| **EUROCOPTER**           | LAMA      |
+| **BOEING**               | MD60      |
+| **NHI**                  | NH90      |
+| **AEROSPATIALE**         | PUMA      |
+| **ROBINSON**             | R22       |
+| **SIKORSKY**             | R4        |
+| **ROBINSON**             | R44       |
+| **ROBINSON**             | R66       |
+| **AGUSTA**               | S61       |
+| **SIKORSKY**             | S61R      |
+| **SIKORSKY**             | S62       |
+| **SIKORSKY**             | S64       |
+| **AEROSPATIALE**         | S65C      |
+| **SIKORSKY**             | S76       |
+| **SIKORSKY**             | S92       |
+| **BELL**                 | UH1       |
+| **BELL**                 | UH1Y      |
