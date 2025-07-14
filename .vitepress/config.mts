@@ -177,7 +177,7 @@ export default defineConfig({
 			},
 		],
 
-		socialLinks: [{ icon: "github", link: "https://github.com/VAR-Virtual-Air-Rescue/docs" }],
+		socialLinks: [{ icon: "github", link: "https://github.com/VAR-Virtual-Air-Rescue/docs-v2" }],
 
 		docFooter: {
 			prev: "Vorherige Seite",
