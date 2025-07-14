@@ -133,7 +133,7 @@ export default defineConfig({
 								],
 							},
 							{
-								text: "Leitstelle",
+								text: "Operations Center",
 								collapsed: true,
 								items: [
 									{ text: "Piloten", link: "/allgemein/var-systeme/leitstelle/pilot" },
@@ -164,6 +164,7 @@ export default defineConfig({
 						],
 					},
 					{ text: "Live-Streaming", link: "/allgemein/streaming" },
+					{ text: "Das Team & Struktur", link: "/allgemein/team" },
 				],
 			},
 			{
