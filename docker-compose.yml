@@ -3,15 +3,15 @@ networks:
     external: true
 
 docs:
-    build:
-      context: .
-      dockerfile: ./Dockerfile
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.docs.rule=Host(`docs.premiumag.de`)"
-      - "traefik.http.routers.docs.entrypoints=websecure"
-      - "traefik.http.routers.docs.tls.certresolver=le"
-      - "traefik.http.services.docs.loadbalancer.server.port=80"
+  build:
+    context: .
+    dockerfile: ./Dockerfile
+  labels:
+    - "traefik.enable=true"
+    - "traefik.http.routers.docs.rule=Host(`docs.premiumag.de`)"
+    - "traefik.http.routers.docs.entrypoints=websecure"
+    - "traefik.http.routers.docs.tls.certresolver=le"
+    - "traefik.http.services.docs.loadbalancer.server.port=80"
 
-    networks:
-      - traefik
+  networks:
+    - traefik
