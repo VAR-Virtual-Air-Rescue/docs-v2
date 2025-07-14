@@ -15,16 +15,22 @@ Wenn du alles installiert hast, öffne eine Powershell oder CMD Konsole an dem O
 
 ## Die Dokumentation bearbeiten
 Gehe nun in das eben heruntergeladene Repository.
+
+Führe initial den Befehl `npm install` aus, um alle Abhängigkeiten herunterzuladen.
+
 Wenn du etwas bearbeiten möchtest, erstelle ein neues Branch mit `git switch -c <branch-name>`.
 
 Bearbeite die Dateien, oder füge neue Hinzu. Alle Seiten werden mit Markdown als .md Datei gespeichert.
 Wenn du die Navigation bearbeiten möchtest, kannst du dies unter `.vitepress/config.mts` machen.
+
+Deine Änderungen kannst du mit `npm run dev` live anschauen.
 
 Wenn du fertig bist, führe vom Hauptverzeichnis folgende Befehle in dieser Reihenfolge aus:
 
     git add .
     git commit -m "Beschreibe kurz deine Änderungen"
     git push
+
 Deine Änderungen werden nun auf GitHub in einem neuen Branch hochgeladen und werden, nachdem wir drüber geschaut haben, in die Docs hinzugefügt.
 
 **Vielen Dank für dein Engagement!**
