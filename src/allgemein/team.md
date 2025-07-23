@@ -42,7 +42,7 @@ Zusätzlich gibt es die folgenden Rollen:
 | Tim     | VAR0038  | Durchführung von Events, Ticket-Support, administrative Unterstützung |
 | Nicolas     | VAR1242  | Entwicklung, Tech-Support, administrative Unterstützung |
 | Nick     | VAR0870  | Durchführung von Events, Ticket-Support, administrative Unterstützung |
-| Justus     | VAR0103  | Durchführung von Events, Ticket-Support, administrative Unterstützung |
+| Justus     | VAR0103  | Durchführung von Disponenten-Events, Ticket-Support, administrative Unterstützung |
 
 ---
 

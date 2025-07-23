@@ -14,24 +14,24 @@ Der Vorteil dieser Statusnummern ist die deutliche Reduktion des Funkverkehrs in
 | :--------: | :------------------------: | :------------------------------------------------------------------------------------------------ |
 |     0      | Priorisierter Sprechwunsch | Das Einsatzmittel möchte vor allen anderen Kontakt mit der Leitstelle aufnehmen.                  |
 |     1      |  Einsatzbereit über Funk   | Das Einsatzmittel kann nach Rücksprache und abhängig vom Standort alarmiert werden.               |
-|     2      | Einsatzbereit am Standort  | Das Einsatzmittel kann am Heimatstandort alarmiert werden.                                        |
+|     2      |   Einsatzbereit auf Wache  | Das Einsatzmittel kann am Heimatstandort alarmiert werden.                                        |
 |     3      |     Einsatz übernommen     | Das Einsatzmittel hat den Auftrag angenommen und befindet sich auf Anfahrt.                       |
-|     4      |   Ankunft am Einsatzort    | Das Einsatzmittel ist mit der Abarbeitung vor Ort beschäftigt und nur bedingt erreichbar.         |
+|     4      |       Einsatzort an        | Das Einsatzmittel ist mit der Abarbeitung vor Ort beschäftigt und nur bedingt erreichbar.         |
 |     5      |        Sprechwunsch        | Das Einsatzmittel möchte Kontakt mit der Leitstelle aufnehmen.                                    |
 |     6      |    Nicht einsatzbereit     | Das Einsatzmittel kann nicht alarmiert werden.                                                    |
-|     7      |    Patient aufgenommen     | Das Einsatzmittel hat einen Patienten aufgenommen und kann nicht alarmiert werden.                |
-|     8      |     Ankunft am Zielort     | Das Einsatzmittel kann mit einer längeren Reaktionszeit nach Rücksprache alarmiert werden.        |
+|     7      |      Einsatzgebunden       | Das Einsatzmittel hat einen Patienten aufgenommen und kann nicht alarmiert werden.                |
+|     8      |     Bedingt verfügbar      | Das Einsatzmittel kann mit einer längeren Reaktionszeit nach Rücksprache alarmiert werden.        |
 |     9      |     Fahrzeuganmeldung      | Das Einsatzmittel meldet sich im Funkverkehrsbereich an. Bei der VAR: Meldung nach dem Einloggen. |
 
 ## Statusanweisungen
 
 | **Status** |           **Bedeutung**           | **Details**                                                                                     |
 | :--------: | :-------------------------------: | :---------------------------------------------------------------------------------------------- |
-|     E      |          Einsatzabbruch           | Das Einsatzmittel wird vom Einsatzabgezogen und quittiert mit `2` oder `1`.                     |
-|     C      |      Einsatzübernahme melden      | Dem Disponenten muss mit `3` die Übernahme des Einsatzes quittiert werden.                      |
+|     E      |          Einsatzabbruch           | Das Einsatzmittel wird vom Einsatz abgezogen und quittiert mit `2` oder `1`.                     |
+|     C      |      Einsatzübernahme melden      | Dem Disponenten muss mit Status `3` die Übernahme des Einsatzes quittiert werden.                      |
 |     F      |       Kommen Sie über Draht       | Das Einsatzmittel muss sich telefonisch (per Discord) beim Disponenten melden.                  |
 |     H      |        Fahren Sie Wache an        | Keine Nutzung in der VAR                                                                        |
-|     J      | Sprechaufforderung (nach `5`/`0`) | Nicht-mündliche Aufforderung, mit dem Sprechen zu beginnen.                                     |
+|     J      | Sprechaufforderung (nach Status `5`/`0`) | Nicht-mündliche Aufforderung, mit dem Sprechen zu beginnen.                                     |
 |     L      |       Geben Sie Lagemeldung       | Die Leitstelle fordert eine Lagemeldung vom Rettungsmittel an.                                  |
 |     P      | Einsatz mit Polizei/Pause nehmen  | Keine Nutzung in der VAR                                                                        |
 |     U      |      Unerlaubte Statusfolge       | Keine Nutzung in der VAR                                                                        |
