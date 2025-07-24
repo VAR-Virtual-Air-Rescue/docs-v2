@@ -15,14 +15,16 @@ Die VAR ist weder Urheber noch Entwickler der NTFY App. Wir erklären lediglich 
 
 ### Schritt 1
 
-Gehe zu Einstellungen.
+Gehe vom Hub in die Leitstelle mit dem *Pilot* Button. Von dort öffnest du deine Einstellungen oben rechts.
 
-![ntfy_settings](assets/ntfy_settings.jpg)
+![ntfy_hub](assets/ntfy/Hub-Pilot.jpg)
 
 ### Schritt 2
 
 Trage hier den Namen deines mobilen Melders ein. Wir schlagen den Namen Pager-XXXX vor. Dabei stehen die X für die Ziffern der VAR Nummer.
 Falls die VAR-Nummer unbekannt ist, kann sie auf der Startseite sehen (VARXXXX).
+
+![ntfy_settings](assets/ntfy/Hub-Pilot-Settings.jpg)
 
 ### Schritt 3
 
@@ -34,27 +36,27 @@ Klicke auf "Speichern"
 
 Klicke auf das "+" in der oberen rechten Ecke deines Displays.
 
-![app_settings_img1](./assets/Bild1_Alarm_App.jpg)
+![app_settings_img1](./assets/ntfy/Bild1_Alarm_App.jpg)
 
 ### Schritt 2
 
 Trage hier den zuvor festgelegten Namen für deinen mobilen Melder ein.
 
-![app_settings_img2](./assets/Bild2_Alarm_App.jpg)
+![app_settings_img2](./assets/ntfy/Bild2_Alarm_App.jpg)
 
 ### Schritt 3
 
 Tippe auf "Subscribe"
 
-![app_settings_img1](./assets/Bild3_Alarm_App.jpg)
+![app_settings_img1](./assets/ntfy/Bild3_Alarm_App.jpg)
 
 ### Schritt 4
 
 Mit einem Klick auf das hier umrandete Fenster kannst du später deine Alarmierungen sehen.
 
-![app_settings_img1](./assets/Bild4_Alarm_App.jpg)
+![app_settings_img1](./assets/ntfy/Bild4_Alarm_App.jpg)
 
-![app_settings_img1](./assets/Bild5_Alarm_App.jpg)
+![app_settings_img1](./assets/ntfy/Bild5_Alarm_App.jpg)
 
 :::tip Tipp
 Mit dem Button "quittieren", welcher **erst erscheint, wenn eine Alarmierung eingegangen ist**, kann der Alarmton des Melders in der Leitstelle stummgeschaltet werden.
