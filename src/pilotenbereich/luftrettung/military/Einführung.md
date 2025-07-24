@@ -65,4 +65,3 @@ Grundsätzlich fliegt die Bundeswehr bei Such- und Rettungsaktionen mit dem SAR 
 | 0020 | Luftrettung, Rettungsfliegerei                     |
 | 0033 | Military VFR                                       |
 | 0034 | SAR, aktive Suche nach Personen/vermisste Maschine |
-| 7000 | Normal VFR                                         |
