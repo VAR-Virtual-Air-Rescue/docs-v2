@@ -12,8 +12,9 @@ Zuerst benötigst du einen Account bei uns. Registriere dich [in unserem HUB](ht
 
 ## 2. Disponenten Kurs
 
-Unter Events & Kurse kannst du dich für einen Disponenten Kurs anmelden. Dieser ist zweiteilig und besteht aus einem Moodle Kurs, welchen du sofort absolvieren kannst, sowie einem Präsenzevent im Discord. Damit du dich für einen Präsenztermin anmelden kannst, musst du den Moodle Kurs zuerst erfolgreich abgeschlossen haben.
+Unter Events & Kurse kannst du dich für einen Disponenten Kurs anmelden. Dieser ist zweiteilig und besteht aus einem Moodle Kurs und einem Präsenztermin, für welchen du dich im Hub anmelden kannst.
+Bevor du dich für den Moodle-Kurs anmelden kannst, musst du am Präsenztermin teilgenommen haben. Nach erfolgreicher Teilnahme am Präsenztermin wirst du für den "D1"-Moodle-Kurs freigeschaltet.
 
-Präsenztermine finden alle paar Wochen statt, schau regelmäßig rein oder informiere dich im Discord um von einem neuen Termin zu erfahren. Mit Abschluss des Präsenztermins kannst du dann schon loslegen. In der Zwischenzeit kannst du dir gerne die VAR aus Pilotensicht anschauen - das eine schließt nicht das andere aus.
+Präsenztermine finden in der Regel alle paar Wochen statt, schau regelmäßig rein oder informiere dich im Discord um von einem neuen Termin zu erfahren ("Ankündigungen"). Mit Abschluss des Präsenztermins sowie des Moodle-Kurses kannst du dann schon loslegen. In der Zwischenzeit kannst du dir gerne die VAR aus Pilotensicht anschauen - das eine schließt nicht das andere aus.
 
 Wir wünschen dir viel Spaß!
