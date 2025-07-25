@@ -15,7 +15,7 @@ Die VAR ist weder Urheber noch Entwickler der NTFY App. Wir erklären lediglich 
 
 ### Schritt 1
 
-Gehe vom Hub in die Leitstelle mit dem *Pilot* Button. Von dort öffnest du deine Einstellungen oben rechts.
+Gehe vom [Hub](https://hub.virtualairrescue.com/) in die [Leitstelle](https://ops.virtualairrescue.com/pilot) mit dem *Pilot* Button. Von dort öffnest du deine Einstellungen oben rechts.
 
 ![ntfy_hub](assets/ntfy/Hub-Pilot.jpg)
 
