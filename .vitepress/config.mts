@@ -79,6 +79,14 @@ export default defineConfig({
 					{ text: "Standardplatzrunde", link: "/pilotenbereich/Standardplatzrunde" },
 					{ text: "Reichweite / Endurance", link: "/pilotenbereich/Endurance" },
 					{
+						text: "Prozeduren (SOP)",
+						collapsed: false,
+						items: [
+							{ text: "Über SOPs & dieses Kapitel", link: "/pilotenbereich/procedures/sops.md"},
+							{ text: "H145 Checkliste", link: "/pilotenbereich/procedures/H145_checklist.md"},
+						]
+					},
+					{
 						text: "Luftrettung",
 						collapsed: true,
 						items: [
