@@ -7,5 +7,5 @@ Um die Integration mit dem R&E Missionsskript für die HPG H145 nutzen zu könne
 
 Sollte dies noch nicht der Fall sein, findest du die Software hier:
 
-- Den VAR-Client findest du im [Downloadbereich](https://lst.virtualairrescue.com/resources) der Leitstelle.
+- Den VAR-Client findest du im [Downloadbereich](https://hub.virtualairrescue.com/resources) der Leitstelle.
 - Das R&E Missionsskript findest du auf [flightsim.to](https://flightsim.to/file/44159/hpg-airbus-h145-action-pack-hems-random-and-anywhere-mission).

@@ -154,5 +154,5 @@ Nach einer Landung am Einsatzort mit anschließenem **Engine Shutdown** kann die
 | ENG 1 + 2 MAIN sw's | FLIGHT | 
 
 :::info
-Fahre nach dem Quick-Start-Up Procedure mit dem **Pre-Takeoff Check** und **Takeoff Check** fort.
+Fahre nach dem **Quick-Start-Up Procedure** mit dem **Pre-Takeoff Check** und **Takeoff Check** fort.
 :::
