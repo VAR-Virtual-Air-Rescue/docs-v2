@@ -26,7 +26,6 @@ Hierzu haben wir folgend ein Beispiel:
 
 Mit dem folgenden Link kannst du einen vorausgefüllten PreFile-Flugplan öffnen.
 
-Wichtig: Bitte ändere entsprechend deines Fluges das
 :::danger Wichtig
 
 ### Bitte ändere entsprechend deines Fluges folgende Einträge:
@@ -40,4 +39,15 @@ Wichtig: Bitte ändere entsprechend deines Fluges das
 - **REG/**
   :::
 
-> **[Bitte bei my.vatsim.net einloggen, dann diesen Link anklicken und o.g. Parameter anpassen!](https://my.vatsim.net/pilots/flightplan?raw=%28FPL-CHXzzz-VS+-EC45%2FL-SDGIJ7RY%2FS+-ZZZZ2035+-N0110F025+VFR+-ZZZZ0120+-PBN%2FD1+REG%2FDHxxx+OPR%2FVAR+COM%2FVIRTUALAIRRESCUE.COM+RMK%2FTCAS%29&fuel_time=0130)**
+> 📄**[Bitte bei my.vatsim.net einloggen, dann diesen Link anklicken und o.g. Parameter anpassen!](https://my.vatsim.net/pilots/flightplan?raw=%28FPL-CHXzzz-VS+-EC45%2FL-SDGIJ7RY%2FS+-ZZZZ2035+-N0110F025+VFR+-ZZZZ0120+-PBN%2FD1+REG%2FDHxxx+OPR%2FVAR+COM%2FVIRTUALAIRRESCUE.COM+RMK%2FTCAS%29&fuel_time=0130)**
+
+### Aircraft Type
+Dies sind die bei uns meistgeflogenen Aircraft Types und die benötigten ICAO Codes für den oben beschriebenen Flugplan.
+
+|Hubschrauber|ICAO Code|
+|-|-|
+| EC145 / H145 | EC45 |
+| EC135 / H135 | EC35 |
+| AgustaWestland AW109SP | A109 |
+| Robinson R-44 Raven II | R44 |
+| NH90 | NH90 |

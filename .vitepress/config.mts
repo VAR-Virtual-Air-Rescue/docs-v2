@@ -39,7 +39,7 @@ export default defineConfig({
 
 		footer: {
 			message:
-				"<a href='https://virtualairrescue.com/impressum/'>Impressum</a> | <a href='https://virtualairrescue.com/datenschutz/'>Datenschutzerklärung</a>",
+				"<a href='https://virtualairrescue.com/impressum/'>Impressum</a> | <a href='https://virtualairrescue.com/datenschutz/'>Datenschutzerklärung</a> | <a href='https://docs.virtualairrescue.com/fair-play/'>VAR FAIR PLAY</a>"
 		},
 
 		sidebar: [
@@ -47,13 +47,11 @@ export default defineConfig({
 				text: "Pilotenbereich",
 				items: [
 					{ text: "How-To Pilot", link: "/pilotenbereich/how-to-pilot" },
+					{ text: "Addon Hubschrauber", link: "/pilotenbereich/addons" },
 					{
-						text: "HPG H145",
+						text: "Addon Integrationen",
 						collapsed: false,
 						items: [
-							{ text: "Allgemeine Informationen", link: "/pilotenbereich/hpg-h145/info" },
-							{ text: "Start-Up", link: "/pilotenbereich/hpg-h145/Start-Up" },
-							{ text: "Powering Down", link: "/pilotenbereich/hpg-h145/Powering-Down" },
 							{
 								text: "R&E Integration",
 								collapsed: true,
@@ -74,14 +72,20 @@ export default defineConfig({
 							},
 						],
 					},
-					{ text: "EC135 Bedienung", link: "/pilotenbereich/ec-135" },
 					{ text: "Hubschrauber Steuerorgane", link: "/pilotenbereich/Steuerorgane" },
 					{ text: "Luftraumstruktur", link: "/pilotenbereich/Luftraumstruktur" },
 					{ text: "Meteorologie", link: "/pilotenbereich/Meteorologie" },
 					{ text: "Navigation", link: "/pilotenbereich/Navigation" },
 					{ text: "Standardplatzrunde", link: "/pilotenbereich/Standardplatzrunde" },
 					{ text: "Reichweite / Endurance", link: "/pilotenbereich/Endurance" },
-					{ text: "Hubschraubertypen", link: "/pilotenbereich/Hubschraubertypen" },
+					{
+						text: "Prozeduren (SOP)",
+						collapsed: false,
+						items: [
+							{ text: "Über SOPs & dieses Kapitel", link: "/pilotenbereich/procedures/sops.md"},
+							{ text: "H145 Checkliste", link: "/pilotenbereich/procedures/H145_checklist.md"},
+						]
+					},
 					{
 						text: "Luftrettung",
 						collapsed: true,
@@ -172,7 +176,8 @@ export default defineConfig({
 				items: [
 					{ text: "Impressum", link: "https://virtualairrescue.com/impressum/" },
 					{ text: "Datenschutzerklärung", link: "https://virtualairrescue.com/datenschutz/" },
-					{ text: "Mitwirken", link: "/" },
+					{ text: "Mitwirken", link: "/mitwirken"},
+					{text: "VAR FAIR PLAY", link: "/fair-play" },
 				],
 			},
 		],

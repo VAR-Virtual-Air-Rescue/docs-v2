@@ -30,7 +30,7 @@ Im Gegensatz zum VFR, fliegt man beim IFR eine konkrete Route und man ist nicht 
 ### VOR (Very high frequency omnidirectional radio range)
 
 Ein VOR ist wie ein Waypoint, funktioniert aber nur mit Funk.
-Im Prinzip funktioniert ein VOR wie ein Leutturm, sendet aber anstatt Licht Funk aus. Ein enger Funkstrahl bewegt sich mit 1800 Umdrehungen in der Minute, und jedes Mal, wo dieser Funkstrahl richtung Norden zeigt, wird in allen Richtungen ein Signal gesendet. Sobald dieses Signal empfangen wurde, wird in den Instrumenten im Cockpit die Zeit gemessen, die es bracuht, bis der enge Funkstrahl wieder das Flugzeug trifft.
+Im Prinzip funktioniert ein VOR wie ein Leutturm, sendet aber anstatt Licht Funk aus. Ein enger Funkstrahl bewegt sich mit 1800 Umdrehungen in der Minute, und jedes Mal, wo dieser Funkstrahl richtung Norden zeigt, wird in allen Richtungen ein Signal gesendet. Sobald dieses Signal empfangen wurde, wird in den Instrumenten im Cockpit die Zeit gemessen, die es braucht, bis der enge Funkstrahl wieder das Flugzeug trifft.
 
 ![GIF zum beschreiben, wie ein VOR funktioniert (Orion 8, CC BY-SA 3.0, via Wikimedia Commons)](https://upload.wikimedia.org/wikipedia/commons/d/d1/VOR_principle.gif)
 
