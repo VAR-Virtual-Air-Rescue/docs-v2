@@ -26,8 +26,6 @@ Zusätzlich gibt es die folgenden Rollen:
 | Johannes   | VAR0000  | DEVDEP         |
 | Timm    | VAR0001  | MEDEP           |
 | Lucas    | VAR0002  | MEDEP           |
-| Julien       | VAR0003  | COMDEP, Administration der Moodle-Kurse       |
-| Felix      | VAR0004  | COMDEP        |
 | Dominik      | VAR0005  | DEVDEP        |
 | Patrick      | VAR0006  | DEVDEP, Administration der Moodle-Kurse        |
 

@@ -22,7 +22,7 @@ Die H145 von Hype Performance Group ist aktuell die am tiefsten simulierte H145 
 #### Random & Everywhere (Script)
 Random & Everywhere *(HEMS Random and Anywhere)* ist eine kostenlose Modifikation für die HPG-H145 sowie das Action Pack und geniert zufällige Einsätze nach festgelegten Parametern.
 
-Seit [VARv2](/src/allgemein/var-systeme/v2-changes.md) ist R&E außerdem in die Leitstelle integriert. Dies bedeutet das Einsätze des Disponenten bei dir korrekt in der Spielwelt dargestellt werden und Orte an deine Hubschrauber Avionik übermittelt wird.
+Seit [VARv2](https://docs.virtualairrescue.com/allgemein/var-systeme/v2-changes.md) ist R&E außerdem in die Leitstelle integriert. Dies bedeutet das Einsätze des Disponenten bei dir korrekt in der Spielwelt dargestellt werden und Orte an deine Hubschrauber Avionik übermittelt wird.
 
 [Random & Everywhere](https://flightsim.to/file/44159/hpg-airbus-h145-action-pack-hems-random-and-anywhere-mission)
 
