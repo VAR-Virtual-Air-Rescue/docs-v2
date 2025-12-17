@@ -39,7 +39,7 @@ export default defineConfig({
 
 		footer: {
 			message:
-				"<a href='https://virtualairrescue.com/impressum/'>Impressum</a> | <a href='https://virtualairrescue.com/datenschutz/'>Datenschutzerklärung</a>",
+				"<a href='https://virtualairrescue.com/impressum/'>Impressum</a> | <a href='https://virtualairrescue.com/datenschutz/'>Datenschutzerklärung</a> | <a href='https://docs.virtualairrescue.com/fair-play/'>VAR FAIR PLAY</a>"
 		},
 
 		sidebar: [
@@ -176,7 +176,8 @@ export default defineConfig({
 				items: [
 					{ text: "Impressum", link: "https://virtualairrescue.com/impressum/" },
 					{ text: "Datenschutzerklärung", link: "https://virtualairrescue.com/datenschutz/" },
-					{ text: "Mitwirken", link: "/" },
+					{ text: "Mitwirken", link: "/mitwirken"},
+					{text: "VAR FAIR PLAY", link: "/fair-play" },
 				],
 			},
 		],

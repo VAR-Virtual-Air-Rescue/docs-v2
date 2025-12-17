@@ -26,10 +26,8 @@ Zusätzlich gibt es die folgenden Rollen:
 | Johannes   | VAR0000  | DEVDEP         |
 | Timm    | VAR0001  | MEDEP           |
 | Lucas    | VAR0002  | MEDEP           |
-| Julien       | VAR0003  | COMDEP       |
-| Felix      | VAR0004  | COMDEP        |
 | Dominik      | VAR0005  | DEVDEP        |
-| Patrick      | VAR0006  | DEVDEP        |
+| Patrick      | VAR0006  | DEVDEP, Administration der Moodle-Kurse        |
 
 ---
 
@@ -42,7 +40,7 @@ Zusätzlich gibt es die folgenden Rollen:
 | Tim     | VAR0038  | Durchführung von Events, Ticket-Support, administrative Unterstützung |
 | Nicolas     | VAR1242  | Entwicklung, Tech-Support, administrative Unterstützung |
 | Nick     | VAR0870  | Durchführung von Events, Ticket-Support, administrative Unterstützung |
-| Justus     | VAR0103  | Durchführung von Disponenten-Events, Ticket-Support, administrative Unterstützung |
+| Justus     | VAR0103  | Durchführung von Disponenten-Events, Administration der Moodle-Kurse, Ticket-Support, administrative Unterstützung |
 
 ---
 
