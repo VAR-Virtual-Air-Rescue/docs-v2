@@ -111,6 +111,7 @@ export default defineConfig({
 						],
 					},
 					{ text: "Mobile App-Alarmierung", link: "/pilotenbereich/app-alarmierung" },
+					{ text: "Flugpläne und Nutzerwegpunkte", link: "/pilotenbereich/FlugplanUndWegpunkte" },
 				],
 			},
 			{
