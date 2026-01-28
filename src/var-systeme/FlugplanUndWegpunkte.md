@@ -1,5 +1,5 @@
-# Flugpläne und Nutzerwegpunkte
-Die VAR unterstützt jetzt auch eine direkte Einsatznavigation durch den [Client](Desktopclient).
+# Flugpläne und Landeplätze
+Die VAR unterstützt jetzt auch eine direkte Einsatznavigation durch den Client.
 Bei Erhalt eines neuen Einsatzen, wird automatisch eine entsprechende Datei ins richtige Verzeichnis importiert, sodass diese mit gängigen Navigationsgeräten geladen werden kann.
 Um die Funktion, bei einem Einsatz automatisch zum aktuellen Einsatz zu navigieren, nutzen zu können, findest du hier entsprechende Anleitungen.
 ## Flugpläne
@@ -22,9 +22,12 @@ Nach der Alarmierung wird dann eine Flugplan-Datei erstellt, die folgendermaßen
 2. Danach <code>Menu</code>, zum Aufrufen des Flight Plan-Menüs.
 3. Durch Klicken von <code>Import</code> und <code>Import from File</code> den Flugplan laden.
 4. Nach Auswahl von <code>OK</code> kann der Import kurz dauern.
-## Nutzerwegpunkte
+## Landeplätze
 :::danger Hinweis
-Die Funktion des Exports von Wegpunkten über den angegeben Link ist zur Zeit <b>nicht verfügbar</b>.
+Die Funktion des Exports von Landeplätzen über den angegeben Link ist zur Zeit <b>nicht verfügbar</b>.
+:::
+:::info Information
+Die Downloadfunktion fügt deinem Navigationsgerät nur die geografischen Informationen der Landeplätze und ihre jeweiligen Designator hinzu. **Die Funktion installiert keine Simulatorszenerien.**
 :::
 #### Datenbank anzeigen
 Zum Anzeigen dieser Datenbank navigiert ihr in der Webleitstelle zu **Einstellungen > Download** und klickt dann auf den entsprechenden Link.

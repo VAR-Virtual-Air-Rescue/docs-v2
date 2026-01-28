@@ -6,7 +6,7 @@ Diese Lufträume sind leider nicht mit bloßen Auge sichtbar. Piloten nutzen des
 
 ### Luftraumstruktur <br />
 
-![LR Überblick](assets/Airspaces/LR_Ueberblick.jpg)
+![LR Überblick](Airspaces/LR_Ueberblick.jpg)
 
 _Quelle: DFS_ <br />
 
@@ -41,7 +41,7 @@ Prinzipiell kann man sagen, dass je **früher der Buchstabe im Alphabet** vorkom
 
 ### Übersicht der Lufträume in Deutschland
 
-![LR DE](assets/Airspaces/LR_DE.jpg)
+![LR DE](Airspaces/LR_DE.jpg)
 
 _Quelle: DFS_ <br />
 
@@ -134,7 +134,7 @@ VFR Verkehr bekommt hingegen nur Verkehrsmeldungen zu anderen VFR Luftfahrzeugen
 Diese Absenkung geschieht **stufenweise**. Hier wird dann recht schnell deutlich was ich vorhin mit _umgedrehter, "mehrstöckiger Hochzeitstorte"_ meinte. <br />
 Schauen wir uns hierfür einen Abschnitt des Class Charlie um Hamburg (**EDDH**) an.
 
-![EDDH_C](assets/Airspaces/EDDH_C.jpg)
+![EDDH_C](Airspaces/EDDH_C.jpg)
 
 _Quelle: openflightmap.org_
 
@@ -144,7 +144,7 @@ Die Ausdehnung im mittleren Bereich beträgt FL100 - 5.500 MSL.<br />
 Die Ausdehnung des verbleibenden markierten Bereiches beträgt FL100 - 3.500 MSL.<br />
 Dementsprechend sieht im Profil der Luftraum etwa so aus: <br />
 
-![stepdown](assets/Airspaces/stepdown.jpg)
+![stepdown](Airspaces/stepdown.jpg)
 
 ### Fakten über Charlie
 
@@ -168,7 +168,7 @@ Luftraum Delta ist ein **kontrollierter** Luftraum der eine ähnliche Funktion w
 Er befindet sich im Approachbereich kleinerer Flughäfen (z.B. Münster EDDG), weshalb eine **Freigabe** zum Einfliegen benötigt wird. <br />
 Delta **beginnt über der Delta-CTR** (_Delta Kontrollzone_) und die **Obergrenze ist der Luftraum Charlie oder Luftraum Echo** (je nach Luftraumstruktur um den Airport). Im Beispiel des Flughafen Münster (EDDG) endet der Delta Airspace zum Beispiel im Airspace Echo, wie auf dem Kartenausschnitt zu erkennen ist. <br />
 
-![EDDG_LR](assets/Airspaces/EDDG_LR.jpg)
+![EDDG_LR](Airspaces/EDDG_LR.jpg)
 
 _Quelle: openflightmap.org_
 
@@ -234,7 +234,7 @@ Diese sind auf der Karte mit einem "**HX**" gekennzeichnet. Die Betriebsstunden 
 Sollte der Luftraum inaktiv sein, so gilt er als Airspace Echo mit all seinen Eigenschaften und Minima.
 :::
 
-![SH_DCTR](assets/Airspaces/SH_DCTR.jpg)
+![SH_DCTR](Airspaces/SH_DCTR.jpg)
 
 Die Pfeile zeigen auf die Pflichtmeldepunkte.
 _Quelle: openflightmap.org_
@@ -309,7 +309,7 @@ Auch hier gilt: _wenn unsicher - Zone als aktiv betrachten._ <br />
 Für Polizei, Militär, sowie Luftrettungsdienst gelten Ausnahmeregelungen zum durchqueren von ED-R.
 Die Dimensionen des Gebiets (horizontal und vertikal) sind aus den Karten zu entnehmen.
 
-![SH_EDR](assets/Airspaces/SH_EDR.jpg)
+![SH_EDR](Airspaces/SH_EDR.jpg)
 
 _Quelle: openflightmap.org_
 
@@ -319,7 +319,7 @@ Die **ED-D** (_Danger Area_) sind Bereiche über _internationalen Gebieten_, wel
 Prinzipiell ist der **Durchflug erlaubt**, _aber nicht empfohlen_. Es ist ratsam einen Durchflug vorher FIS mitzuteilen.
 Die Dimensionen des Gebiets (horizontal und vertikal) sind aus den Karten zu entnehmen.
 
-![SH_EDR](assets/Airspaces/SH_EDD.jpg)
+![SH_EDR](Airspaces/SH_EDD.jpg)
 
 _Quelle: openflightmap.org_
 

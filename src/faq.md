@@ -22,7 +22,7 @@ Bitte nutze außerdem auch in deinem VATSIM-Flugplan COM/VIRTUALAIRRESCUE.COM. [
 ::: details Wie erhalte ich Zugriff im Discord?
 
 Du musst deinen Discord-Account in den Einstellungen im HUB verknüpfen.
-[Siehe hier für mehr](allgemein/var-systeme/hub/how-to-discord).
+[Siehe hier für mehr](var-systeme/hub/how-to-discord).
 
 :::
 
@@ -65,7 +65,7 @@ Aktuell noch nicht. Eine Integration bzw. Umsetzung ist aber für die Zukunft ge
 
 ::: details Gibt es eine Karte mit allen aktiven Piloten?
 
-[Auf unserem Tracker](https://lst.premiumag.de/tracker) siehst du alle eingeloggten Piloten sowie Disponenten angezeigt.
+[Auf unserem Tracker](https://ops.virtualairrescue.com/tracker) siehst du alle eingeloggten Piloten sowie Disponenten angezeigt.
 
 :::
 
