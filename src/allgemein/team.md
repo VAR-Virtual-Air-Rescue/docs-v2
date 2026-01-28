@@ -4,18 +4,17 @@ Die Virtual Air Rescue ist ein Projekt mit einer klar gegliederten, aber möglic
 
 ## Gesamtstruktur
 
-Das Admin-Team gliedert sich in folgende Hauptbereiche („Departments“):
+Die VAR gliedert sich in folgende Hauptbereiche („Departments“):
 
 - **Development Department (DEVDEP)** – Technische Entwicklung, Plattformen, Tools
 - **Media Department (MEDEP)** – Mediengestaltung, Social Media, Öffentlichkeitsarbeit
 - **Community Department (COMDEP)** – Community Management, Support, Leitfäden
 
-Dabei übernehmen die Administratoren die Gesamtverantwortung, strategische Entscheidungen und die Koordination.
-
-Zusätzlich gibt es die folgenden Rollen:
+Dabei übernehmen die Administratoren die Gesamtverantwortung pro Department, strategische Entscheidungen und die Koordination.
+Da die Administration der Community viele Ressourcen bindet, hat sich die Übertragung von Kompetenzen auf Mitglieder aus der Community als enorm hilfreich erwiesen. Sie unterstützen unterstützen freiwillig in einer der beiden folgenden Teams:
 
 - **Supervisor** – Ticketmanagement, Entlastung der Admins, Durchführung von Events
-- **Community Guides (CGs)** – Nähe zur Community, Onboarding, Kommunikation
+- **Community Guides** – Nähe zur Community, Onboarding, Kommunikation
 
 ---
 
@@ -24,14 +23,18 @@ Zusätzlich gibt es die folgenden Rollen:
 | Name       | VAR-Nr.  | Zuständigkeit                      |
 |------------|----------|------------------------------------|
 | Johannes   | VAR0000  | DEVDEP         |
-| Timm    | VAR0001  | MEDEP           |
-| Lucas    | VAR0002  | MEDEP           |
+| Timm    | VAR0001  | MEDEP, COMDEP           |
+| Lucas    | VAR0002  | MEDEP, COMDEP           |
 | Dominik      | VAR0005  | DEVDEP        |
 | Patrick      | VAR0006  | DEVDEP, Administration der Moodle-Kurse        |
+
+
 
 ---
 
 ## Supervisor
+
+Unserer Supervisoren bilden die untergeordnete Moderationsebene. Sie haben erweiterte Rechte im Hub und auf dem Discord und sind dazu befugt, Mitglieder zeitweise zu sperren. Auch unterstützen sie bei der Bearbeitung von Tickets, entwickeln unsere Systeme mit und führen Events durch.
 
 | Name      | VAR-Nr.  | Zuständigkeit                        |
 |-----------|----------|--------------------------------------|
@@ -40,24 +43,13 @@ Zusätzlich gibt es die folgenden Rollen:
 | Tim     | VAR0038  | Durchführung von Events, Ticket-Support, administrative Unterstützung |
 | Nicolas     | VAR1242  | Entwicklung, Tech-Support, administrative Unterstützung |
 | Nick     | VAR0870  | Durchführung von Events, Ticket-Support, administrative Unterstützung |
-| Justus     | VAR0103  | Durchführung von Disponenten-Events, Administration der Moodle-Kurse, Ticket-Support, administrative Unterstützung |
 
 ---
 
 ## Community Guides
 
-Die Community Guides befinden sich derzeit noch im Aufbau. Ihre Aufgaben:
-
-- Ansprechpartner für neue Mitglieder
-- Onboarding und Einführung
-- Qualität und Werte der VAR vermitteln
+Community Guides bilden die Schnittstelle zwischen Supervisor und Community. Sie sollen neue Mitglieder an die VAR heranführen, Chats moderieren und die Werte der VAR innerhalb der Mitglieder verbreiten. Als erste Ansprechpartner stehen sie für die Community- und Administrationsseite zur Verfügung und werden bei Bedarf durch die COMDEP-Leitung ernannt.
 
 ---
 
-## Weitere Anmerkungen
-
-- Das Admin-Team strebt weiterhin nach dem Ziel, die Hierarchien flach zu halten.
-- Entscheidungen werden gemeinsam getroffen, Feedback ist jederzeit willkommen und jeder ist Ansprechpartner.
-- Wir setzen auf **Transparenz, Qualität und Engagement** in allen Bereichen.
-
-Bei Änderungen, Fragen oder Ergänzungen bitte an das COMDEP wenden.
+Generell werden Entscheidungen wo möglich gemeinsam und immer im Sinne der Community getroffen. Feedback ist jederzeit willkommen, erwünscht und unbedingt nötig. Wir setzen in allen Bereichen auf **Transparenz, Qualität und Engagement**, weisen aber auch darauf hin, dass die VAR nur funktioniert, wenn *alle* mitmachen.
