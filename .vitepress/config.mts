@@ -104,7 +104,7 @@ export default defineConfig({
                     },
 					{ text: "Außenlandungen", link: "/luftrettung/aussenlandung" },
                     { text: "Landestellen", link: "/luftrettung/landeplatz" },
-					{ text: "Luftrettungszentren"},
+					{ text: "Luftrettungszentren", link: "/luftrettung/luftrettungszentren"},
 					{ text: "Militärluftrettung",
 						collapsed: true,
 						items: [

@@ -1,6 +1,6 @@
 Auf dieser Seite beziehen wir uns auf die Funktionalität der [Webleitstelle](https://ops.virtualairrescue.com/dispatch) des Leitstellensystems.
 
-Während du als Leitstelle aktiv bist, muss die Webleitstelle die immer geöffnet bleiben, da hierüber die gesamte Kommunikation und Koordination passiert.
+Während du als Leitstelle aktiv bist, muss die Webleitstelle die immer geöffnet bleiben, da hierüber die gesamte Kommunikation und Koordination passiert. Weitere Informationen zum Disponenten-Interface findest du [hier](/var-systeme/webleitstelle).
 
 ## Einsatzalarmierung
 
