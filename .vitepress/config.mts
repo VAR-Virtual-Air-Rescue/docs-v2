@@ -3,7 +3,7 @@ import { defineConfig } from "vitepress";
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
     title: "VAR Knowledgebase",
-    description: "How To's und mehr zu Virtual Air Rescue",
+    description: "How To's und mehr zur Virtual Air Rescue",
     srcDir: "src",
     themeConfig: {
         logo: "/var_logo.png",
@@ -168,6 +168,7 @@ export default defineConfig({
 
         outline: {
             label: "Inhalt",
+            level: [2, 3],
         },
     },
     markdown: {
