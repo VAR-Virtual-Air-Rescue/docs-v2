@@ -18,7 +18,7 @@ Nach deiner Registrierung siehst du auf der Startseite im [HUB](https://hub.virt
 
 ## 3. Optionale Addons
 
-Seit neuestem und als erste und bisher einzige Luftrettungs Simulation bieten wir eine vollständige Integration des Random & Everywhere Script in unsere Leitstelle an. Heißt - Ein Einsatz, welcher von unserer Leitstelle disponiert wird, erscheint automatisch als Szenerie mit zugehörger Navigation etc. in deinem Simulator. Wie genau du das einrichtest, [siehst du hier](/pilotenbereich/hpg-h145/r-e-integration/Einrichtung). Daneben lohnt es sich, auf Webseiten wie [flightsim.to](https://flightsim.to) nach Szenerien für Krankenhäuser oder Luftrettungszentren zu suchen.
+Seit neuestem und als erste und bisher einzige Luftrettungs Simulation bieten wir eine vollständige Integration des Random & Everywhere Script in unsere Leitstelle an. Heißt - Ein Einsatz, welcher von unserer Leitstelle disponiert wird, erscheint automatisch als Szenerie mit zugehörger Navigation etc. in deinem Simulator. Wie genau du das einrichtest, [siehst du hier](../var-systeme/hpg-h145/r-e-integration/Einrichtung.md). Daneben lohnt es sich, auf Webseiten wie [flightsim.to](https://flightsim.to) nach Szenerien für Krankenhäuser oder Luftrettungszentren zu suchen.
 
 ## 4. Endlich Fliegen
 

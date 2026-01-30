@@ -22,13 +22,13 @@ Bitte nutze außerdem auch in deinem VATSIM-Flugplan COM/VIRTUALAIRRESCUE.COM. [
 ::: details Wie erhalte ich Zugriff im Discord?
 
 Du musst deinen Discord-Account in den Einstellungen im HUB verknüpfen.
-[Siehe hier für mehr](var-systeme/hub/how-to-discord).
+[Siehe hier für mehr](var-systeme/how-to-discord).
 
 :::
 
 ::: details Wie funke ich?
 
-Funkbeispiele und alles über den BOS-Funk [findest du hier](allgemein/bos-funk/Funkbeispiel).
+Funkbeispiele und alles über den BOS-Funk [findest du hier](luftrettung/bos-funk/Funkbeispiel).
 
 :::
 
@@ -53,7 +53,7 @@ Ja natürlich.
 
 ::: details Wie kann ich derzeit am besten mit dem HPG H145 mitmachen?
 
-Eine Integration mit unserer Leitstelle und dem Random & Everywhere Script existiert nun auch, [für mehr Infos siehe hier](/pilotenbereich/hpg-h145/r-e-integration/Voraussetzungen.html)!
+Eine Integration mit unserer Leitstelle und dem Random & Everywhere Script existiert nun auch, [für mehr Infos siehe hier](/var-systeme/hpg-h145/r-e-integration/Voraussetzungen.md)!
 
 :::
 

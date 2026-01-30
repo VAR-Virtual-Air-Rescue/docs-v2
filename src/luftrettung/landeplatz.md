@@ -43,4 +43,4 @@ Die dieser Datenbank zugrunde liegenden Daten entstammen in Deutschland der [AIP
 Für die Landeplätze in Österreich haben wir auf das [austroCONTROL Geodatenportal](https://www.austrocontrol.at/piloten/vor_dem_flug/aim_services/geodatenportal) zurückgegriffer,
 die Landeplätze der Schweiz entstammen dem [Sachplan Verkehr, Teil Infrastruktur Luftfahrt (SIL)](https://inspire-geoportal.ec.europa.eu/srv/api/records/ae5fa63c-c153-496a-b8a6-c896126398b1?language=ger) des BAZL.
 
-Mehr zur Datenbank erfahrt ihr [hier](..\var-systeme\FlugplanUndWegpunkte).
+Mehr zur Datenbank erfahrt ihr [hier](../var-systeme/FlugplanUndWegpunkte).
