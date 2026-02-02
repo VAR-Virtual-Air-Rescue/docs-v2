@@ -52,7 +52,7 @@ Auf der Seite der Nachalarmierung gibt es nun einen Button an der gleichen Posit
 Am linken Seitenrand gibt es einen Chat, die Möglichkeit jemanden zu reporten sowie eine Liste aller Einsätze und aktiver Stationen.
 
 In der unteren rechten Ecke findest du eine Übersicht über die verfügbaren Kartenlayer.
-![Layer](assets/layer.png)
+![Layer](assets/Layer.png)
 Die oberen 4 kreisförmigen Auswahlelemente bestimmen die **Basiskarte**. Von diesen kann immer nur eine zur gleichen Zeit gewählt werden.
 Die unteren Checkboxen ermöglichen das Überlagern von zusätzlichen Informationsebenen über die Basiskarten.
 - **Leitstellenbereiche** zeigt die Funkverkehrsvereiche der unterschiedlichen Leitstellen an.
