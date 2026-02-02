@@ -1,8 +1,6 @@
-# Disponenten
+Auf dieser Seite beziehen wir uns auf die Funktionalität der [Webleitstelle](https://ops.virtualairrescue.com/dispatch) des Leitstellensystems.
 
-Auf dieser Seite beziehen wir uns auf [die /dispatch Seite](https://lst.premiumag.de/dispatch) des Leitstellensystems.
-
-Während du als Leitstelle aktiv bist, muss diese Seite immer geöffnet bleiben, da hierüber die gesamte Kommunikation passiert.
+Während du als Leitstelle aktiv bist, muss die Webleitstelle die immer geöffnet bleiben, da hierüber die gesamte Kommunikation und Koordination passiert. Weitere Informationen zum Disponenten-Interface findest du [hier](/var-systeme/webleitstelle).
 
 ## Einsatzalarmierung
 
@@ -52,3 +50,15 @@ Auf der Seite der Nachalarmierung gibt es nun einen Button an der gleichen Posit
 ![Linke Seite](assets/left_actions.png)
 
 Am linken Seitenrand gibt es einen Chat, die Möglichkeit jemanden zu reporten sowie eine Liste aller Einsätze und aktiver Stationen.
+
+In der unteren rechten Ecke findest du eine Übersicht über die verfügbaren Kartenlayer.
+![Layer](assets/layer.png)
+Die oberen 4 kreisförmigen Auswahlelemente bestimmen die **Basiskarte**. Von diesen kann immer nur eine zur gleichen Zeit gewählt werden.
+Die unteren Checkboxen ermöglichen das Überlagern von zusätzlichen Informationsebenen über die Basiskarten.
+- **Leitstellenbereiche** zeigt die Funkverkehrsvereiche der unterschiedlichen Leitstellen an.
+- **Niederschlag** zeigt Informationen von Niederschlagsradaren.
+- **LRZs** zeigt alle verfügbaren Lufrettungszentren mit Zusatzinfomrationen per Hover und Klick. So werden per Klick etwa die 10- und 20-Minuten Isochronen eingeblendet.
+- **Heliports** zeigt die meisten Landeplätze mit ihren Designatoren.
+- **OpenAIP** zeigt Lufträume
+- **Skigebiete** zeigt Skigebiete mit Pisteninformationen und Wintersportstätten
+- **Windkraftanlagen offshore** zeigt Windparks in der Ost- und Nordsee

@@ -24,7 +24,7 @@ Um lange Denkpausen wärhend des Funkspruchs zu verhindern, kann man sich an den
 - ggf. die [deutsche postalische Buchstabiertafel](https://de.wikipedia.org/wiki/Buchstabiertafel#Deutscher_Sprachraum) ("A wie Anton", "B wie Berta" etc.)
   :::
 
-Natürlich ist im alltäglichen Gebrauch eine starke Abweichung zu erkennen - aber nur wer weiß, wie's richtig geht, kann sich eine Abweichung erlauben. Gerade in [DMO](/allgemein/bos-funk/Grundlagen)-Rufgruppen ist ein "Standardfunkverkehr" nur selten gewährleistet. Bei größeren Einsatzlagen wird eine korrekte und unmisverständliche Kommunikation jedoch wichtig.
+Natürlich ist im alltäglichen Gebrauch eine starke Abweichung zu erkennen - aber nur wer weiß, wie's richtig geht, kann sich eine Abweichung erlauben. Gerade in [DMO](/luftrettung/bos-funk/Grundlagen)-Rufgruppen ist ein "Standardfunkverkehr" nur selten gewährleistet. Bei größeren Einsatzlagen wird eine korrekte und unmisverständliche Kommunikation jedoch wichtig.
 
 ## Gesprächsaufbau
 
@@ -40,7 +40,7 @@ Auch kann ein kommender Gesprächsinhalt als Vorbereitung angefügt werden.
 <strong>"Leitstelle VAR von Christoph 69 - mit Nachforderung - kommen"</strong>
 :::
 
-Das Drücken des [Status](/allgemein/bos-funk/Status) 5 kommt einem wortlosen Gesprächsaufbau gleich.
+Das Drücken des [Status](/luftrettung/bos-funk/Status) 5 kommt einem wortlosen Gesprächsaufbau gleich.
 
 ## Antwort auf einen Gesprächsaufbau
 

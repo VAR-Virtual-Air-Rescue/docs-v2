@@ -1,3 +1,95 @@
 .VPHero .image-src {
 	max-width: 50%;
 }
+
+/* =========================================================
+   LINKS
+========================================================= */
+
+/* Light Mode */
+:root:not(.dark) .VPDoc a {
+	color: #2B6EFF;
+  }
+  
+  :root:not(.dark) .VPDoc a:hover {
+	color: color-mix(in srgb, #D5A507 100%, black);
+	text-decoration: underline;
+  }
+  
+  /* Dark Mode */
+  :root.dark .VPDoc a {
+	color: #D5A507;
+  }
+  
+  :root.dark .VPDoc a:hover {
+	color: #2B6EFF;
+  }
+  
+  /* =========================================================
+	 HEADINGS
+  ========================================================= */
+  
+  /* Light Mode */
+  :root:not(.dark) .VPDoc h1,
+  :root:not(.dark) .VPDoc h2,
+  :root:not(.dark) .VPDoc h3,
+  :root:not(.dark) .VPDoc h4,
+  :root:not(.dark) .VPDoc h5,
+  :root:not(.dark) .VPDoc h6 {
+	color: #00113A;
+  }
+  
+  /* Header anchor (#) */
+  :root:not(.dark) .VPDoc .header-anchor {
+	color: color-mix(in srgb, #00113A 50%, transparent);
+  }
+  
+  :root:not(.dark) .VPDoc h1:hover .header-anchor,
+  :root:not(.dark) .VPDoc h2:hover .header-anchor,
+  :root:not(.dark) .VPDoc h3:hover .header-anchor,
+  :root:not(.dark) .VPDoc h4:hover .header-anchor,
+  :root:not(.dark) .VPDoc h5:hover .header-anchor,
+  :root:not(.dark) .VPDoc h6:hover .header-anchor {
+	color: #00113A;
+  }
+
+    /* Dark Mode */
+	:root.dark .VPDoc h1,
+	:root.dark  .VPDoc h2,
+	:root.dark  .VPDoc h3,
+	:root.dark  .VPDoc h4,
+	:root.dark  .VPDoc h5,
+	:root.dark  .VPDoc h6 {
+	  color: #FFFFFC
+	  ;
+	}
+	
+	/* Header anchor (#) */
+	:root:not(.dark) .VPDoc .header-anchor {
+	  color: color-mix(in srgb, #FFFFFC
+	  50%, transparent);
+	}
+	
+	:root.dark  .VPDoc h1:hover .header-anchor,
+	:root.dark  .VPDoc h2:hover .header-anchor,
+	:root.dark  .VPDoc h3:hover .header-anchor,
+	:root.dark  .VPDoc h4:hover .header-anchor,
+	:root.dark  .VPDoc h5:hover .header-anchor,
+	:root.dark  .VPDoc h6:hover .header-anchor {
+	  color: #FFFFFC
+	  ;
+	}
+  
+  /* =========================================================
+	 TEXT SELECTION
+  ========================================================= */
+  
+  /* Light Mode */
+  :root:not(.dark) .VPDoc ::selection {
+	background: color-mix(in srgb, #D5A507 50%, transparent);
+  }
+  
+  /* Dark Mode */
+  :root.dark .VPDoc ::selection {
+	background: color-mix(in srgb, #2B6EFF 50%, transparent);
+  }

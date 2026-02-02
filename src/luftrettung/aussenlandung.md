@@ -25,7 +25,7 @@ Näher am Boden sind zumeist Häuser und Bäume relevant und schränken möglich
 ### Wind
 
 Esenziell ist bei jedem Start und jeder Landung die Windrichtung. Startet und landet man in den Wind, sorgt man für die optimalsten Auftriebsverhältnisse - was nicht zuletzt in Notverfahren wichtig ist.
-Woher man weiß, woher der Wind weht, haben wir bereits [hier](/pilotenbereich/Meteorologie) erläutert.
+Woher man weiß, woher der Wind weht, haben wir bereits [hier](/pilotenbereich/allgemeineluftfahrt/Meteorologie) erläutert.
 
 ### Abmaße
 

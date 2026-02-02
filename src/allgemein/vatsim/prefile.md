@@ -1,15 +1,15 @@
 # VATSIM Prefile Flugplan
 
-Um auf VATSIM online zu fliegen, ist es erforderlich, einen Flugplan aufzugeben. In diesen Flugplan kann man relevante Informationen eintragen, die für Lotsen auf dem Netzwerk von nöten sind.
-Hierzu haben wir folgend ein Beispiel:
+Um auf VATSIM online zu VFR fliegen, ist es in Deutschland nicht unbedingt erforderlich, einen Flugplan aufzugeben. Ein solcher Flugplan bietet aber den Vorteil, dass Lotsen ständig über dein Vorhaben informiert sind.
+Hierzu haben wir nachfolgend ein Beispiel:
 
 ```
-(FPL-CALLSIGN-IG
+(FPL-CALLSIGN-VG
 -EC45/L-SDGIJ7RY/S
 -ZZZZxxxx
 -N0110F025 VFR RESCUE MISSIONS
 -ZZZZxxxx
--PBN/D1 DOF/**240926** REG/DHxxx OPR/VAR COM/VIRTUALAIRRESCUE.COM ORGN/EDDZZPZX RMK/IFPSRA)
+-PBN/D1 DOF/YYMMDD REG/DHxxx OPR/VAR COM/VIRTUALAIRRESCUE.COM)
 ```
 
 :::info
@@ -39,7 +39,7 @@ Mit dem folgenden Link kannst du einen vorausgefüllten PreFile-Flugplan öffnen
 - **REG/**
   :::
 
-> 📄**[Bitte bei my.vatsim.net einloggen, dann diesen Link anklicken und o.g. Parameter anpassen!](https://my.vatsim.net/pilots/flightplan?raw=%28FPL-CHXzzz-VS+-EC45%2FL-SDGIJ7RY%2FS+-ZZZZ2035+-N0110F025+VFR+-ZZZZ0120+-PBN%2FD1+REG%2FDHxxx+OPR%2FVAR+COM%2FVIRTUALAIRRESCUE.COM+RMK%2FTCAS%29&fuel_time=0130)**
+> 📄[Bitte bei my.vatsim.net einloggen, dann diesen Link anklicken und o.g. Parameter anpassen!](https://my.vatsim.net/pilots/flightplan?raw=%28FPL-CHXzzz-VS+-EC45%2FL-SDGIJ7RY%2FS+-ZZZZ2035+-N0110F025+VFR+-ZZZZ0120+-PBN%2FD1+REG%2FDHxxx+OPR%2FVAR+COM%2FVIRTUALAIRRESCUE.COM+RMK%2FTCAS%29&fuel_time=0130)**
 
 ### Aircraft Type
 Dies sind die bei uns meistgeflogenen Aircraft Types und die benötigten ICAO Codes für den oben beschriebenen Flugplan.

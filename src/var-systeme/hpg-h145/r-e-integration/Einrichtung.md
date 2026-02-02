@@ -1,5 +1,6 @@
 # Random & Everywhere Script Einrichtung
 
+
 ## VAR-Client
 
 Um die Integration mit dem R&E Missionsskript zu aktivieren, musst du in den Einstellungen des VAR-Clients die Option
@@ -51,3 +52,8 @@ Nach kurzer Zeit wird auch im VAR-Client angezeigt, dass die Verbindung zu der H
 Jetzt ist die R&E-Integration aktiv und du kannst dich mittels Status 2 einsatzbereit melden.
 
 Seit der V2 ist es nun auch möglich, über das CARLS-Funkgerät den eigenen Status mit den Tasten an die Leitstelle zu übermitteln
+
+
+:::info INFO
+Die Navigation zum und vom Einsatzort obliegt auch mit dem Skript immer dem Piloten. Fehlleitungen des Skripts sind keine Ausrede für falsche Navigation. Siehe dazu auch die Erklärung in [Voraussetzungen](Voraussetzungen).
+:::

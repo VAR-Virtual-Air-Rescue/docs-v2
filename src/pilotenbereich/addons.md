@@ -26,4 +26,4 @@ Seit [VARv2](https://docs.virtualairrescue.com/allgemein/var-systeme/v2-changes.
 
 [Random & Everywhere](https://flightsim.to/file/44159/hpg-airbus-h145-action-pack-hems-random-and-anywhere-mission)
 
-Hier in unseren Virtual Air Rescue Docs zeigen wir dir außerdem wie du R&E in Verbindung mit unserem Client korrekt nutzt. [Die Anleitung dazu findest du hier.](/pilotenbereich/hpg-h145/r-e-integration/Einrichtung)
+Hier in unseren Virtual Air Rescue Docs zeigen wir dir außerdem wie du R&E in Verbindung mit unserem Client korrekt nutzt. [Die Anleitung dazu findest du hier.](../var-systeme/hpg-h145/r-e-integration/Einrichtung.md)

@@ -11,7 +11,7 @@ Solltet ihr euch dafür entscheiden, gemeinsam zu disponieren, koordiniert im Vo
 Siehe dazu auch [Impulse](#impulse).
 
 ::: warning Achtung
-Vor deiner ersten Schicht als Disponent **musst** du mit der [Funkphraseologie](/allgemein/bos-funk/Funkverkehr) vertraut sein.
+Vor deiner ersten Schicht als Disponent **musst** du mit der [Funkphraseologie](/luftrettung/bos-funk/Funkverkehr) vertraut sein.
 :::
 
 ### Nach dem Login
