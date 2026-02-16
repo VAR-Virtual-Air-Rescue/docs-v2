@@ -111,8 +111,16 @@ export default defineConfig({
 							{ text: "Einführung", link: "/luftrettung/military/Einführung" },
 							{ text: "SOP", link: "/luftrettung/military/SOP" },
 						]
-					}
-				]
+					},
+                    { text: "Schweizer Luftrettung",
+                        collapsed: true,
+                        items: [
+                            { text: "Organisation", link: "/luftrettung/Schweiz/organisation-schweiz" },
+                            { text: "Operationsbetrieb", link: "/luftrettung/Schweiz/operationsbetrieb-schweiz" },
+                            { text: "Spitallexikon", link: "/luftrettung/Schweiz/spitallexikon-schweiz.md" },
+                        ]
+                    }        
+				]   
 			},
             {   
                 text: "VAR-Systeme",

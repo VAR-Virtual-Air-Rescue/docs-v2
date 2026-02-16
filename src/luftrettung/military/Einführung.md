@@ -30,7 +30,7 @@ Hierbei eine Karte mit einer Übersicht der Standorte:
 
 ## Flugaufträge
 
-Wann komm denn genau ein SAR der Bundeswehr zum Einsatz? Der Such- und Rettungsdienst der Bundeswehr hat vier Aufgabengebiete:
+Wann kommt denn genau ein SAR der Bundeswehr zum Einsatz? Der Such- und Rettungsdienst der Bundeswehr hat vier Aufgabengebiete:
 
 1.  Transport verwundeter Streitkräfte zu Krankenhäusern
 2.  Hilfeleistung für alle in Not geratenen Luftfahrzeugen (Ortung & Erstversorgung)
