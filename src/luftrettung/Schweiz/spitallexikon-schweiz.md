@@ -1,9 +1,9 @@
 # Spitallexikon Schweiz
 Dank umfassender Zahlen des Bundesamtes für Statistik lässt sich die schweizer Spitallandschaft sehr gut überblicken. Das Spitallexikon sollte Disponenten sowie Piloten dabei unterstützen das richtige Zielkrankenhaus für den Patienten auszuwählen. 
 ## Zentrumsversorger Niveau 1 (Maximalversorger)
-Die Zentrumsversorger der Schweiz werden in 2 Stufen unterschieden. Dem Niveau 1, welches universitäre Maximalversorger festlegt sowie das Niveau 2 welches Allgemeinspitäler der Zentrumsversorgung festlegt. Die nachfolgenden Informationen sind aus dem Jahr 2023. Die Informationen zu Transplantationen entstammen der Webseite von Swisstransplant.
+Die Zentrumsversorger der Schweiz werden in zwei Stufen unterschieden. Dem Niveau 1, welches universitäre Maximalversorger festlegt, sowie das Niveau 2, welches Allgemeinspitäler der Zentrumsversorgung festlegt. Die nachfolgenden Informationen sind aus dem Jahr 2023. Die Informationen zu Transplantationen entstammen der Webseite von Swisstransplant.
 
-In der Schweiz befinden sich 5 Spitäler des Niveaus 1:
+In der Schweiz befinden sich fünf Spitäler des Niveaus 1:
 
 **Universitätsspital Genf, HUG**
 
@@ -303,36 +303,36 @@ In der Schweiz befinden sich 39 Zentrumsspitäler des Niveaus 2:
 </details>
 
 ## Spezialzentren
-Nachfolgend sind alle Spitalzentren für die spezifischen Medizinbereiche mit ICAO (falls vorhanden, Stand 08.2026) aufgelistet:
+Nachfolgend sind alle Spitalzentren für die spezifischen Medizinbereiche mit ICAO-Designator (falls vorhanden, Stand 08.2026) aufgelistet:
 <details>
     <summary>Polytraumazentren</summary>
 
-- Kantonsspital Aarau/ LSHA
-- Inselspital Bern/ LSHI
-- Universitätsspital Basel/ LSHB
-- Universitätsspital Genf/ LSHU
-- Kantonsspital Graubünden/ LSHC
-- Luzerner Kantonsspital/ LSHL
-- Kantonsspital St. Gallen/ LSHG
-- Regionalspital Lugano/ LSHT
-- Universitätsspital Lausanne/ LSHV
-- Spital Sitten/ LSHS
-- Kantonsspital Winterthur/ LSHW
-- Universitätsspital Zürich/ LSHZ
+- Kantonsspital Aarau / LSHA
+- Inselspital Bern / LSHI
+- Universitätsspital Basel / LSHB
+- Universitätsspital Genf / LSHU
+- Kantonsspital Graubünden / LSHC
+- Luzerner Kantonsspital / LSHL
+- Kantonsspital St. Gallen / LSHG
+- Regionalspital Lugano / LSHT
+- Universitätsspital Lausanne / LSHV
+- Spital Sitten / LSHS
+- Kantonsspital Winterthur / LSHW
+- Universitätsspital Zürich / LSHZ
 </details>
 
 <details>
-    <summary>Überregionale Stroke Zentren</summary>
+    <summary>Überregionale Stroke-Zentren</summary>
 
-- Kantonsspital Aarau/ LSHA
-- Inselspital Bern/ LSHI
-- Universitätsspital Basel/ LSHB
-- Universitätsspital Genf/ LSHU
-- Luzerner Kantonsspital/ LSHL
-- Kantonsspital St. Gallen/ LSHG
-- Regionalspital Lugano/ LSHT
-- Universitätsspital Lausanne/ LSHV
-- Universitätsspital Zürich/ LSHZ
+- Kantonsspital Aarau / LSHA
+- Inselspital Bern / LSHI
+- Universitätsspital Basel / LSHB
+- Universitätsspital Genf / LSHU
+- Luzerner Kantonsspital / LSHL
+- Kantonsspital St. Gallen / LSHG
+- Regionalspital Lugano / LSHT
+- Universitätsspital Lausanne / LSHV
+- Universitätsspital Zürich / LSHZ
 </details>
 
 <details>
@@ -340,40 +340,40 @@ Nachfolgend sind alle Spitalzentren für die spezifischen Medizinbereiche mit IC
 
 - Spital Baden
 - Spitalzentrum Biel
-- Kantonsspital Graubünden/ LSHC
+- Kantonsspital Graubünden / LSHC
 - Kantonsspital Fribourg
 - Spital Grabs
 - Kantonsspital Münsterlingen
 - Spital Neuchâtel 
 - Spital Nyon
 - Spital Limmattal
-- Spital Sitten/ LSHS
+- Spital Sitten / LSHS
 - Stadtspital Zürich Triemli 
-- Kantonsspital Winterthur/ LSHW
+- Kantonsspital Winterthur / LSHW
 </details>
 
 <details>
     <summary>Verbrennungszentren</summary>
 
-- Universitätsspital Zürich/ LSHZ
-- Universitätsspital Lausanne/ LSHV
+- Universitätsspital Zürich / LSHZ
+- Universitätsspital Lausanne / LSHV
 </details>
 
 <details>
     <summary>Kinderspitäler</summary>
 
-- Kinderspital Universitätsspital Basel/ LSHB
+- Kinderspital Universitätsspital Basel / LSHB
 - Kinderspital Spitalzentrum Biel
-- Kinderspital Zürich/ LSHJ
-- Kinderspital Kantonsspital Graubünden/ LSHC
-- Kinderspital Inselspital Bern/ LSHI
-- Kinderspital Kantonsspital Luzern/ LSHL
-- Kinderspital Ostschweiz/ LSHN
-- Kinderspital Universitätspital Genf/ LSHU
-- Kinderspital Universitätsspital Lausanne/ LSHV
-- Kinderabteilung Spital Visp/ LSHP
-- Kinderabteilung Spital Sitten/ LSHS
-- Kinderspital Regionalspital Bellinzona/ LSHO
+- Kinderspital Zürich / LSHJ
+- Kinderspital Kantonsspital Graubünden / LSHC
+- Kinderspital Inselspital Bern / LSHI
+- Kinderspital Kantonsspital Luzern / LSHL
+- Kinderspital Ostschweiz / LSHN
+- Kinderspital Universitätspital Genf / LSHU
+- Kinderspital Universitätsspital Lausanne / LSHV
+- Kinderabteilung Spital Visp / LSHP
+- Kinderabteilung Spital Sitten / LSHS
+- Kinderspital Regionalspital Bellinzona / LSHO
 </details>
 <details>
     <summary>Kliniken für Querschnitt</summary>
@@ -383,14 +383,14 @@ Nachfolgend sind alle Spitalzentren für die spezifischen Medizinbereiche mit IC
 <details>
     <summary>Druckkammern</summary>
 
-- Universitätsspital Genf/ LSHU
+- Universitätsspital Genf / LSHU
 </details>
 Für weitere Spezialisierungen steht die Liste der GDK zur Verfügung
 
 <a href="https://www.gdk-cds.ch/fileadmin/docs/public/gdk/themen/hsm/hsm_spitalliste/2025/20250801/HSM_Spitalliste_20250801_def_d.pdf">Spitalliste GDK</a>
 
 ## ICAO Codes Spitäler
-Die grösseren schweizer Spitäler besitzen aufgrund der IFR Fähigkeit der Hubschrauber eigene Location Indicators.
+Die Landeplätze der größeren schweizer Spitäler besitzen eigene Location Indicators.
 
 Hier eine Auflistung:    
 - LSHA: Kantonsspital Aarau
