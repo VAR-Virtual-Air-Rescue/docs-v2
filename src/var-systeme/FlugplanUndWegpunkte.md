@@ -5,7 +5,7 @@ Um die Funktion, bei einem Einsatz automatisch zum aktuellen Einsatz zu navigier
 ## Flugpläne
 Um bei der Alarmierung automatisch zum Einsatzort navigiert zu werden, musst du im Client folgende Einstellungen vornehmen:
 1. MSFS: Keine Einstellungen notwendig
-2. X-Plane: Eintragen des Ordnerpfades, in dem sich X-Plane selbst befindet. Sollte es Fehler beim Importieren von .fms-Daten geben, kannst du deinen AIRAC angeben, das ist aber optional und sollte automatisch gefunden (aber nicht angezeigt) werden.
+2. X-Plane: Eintragen des Ordnerpfades, in dem sich X-Plane selbst befindet. Sollte es Fehler beim Importieren von .fms-Daten geben, kannst du deinen AIRAC angeben, das ist aber optional und sollte automatisch gefunden (aber nicht angezeigt) werden. Wichtig ist zudem, dass ein Ordner <code>Ressources/Output/FMS plans</code> in deinem X-Plane-Stammverzeichnis existiert.
 Nach der Alarmierung wird dann eine Flugplan-Datei erstellt, die folgendermaßen aufgerufen werden kann:
 #### X-Plane Standard - Garmin GNS-430
 1. Aufrufen der ACTIVE FLIGHT PLAN Seite über den Button <code>FPL</code>.
@@ -23,19 +23,16 @@ Nach der Alarmierung wird dann eine Flugplan-Datei erstellt, die folgendermaßen
 3. Durch Klicken von <code>Import</code> und <code>Import from File</code> den Flugplan laden.
 4. Nach Auswahl von <code>OK</code> kann der Import kurz dauern.
 ## Landeplätze
-:::danger Hinweis
-Die Funktion des Exports von Landeplätzen über den angegeben Link ist zur Zeit <b>nicht verfügbar</b>.
-:::
 :::info Information
 Die Downloadfunktion fügt deinem Navigationsgerät nur die geografischen Informationen der Landeplätze und ihre jeweiligen Designator hinzu. **Die Funktion installiert keine Simulatorszenerien.**
 :::
 #### Datenbank anzeigen
-Zum Anzeigen dieser Datenbank navigiert ihr in der Webleitstelle zu **Einstellungen > Download** und klickt dann auf den entsprechenden Link.
-Alternativ findet ihr [hier](https://lst.virtualairrescue.com/resources/heliport) schnell dort hin.
-Angezeigt wird die Gesamtheit aller verfügbaren Daten in Seiten zu je 100 Landeplätzen.
+Zum Anzeigen dieser Datenbank navigiert ihr im Hub zu **Downloads / Links > Wegpunktdatenbank** und klickt dann auf den entsprechenden Link.
+Alternativ findet ihr [hier](https://hub.virtualairrescue.com/resources/waypoint-export) schnell dorthin.
+Angezeigt wird die Gesamtheit aller verfügbaren Daten in Seiten zu anfangs je 30 Landeplätzen.
 #### Filter
 Da ein Export aller Daten zur selben Zeit nicht immer sinnvoll ist, könnt ihr die zu exportierenden Landeplätze filtern.
-Dazu gibt es in jeder Spaltenüberschrift ein Drei-Punkt-Menü, in welchem durch Klicken der Schaltfläche "Filter" die entsprechende Spalte gefiltert werden kann.
+Dazu gibt es links neben der Suche zwei Schaltflächen.
 #### Export
 Alle zu exportierenden Helipads können mit der obersten Checkbox ("Alle auswählen") ausgewählt werden; alternativ ist auch eine selektivere Auswahl durch anklicken der individuellen Reihen möglich.
 Sobald eine Auswahl getroffen wurde, unterscheidet sich der Ablauf nach dem gewünschten Import-Format:
@@ -79,7 +76,9 @@ Sobald eine Auswahl getroffen wurde, unterscheidet sich der Ablauf nach dem gew�
 <summary><b>PMS50 GTN 750</b></summary>
 
 **Hinweis:**  
-Import nur mit Premium-Version möglich.
+- Import nur mit Premium-Version möglich.
+- Import von maximal 100 Wegpunkten pro Bank (insg. 20 Banks, siehe Manual).
+- Designator, die länger als 5 Zeichen sind, werden von vorne beginnend auf 5 Zeichen gekürzt (ED6969 → D6969)
 
 1. Anklicken der Schaltfläche **„Export für PMS50“**  
    (max. 100 Wegpunkte pro Bank)
