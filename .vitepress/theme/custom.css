@@ -1,95 +1,384 @@
-.VPHero .image-src {
-	max-width: 50%;
+/* =====================================================================
+   VAR Knowledgebase — Gestaltung
+
+   Bis August 2026 lag hier Catppuccin Mocha Lavender, eine pastellviolette
+   Oberfläche, und darüber ein paar VAR-Farben. Das ergab zwei Systeme, die
+   gegeneinander arbeiten. Jetzt wird VitePress mit **seinen eigenen**
+   Variablen auf die Marke gestellt — dann stimmen auch Knöpfe, Hinweiskästen,
+   Suche, Tabellen und Codeblöcke, ohne dass jedes Bauteil einzeln
+   überschrieben werden muss.
+
+   Zwei Rollen für Gold, wie auf der Website:
+     --var-gold  ist eine FLÄCHE (Kante, Ränder, Knopfgrund).
+     --var-akz   ist SCHRIFT. Auf Ivory hat #D5A507 nur 2,3:1 — als Schrift
+                 unbrauchbar. Auf Hell steht deshalb #8A6A05.
+
+   VitePress' `--vp-c-brand-1` ist eine Schriftfarbe (Links, Hervorhebungen),
+   `--vp-c-brand-2/3` sind Flächen. Genau danach sind sie hier belegt.
+   ===================================================================== */
+
+:root {
+  /* --- Die Marke, unverändert in beiden Erscheinungsbildern --- */
+  --var-navy: #00113a;
+  --var-gold: #d5a507;
+  --var-ivory: #fffffc;
+  --var-signal: #2b6eff;
+
+  /* Der Winkel des Zeichens. Gemessen, nicht gewählt:
+     var-v3/brand/werkzeug/tilt.json — tan = 0,0572155. */
+  --var-kippung: -3.2746681643916267deg;
+  --var-kante: 4px;
+
+  /* Uniforms Tabellenziffern. Sie heissen hier nicht `tnum`, sondern `lnum`,
+     und machen alle zehn Ziffern gleich breit (605 statt 450 bis 605). Nur dort
+     einschalten, wo Zahlen untereinander stehen -- im Fliesstext liest sich
+     proportional besser. */
+  --var-ziffern: "lnum" 1;
+
+  /* --- Schrift --- */
+  --vp-font-family-base: Uniform, "Segoe UI", system-ui, -apple-system,
+    "Helvetica Neue", sans-serif;
+
+  /* --- Hell --- */
+  --var-akz: #8a6a05;
+  --var-akz-code: #7a5e04;   /* eine Stufe dunkler, siehe Inline-Code unten */
+  /* Signalblau hat als Flaeche seinen Wert, als Schrift auf Hell nur 4,1:1.
+     Gleiche Rollentrennung wie beim Gold. */
+  --var-signal-tx: #1e4fcc;
+
+  --vp-c-brand-1: var(--var-akz);
+  --vp-c-brand-2: #a37f08;
+  --vp-c-brand-3: var(--var-gold);
+  --vp-c-brand-soft: rgba(213, 165, 7, 0.14);
+
+  --vp-c-bg: #fffffc;
+  --vp-c-bg-alt: #f2f4f8;
+  --vp-c-bg-soft: #f2f4f8;
+  --vp-c-bg-elv: #ffffff;
+
+  --vp-c-divider: #d3d8e4;
+  --vp-c-border: #cdd3e1;
+  --vp-c-gutter: #d3d8e4;
+
+  --vp-c-text-1: #00113a;
+  --vp-c-text-2: #414c63;
+  --vp-c-text-3: #6a7488;
+
+  /* Der gefüllte Knopf: Gold als Fläche, Navy als Schrift darauf. */
+  --vp-button-brand-bg: var(--var-gold);
+  --vp-button-brand-text: var(--var-navy);
+  --vp-button-brand-border: transparent;
+  --vp-button-brand-hover-bg: #e8b711;
+  --vp-button-brand-hover-text: var(--var-navy);
+  --vp-button-brand-active-bg: #bf9406;
+  --vp-button-brand-active-text: var(--var-navy);
+
+  /* Das Sprachkuerzel am Codeblock stand auf --vp-c-text-3 und kam bei 12 px
+     auf 4,3:1. */
+  --vp-code-lang-color: var(--vp-c-text-2);
+
+  --vp-c-tip-1: #0e6e6c;
+  --vp-c-tip-soft: rgba(14, 110, 108, 0.12);
+  --vp-c-warning-1: #8a5c00;
+  --vp-c-warning-soft: rgba(213, 165, 7, 0.14);
+  --vp-c-danger-1: #c2231f;
+  --vp-c-danger-soft: rgba(194, 35, 31, 0.1);
+
+  /* Der Verlauf über dem Namen auf der Startseite. */
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(
+    100deg,
+    var(--var-navy) 10%,
+    #8a6a05 90%
+  );
+  --vp-home-hero-image-background-image: none;
+  --vp-home-hero-image-filter: none;
 }
 
-/* =========================================================
-   LINKS
-========================================================= */
+.dark {
+  --var-akz: #efc02a;
+  --var-akz-code: #efc02a;   /* auf Dunkel traegt der helle Ton ohnehin */
+  --var-signal-tx: #6d9bff;
 
-/* Light Mode */
-:root:not(.dark) .VPDoc a {
-	color: #2B6EFF;
-  }
-  
-  :root:not(.dark) .VPDoc a:hover {
-	color: color-mix(in srgb, #D5A507 100%, black);
-	text-decoration: underline;
-  }
-  
-  /* Dark Mode */
-  :root.dark .VPDoc a {
-	color: #D5A507;
-  }
-  
-  :root.dark .VPDoc a:hover {
-	color: #2B6EFF;
-  }
-  
-  /* =========================================================
-	 HEADINGS
-  ========================================================= */
-  
-  /* Light Mode */
-  :root:not(.dark) .VPDoc h1,
-  :root:not(.dark) .VPDoc h2,
-  :root:not(.dark) .VPDoc h3,
-  :root:not(.dark) .VPDoc h4,
-  :root:not(.dark) .VPDoc h5,
-  :root:not(.dark) .VPDoc h6 {
-	color: #00113A;
-  }
-  
-  /* Header anchor (#) */
-  :root:not(.dark) .VPDoc .header-anchor {
-	color: color-mix(in srgb, #00113A 50%, transparent);
-  }
-  
-  :root:not(.dark) .VPDoc h1:hover .header-anchor,
-  :root:not(.dark) .VPDoc h2:hover .header-anchor,
-  :root:not(.dark) .VPDoc h3:hover .header-anchor,
-  :root:not(.dark) .VPDoc h4:hover .header-anchor,
-  :root:not(.dark) .VPDoc h5:hover .header-anchor,
-  :root:not(.dark) .VPDoc h6:hover .header-anchor {
-	color: #00113A;
-  }
+  --vp-c-brand-1: var(--var-akz);
+  --vp-c-brand-2: var(--var-gold);
+  --vp-c-brand-3: #bf9406;
+  --vp-c-brand-soft: rgba(213, 165, 7, 0.16);
 
-    /* Dark Mode */
-	:root.dark .VPDoc h1,
-	:root.dark  .VPDoc h2,
-	:root.dark  .VPDoc h3,
-	:root.dark  .VPDoc h4,
-	:root.dark  .VPDoc h5,
-	:root.dark  .VPDoc h6 {
-	  color: #FFFFFC
-	  ;
-	}
-	
-	/* Header anchor (#) */
-	:root:not(.dark) .VPDoc .header-anchor {
-	  color: color-mix(in srgb, #FFFFFC
-	  50%, transparent);
-	}
-	
-	:root.dark  .VPDoc h1:hover .header-anchor,
-	:root.dark  .VPDoc h2:hover .header-anchor,
-	:root.dark  .VPDoc h3:hover .header-anchor,
-	:root.dark  .VPDoc h4:hover .header-anchor,
-	:root.dark  .VPDoc h5:hover .header-anchor,
-	:root.dark  .VPDoc h6:hover .header-anchor {
-	  color: #FFFFFC
-	  ;
-	}
-  
-  /* =========================================================
-	 TEXT SELECTION
-  ========================================================= */
-  
-  /* Light Mode */
-  :root:not(.dark) .VPDoc ::selection {
-	background: color-mix(in srgb, #D5A507 50%, transparent);
+  --vp-c-bg: #050b1c;
+  --vp-c-bg-alt: #0a1430;
+  --vp-c-bg-soft: #0a1430;
+  --vp-c-bg-elv: #101c3d;
+
+  --vp-c-divider: #1c2a4e;
+  --vp-c-border: #24345c;
+  --vp-c-gutter: #1c2a4e;
+
+  --vp-c-text-1: #e7eaf3;
+  --vp-c-text-2: #b3bccf;
+  --vp-c-text-3: #8e97ae;
+
+  --vp-c-tip-1: #3fbf74;
+  --vp-c-tip-soft: rgba(63, 191, 116, 0.14);
+  --vp-c-warning-1: #e5920a;
+  --vp-c-warning-soft: rgba(229, 146, 10, 0.14);
+  /* #e5484d ergab auf dem eigenen Weichgrund 4,48:1 -- knapp unter der
+     Grenze fuer 11-px-Beschriftungen. Eine Spur heller reicht. */
+  --vp-c-danger-1: #f0666b;
+  --vp-c-danger-soft: rgba(229, 72, 77, 0.14);
+
+  --vp-home-hero-name-background: linear-gradient(
+    100deg,
+    var(--var-ivory) 10%,
+    var(--var-gold) 90%
+  );
+}
+
+/* =====================================================================
+   Die Kante
+
+   Das Element, an dem die Marke erkannt wird: derselbe Balken, auf dem im
+   Zeichen der Hubschrauber steht.
+
+   Sie steht hier **genau einmal**: als Abschluss des Startbilds. Nicht in der
+   Kopfleiste — das war ein Fehler und ist wieder raus.
+
+   Warum: der Winkel wirkt nur **randabfallend**. Über die Fensterbreite hat
+   die gekippte Linie eine senkrechte Ausdehnung von rund 6,6 % der Breite —
+   bei 1330 px sind das 92 px. Eine Kopfleiste ist aber nur 64 px hoch. Die
+   Linie lief damit quer durch Logo, Menü und weiter ins Startbild hinein.
+
+   Das ist genau der Fall, den die Markenregel meint: **kurze Kästen bleiben
+   gerade.** Eine feste Kopfleiste ist ein kurzer Kasten. Geneigt wird sie zur
+   schiefen Schachtel — hier sogar zu einem Balken quer durchs Bild.
+
+   Was die Kopfleiste stattdessen bekommt: eine gerade Goldlinie in der Stärke
+   der Kante. Der Winkel bleibt dem vorbehalten, was ihn tragen kann.
+   ===================================================================== */
+
+.VPNav {
+  position: relative;
+}
+.VPNavBar {
+  border-bottom: var(--var-kante) solid var(--var-gold);
+}
+.VPNavBar.has-sidebar .curtain,
+.VPNavBar .divider {
+  display: none;
+}
+
+/* Das Startbild trägt den Winkel: sein Abschluss ist die Kante, randabfallend
+   über die volle Breite und ohne etwas zu kreuzen.
+
+   `clip-path` rechnet die senkrechte Koordinate in Prozent der HÖHE — für den
+   Winkel braucht es ein breitenbezogenes Maß, deshalb vw. Das Polster unten
+   hält den Abstand, damit der Schnitt keinen Text anschneidet. */
+.VPHome .VPHero {
+  padding-bottom: calc(48px + 5.72vw);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5.72vw), 0 100%);
+  background: var(--vp-c-bg-alt);
+}
+
+/* Die Notklemmung gegen seitliches Scrollen ist entbehrlich, seit die Kante
+   nicht mehr in der Kopfleiste liegt: es ragt nichts mehr ueber den Rand.
+   Nachgemessen -- scrollWidth entspricht clientWidth. Wieder eingebaut gehoert
+   sie erst, wenn irgendwo wieder etwas randabfallend ueberhaengt. */
+
+/* =====================================================================
+   Lesbarkeit
+   ===================================================================== */
+
+.VPDoc h1,
+.VPDoc h2,
+.VPDoc h3,
+.VPDoc h4 {
+  letter-spacing: -0.018em;
+  text-wrap: balance;
+}
+.VPDoc h2 {
+  border-top-color: var(--vp-c-divider);
+}
+
+/* Fließtext etwas ruhiger setzen — die Seiten hier werden gelesen, nicht
+   überflogen. */
+.VPDoc .vp-doc p,
+.VPDoc .vp-doc li {
+  line-height: 1.72;
+}
+
+/* Beschriftungen im Auszeichnungssatz der Marke: Uniform in Versalien mit
+   weiter Sperrung. So setzt das Vorlagenwerkzeug die Absenderzeile. */
+.VPSidebarItem.level-0 > .item > .text,
+.VPDocFooter .title-text,
+.VPLocalNav .menu-text {
+  letter-spacing: 0.06em;
+}
+
+/* Hoehere Spezifitaet als VitePress' eigene Regel -- sonst bleibt der
+   Bereichsname in der Textfarbe und der Akzent kommt nicht durch. */
+.VPSidebar .VPSidebarItem.level-0 > .item > .text {
+  text-transform: uppercase;
+  font-size: 12.5px;
+  letter-spacing: 0.14em;
+  color: var(--var-akz);
+}
+
+/* Inline-Code steht in Markengold auf grauem Grund -- auf weissem Papier sind
+   das 4,45:1, zwei Hundertstel zu wenig. Und in einem farbigen Block (etwa
+   `::: pruefen`) komponiert der Grund noch dunkler: dort waren es 3,93:1.
+
+   Am Grund zu drehen hilft nur an einer Stelle, weil der Block darunter
+   wechselt. Robust ist die dunklere Schrift: sie traegt auf jedem der
+   vorkommenden Gruende. */
+.vp-doc :not(pre) > code {
+  color: var(--var-akz-code);
+}
+
+/* Tabellen: die Doku besteht zu einem guten Teil daraus (Status,
+   Statusanweisungen, Stichworte). */
+.vp-doc table {
+  display: table;
+  width: 100%;
+}
+.vp-doc th {
+  font-size: 11.5px;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  /* --vp-c-text-3 ergibt auf --vp-c-bg-alt nur 4,3:1 -- bei 12 px zu wenig. */
+  color: var(--vp-c-text-2);
+  background: var(--vp-c-bg-alt);
+  font-weight: 700;
+}
+.vp-doc tr {
+  background: transparent;
+}
+.vp-doc td,
+.vp-doc th {
+  border-color: var(--vp-c-divider);
+}
+/* Statusziffern, Seitenzahlen, Stationszahlen -- alles, was in Tabellen
+   untereinander steht, soll auch untereinander stehen. */
+.vp-doc table td,
+.vp-doc table th {
+  font-feature-settings: var(--var-ziffern);
+}
+
+/* =====================================================================
+   Eigene Blöcke für Fachinhalte
+
+   Funksprüche standen bisher als gewöhnliche Zitate — sie sahen aus wie
+   Fließtext. Vier Container, die tragen, was diese Doku ausmacht:
+
+     ::: funk      Ein Funkspruch, wörtlich
+     ::: status    Eine Statusmeldung oder -anweisung
+     ::: sop       Ein Verfahren, Schritt für Schritt
+     ::: pruefen   Was die VAR noch festlegen muss
+   ===================================================================== */
+
+.vp-doc .custom-block.funk,
+.vp-doc .custom-block.status,
+.vp-doc .custom-block.sop,
+.vp-doc .custom-block.pruefen {
+  border: 1px solid var(--vp-c-divider);
+  border-left-width: 4px;
+  border-radius: 2px;
+  padding: 16px 18px 14px;
+  margin: 20px 0;
+  font-size: 15px;
+  line-height: 1.7;
+}
+.vp-doc .custom-block.funk p:last-child,
+.vp-doc .custom-block.status p:last-child,
+.vp-doc .custom-block.sop p:last-child,
+.vp-doc .custom-block.pruefen p:last-child {
+  margin-bottom: 0;
+}
+.vp-doc .custom-block .custom-block-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* Funkspruch: gesprochene Sprache, deshalb dicktengleich und eingerückt wie
+   ein Mitschnitt. */
+.vp-doc .custom-block.funk {
+  border-left-color: var(--var-signal);
+  background: rgba(43, 110, 255, 0.06);
+  font-family: var(--vp-font-family-mono);
+  font-size: 14px;
+}
+.vp-doc .custom-block.funk .custom-block-title {
+  color: var(--var-signal-tx);
+  font-family: var(--vp-font-family-base);
+}
+
+/* Status: die Farben der Leitstelle. */
+.vp-doc .custom-block.status {
+  border-left-color: var(--var-gold);
+  background: var(--vp-c-brand-soft);
+}
+.vp-doc .custom-block.status .custom-block-title {
+  color: var(--var-akz);
+}
+
+.vp-doc .custom-block.sop {
+  border-left-color: var(--vp-c-text-3);
+  background: var(--vp-c-bg-alt);
+}
+.vp-doc .custom-block.sop .custom-block-title {
+  color: var(--vp-c-text-2);
+}
+
+/* Offene Punkte sichtbar machen, statt sie als Fließtext zu verstecken. */
+.vp-doc .custom-block.pruefen {
+  border-left-color: var(--vp-c-danger-1);
+  background: var(--vp-c-danger-soft);
+}
+.vp-doc .custom-block.pruefen .custom-block-title {
+  color: var(--vp-c-danger-1);
+}
+
+/* =====================================================================
+   Kleinigkeiten
+   ===================================================================== */
+
+/* Auswahl in der Markenfarbe — vorher stand im Dunkel-Abschnitt ein
+   `:root:not(.dark)`-Selektor, der die helle Regel überschrieb. */
+::selection {
+  background: rgba(213, 165, 7, 0.32);
+}
+
+/* Startbild: die Hauptfassung mit Wortmarke. Sie steht dort bei rund 300 px
+   und damit weit über der Mindestgröße von 96 px. */
+.VPHero .image-src {
+  max-width: 62%;
+  filter: none;
+}
+
+/* Kopfleiste: das Zeichen ist hier rund 26 px hoch. Die Hauptfassung gilt ab
+   96 px, das Signet ab 40 px — darunter ausschließlich das App-Icon. Deshalb
+   steht im Menü das Monogramm und nicht die volle Marke. */
+.VPNavBarTitle .logo {
+  height: 26px;
+  width: auto;
+}
+.VPNavBarTitle .title {
+  letter-spacing: -0.01em;
+}
+
+/* Sichtbarer Tastaturfokus — VitePress zeichnet ihn nur schwach. */
+:where(a, button, summary, input, .VPSidebarItem .link):focus-visible {
+  outline: 2px solid var(--var-gold);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
   }
-  
-  /* Dark Mode */
-  :root.dark .VPDoc ::selection {
-	background: color-mix(in srgb, #2B6EFF 50%, transparent);
-  }
+}
