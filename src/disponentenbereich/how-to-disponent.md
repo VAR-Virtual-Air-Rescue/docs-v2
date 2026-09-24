@@ -16,5 +16,5 @@ Unter **Events & Kurse** kannst du dich für einen Disponenten-Kurs anmelden. Di
 Für ein Bestehen musst du mindestens 90% der Fragen korrekt beantworten. Dafür stehen dir zwei Versuche zur Verfügung. Zwar werden dort einige Grundlagen vermittelt, zur Vorbereitung kannst und sollst du dich aber intensiv mit unseren Docs auseinandersetzen.
 
 :::info
-Wenn du den ersten Versuch nicht bestehst, kannst du nach zwei Wochen Wartezeit per Ticket im Discord einen weiteren Versuch anfragen. Solltest du diesen Versuch nicht bestehen, kannst du kein Disponent bei der VAR werden.
+Wenn du den ersten Versuch nicht bestehst, kannst du dir nach zwei Wochen Wartezeit im HUB einen weiteren Versuch freischalten. Die Wartezeit bis zum 3. Versuch beträgt 6 Monate. Nach dem 3. Versuch gibt es keinen weiteren Versuch mehr.
 :::
