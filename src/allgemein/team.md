@@ -6,9 +6,9 @@ Die Virtual Air Rescue ist ein Projekt mit einer klar gegliederten, aber möglic
 
 Die VAR gliedert sich in folgende Hauptbereiche („Departments“):
 
-- **Development Department (DEVDEP)** – Technische Entwicklung, Plattformen, Tools
-- **Media Department (MEDEP)** – Mediengestaltung, Social Media, Öffentlichkeitsarbeit
-- **Community Department (COMDEP)** – Community Management, Support, Leitfäden
+- **Development Department** – Technische Entwicklung, Plattformen, Tools
+- **Media Department** – Mediengestaltung, Social Media, Öffentlichkeitsarbeit
+- **Community Department** – Community Management, Support, Leitfäden
 
 Dabei übernehmen die Administratoren die Gesamtverantwortung pro Department, strategische Entscheidungen und die Koordination.
 Da die Administration der Community viele Ressourcen bindet, hat sich die Übertragung von Kompetenzen auf Mitglieder aus der Community als enorm hilfreich erwiesen. Sie unterstützen unterstützen freiwillig in einer der beiden folgenden Teams:
