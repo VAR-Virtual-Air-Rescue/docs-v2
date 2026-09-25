@@ -5,14 +5,14 @@ next: false
 
 # VAR FAIR PLAY
 
-**VAR FAIR PLAY** stellt die allgemeinen Verhaltensregeln unserer Community dar. Wir bitten dich, diese Regeln stets zu befolgen, um ein offenes, freundlioches und gemeinschaftliches Miteinander zu pflegen. Beachte dabei, dass **VAR FAIR PLAY** nicht alle üblichen Verhaltensregeln gesondert mit einschließt.
+**VAR FAIR PLAY** stellt die allgemeinen Verhaltensregeln unserer Community dar. Wir bitten dich, diese Regeln stets zu befolgen, um ein offenes, freundliches und gemeinschaftliches Miteinander zu pflegen. Beachte dabei, dass **VAR FAIR PLAY** nicht alle üblichen Verhaltensregeln gesondert mit einschließt.
 
 ## Allgemeine Regeln
 
 - Hinter jeder Interaktion steht ein Mensch – begegne anderen respektvoll.
-- Unterschiedliche Wissensstände sind normal und zu respektieren.
+- Verschiedene Wissensstände sind normal - wir helfen einander weiter
 - Keine sensiblen, illegalen, anstößigen oder diskriminierenden Inhalte.
-- Diskutiere sachlich, nicht persönlich.
+- Diskutiere sachlich, nicht auf einer persönlichen Ebene.
 - Konstruktive Kritik ist erwünscht, Respektlosigkeit nicht.
 
 ## Im Discord
@@ -28,7 +28,7 @@ next: false
 ## Im Leitstellenbetrieb
 
 - Die VAR ist ein Hobby – gehe respektvoll mit der Zeit anderer um.
-- Melde dich korrekt an und ab.
+- Melde dich korrekt bei den Piloten/Disponenten an und ab.
 - Gib konstruktives Feedback bei Problemen.
 - Blockiere Stationen nur, wenn du einsatzbereit bist.
 - Melde Fehlverhalten über die Report-Funktion.
