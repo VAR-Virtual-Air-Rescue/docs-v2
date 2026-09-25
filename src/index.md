@@ -16,7 +16,7 @@ hero:
       link: /faq
     - theme: alt
       text: Zum Tracker
-      link: "https://dispatch.premiumag.de/tracker"
+      link: "https://ops.virtualairrescue.com/tracker"
 
 features:
   - title: Wie werde ich Pilot?
