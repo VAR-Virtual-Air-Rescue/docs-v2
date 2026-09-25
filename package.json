@@ -13,9 +13,8 @@
 	"license": "ISC",
 	"packageManager": "npm@11.4.2",
 	"devDependencies": {
+		"@types/markdown-it-container": "^4.0.0",
+		"markdown-it-container": "^4.0.0",
 		"vitepress": "^1.6.3"
-	},
-	"dependencies": {
-		"@catppuccin/vitepress": "^0.1.2"
 	}
 }

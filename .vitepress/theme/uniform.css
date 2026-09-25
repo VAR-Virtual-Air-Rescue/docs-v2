@@ -1,0 +1,44 @@
+/* =====================================================================
+   Uniform — die Hausschrift der VAR.
+
+   Vier Schnitte, auf Latein-1 beschnitten, als WOFF2 (je rund 11 KB).
+   Erzeugt aus den TTF in var-v3/brand/werkzeug/fonts/ — denselben Dateien,
+   aus denen das Markenwerkzeug die Wortmarke in Pfade setzt.
+
+   Uniform hat 416 Glyphen. Was fehlt, fällt auf die Systemschrift zurück und
+   sieht dann falsch aus. Nicht vorhanden und deshalb zu meiden:
+       →   ✓   ★   ≥   sowie U+2011 (geschützter Bindestrich)
+   Vorhanden und benutzbar:
+       »  «  ·  –  —  •  ›  ‹  °  ×  …  §  ±
+
+   Code bleibt bewusst dicktengleich: dort trägt die feste Breite Bedeutung.
+   ===================================================================== */
+
+@font-face {
+  font-family: Uniform;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./schrift/uniform-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: Uniform;
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("./schrift/uniform-500.woff2") format("woff2");
+}
+@font-face {
+  font-family: Uniform;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("./schrift/uniform-700.woff2") format("woff2");
+}
+@font-face {
+  font-family: Uniform;
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("./schrift/uniform-800.woff2") format("woff2");
+}
