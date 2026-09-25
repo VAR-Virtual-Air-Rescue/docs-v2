@@ -29,6 +29,7 @@ Da die Administration der Community viele Ressourcen bindet, hat sich die Übert
 | Nico         | VAR3263  | Community Department |
 | Gerald       | VAR0996  | Community Department |
 | Moritz       | VAR0660  | Media Department     |
+| Nicolas      | VAR1242  | Development Department |
 |Klaus-Paul    | VAR0012  | Community Department |
 
 
