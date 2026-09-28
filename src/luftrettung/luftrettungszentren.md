@@ -39,7 +39,7 @@
 <details><summary>Christoph 35</summary><p>Standort: Brandenburg an der Havel</p><p>Besonderheiten: Zivilschutz-Hubschrauber des Bundes im Doppelnutzen; regulär im Tagbetrieb.</p></details>
 <details><summary>Christoph 36</summary><p>Standort: Magdeburg</p><p>Besonderheiten: DRF-Station; eine Umstellung auf 24-Stunden-Betrieb ist vorgesehen, aber noch als Planung formuliert.</p></details>
 <details><summary>Christoph 37</summary><p>Standort: Nordhausen</p><p>Besonderheiten:</p></details>
-<details><summary>Christoph 38</summary><p>Standort: Dresden</p><p>Besonderheiten: DRF-Station; ab 2027 erweiterte Randzeiten bis 19:00 Uhr in Herbst und Winter sowie ein Wechsel auf H145 vorgesehen.</p></details>
+<details><summary>Christoph 38</summary><p>Standort: Dresden</p><p>Besonderheiten: DRF-Station; ab 2027 erweiterte Randzeiten bis 19:00 Uhr im Herbst und Winter sowie ein Wechsel auf H145 vorgesehen.</p></details>
 <details><summary>Christoph 39</summary><p>Standort: Perleberg</p><p>Besonderheiten: Keine weitere stationseigene Besonderheit.</p></details>
 <details><summary>Christoph 40</summary><p>Standort: Augsburg</p><p>Besonderheiten: Keine weitere stationseigene Besonderheit.</p></details>
 <details><summary>Christoph 41</summary><p>Standort: Leonberg</p><p>Besonderheiten: DRF-Station; keine weitere stationseigene Besonderheit.</p></details>
@@ -55,7 +55,7 @@
 <details><summary>Christoph 51</summary><p>Standort: Stuttgart</p><p>Besonderheiten: Keine weitere stationseigene Besonderheit.</p></details>
 <details><summary>Christoph Europa 5</summary><p>Standort: Niebüll</p><p>Besonderheiten: Grenzüberschreitende Ausrichtung im deutsch-dänischen Raum; Teil eines Projekts mit präklinischem GFAP-Bluttest zur Erkennung von Hirnblutungen.</p></details>
 <details><summary>Christoph 53</summary><p>Standort: Mannheim</p><p>Besonderheiten: Keine weitere stationseigene Besonderheit.</p></details>
-<details><summary>Christoph 54</summary><p>Standort: Freiburg im Breisgau</p><p>Besonderheiten: Keine weitere stationseigene Besonderheit .</p></details>
+<details><summary>Christoph 54</summary><p>Standort: Freiburg im Breisgau</p><p>Besonderheiten: Keine weitere stationseigene Besonderheit.</p></details>
 <details><summary>Christoph Weser</summary><p>Standort: Bremen</p><p>Besonderheiten: Intensivtransport- und Verlegungshubschrauber.</p></details>
 <details><summary>Christoph Ortenau</summary><p>Standort: Lahr</p><p>Besonderheiten: Keine weitere stationseigene Besonderheit.</p></details>
 <details><summary>Christoph 60</summary><p>Standort: Suhl</p><p>Besonderheiten: Keine weitere stationseigene Besonderheit.</p></details>
@@ -66,10 +66,11 @@
 <details><summary>Christoph 65</summary><p>Standort: Dinkelsbühl</p><p>Besonderheiten: Keine weitere stationseigene Besonderheit.</p></details>
 <details><summary>Christoph 66</summary><p>Standort: Rockenhausen-Dörnbach</p><p>Besonderheiten: ADAC-Dual-Use-Hubschrauber der Westpfalz mit Rettungswinde; 2026 vom Übergangsstandort Imsweiler in die dauerhafte Station Rockenhausen-Dörnbach umgezogen.</p></details>
 <details><summary>Christoph 67</summary><p>Standort: Hohenlockstedt / Itzehoe</p><p>Besonderheiten: Keine weitere stationseigene Besonderheit.</p></details>
+<details><summary>Christoph 68 (zukünftig)</summary><p>Standort: Pampow</p><p>Besonderheiten: Geplantes Luftrettungszentrum mit voraussichtlichem Betriebsbeginn frühestens 2027; vorgesehen sind 24-Stunden-Betrieb an sieben Tagen pro Woche, ein Einsatzradius von etwa 70 km und rund 800 bis 1.000 Primäreinsätze pro Jahr. Der Landkreis stellt die Infrastruktur dauerhaft bereit; Betreiber und Hubschraubertyp sind noch nicht festgelegt.</p></details>
 <details><summary>Christoph 70</summary><p>Standort: Jena</p><p>Besonderheiten: Keine weitere stationseigene Besonderheit.</p></details>
 <details><summary>Christoph Brandenburg</summary><p>Standort: Senftenberg</p><p>Besonderheiten: ADAC-Intensivtransport- und Dual-Use-Station.</p></details>
 <details><summary>Christoph Murnau</summary><p>Standort: Murnau</p><p>Besonderheiten: ADAC-Station mit Rettungswinde und alpinem Einsatzprofil.</p></details>
-<details><summary>Christoph Rheinland</summary><p>Standort: Köln</p><p>Besonderheiten: ADAC-Intensivtransporthubschrauber am Flughafen Köln/Bonn; gemeinsames Luftrettungszentrum mit Christoph 3 und Schwerpunkt Intensiv- und Verlegungstransporte.</p></details>
+<details><summary>Christoph Rheinland</summary><p>Standort: Köln</p><p>Besonderheiten: ADAC-Intensivtransporthubschrauber am Flughafen Köln/Bonn; gemeinsames Luftrettungszentrum mit Christoph 3 und dem Schwerpunkt auf Intensiv- und Verlegungstransporten.</p></details>
 <details><summary>Christoph Westfalen</summary><p>Standort: Greven</p><p>Besonderheiten: ADAC-Intensivtransporthubschrauber mit Rettungswinde und Zusatztank für längere Reichweite.</p></details>
 <details><summary>Christoph 77</summary><p>Standort: Mainz</p><p>Besonderheiten: ADAC-Dual-Use-Intensivtransporthubschrauber am Universitätsklinikum Mainz; seit 01.01.2026 rund um die Uhr für Notfall- und Verlegungseinsätze verfügbar.</p></details>
 <details><summary>Christoph 80</summary><p>Standort: Weiden in der Oberpfalz</p><p>Besonderheiten: Keine weitere stationseigene Besonderheit.</p></details>
@@ -88,7 +89,7 @@
 <details><summary>Christoph Rostock</summary><p>Standort: Rostock</p><p>Besonderheiten: Keine weitere stationseigene Besonderheit.</p></details>
 <details><summary>Air Rescue Nürburgring</summary><p>Standort: Nürburg</p><p>Besonderheiten: Johanniter-Intensivtransporthubschrauber am Nürburgring; neben Intensivtransporten auch für Primärnotfalleinsätze dokumentiert.</p></details>
 
-Quelle: <a href="https://www.rth.info/stationen.db/stationen.php">Luftrettungs-Standortinfothek</a> und <a href="https://luftrettung.adac.de/stationen/">ADAC-Stationsübersicht</a>. Der militärische SAR-Dienst ist nicht Teil dieser Liste.
+Quelle: <a href="https://www.rth.info/stationen.db/stationen.php">Luftrettungs-Standortinfothek</a>, <a href="https://luftrettung.adac.de/stationen/">ADAC-Stationsübersicht</a> und <a href="https://www.kreis-lup.de/Verwaltung/Aktuelles/Meldungen/Luftrettungsstandort-in-Westmecklenburg-Landkreis-st%C3%A4rkt-Gesundheitsversorgung-in-der-Region.php?FID=3378.16680.1">Landkreis Ludwigslust-Parchim</a>. Der militärische SAR-Dienst ist nicht Teil dieser Liste.
 </details>
 
 <details><summary><strong>Österreich</strong></summary>
@@ -118,7 +119,7 @@ Quelle: <a href="https://www.rth.info/stationen.db/stationen.php">Luftrettungs-S
 <details><summary>Christophorus 33 / ITH</summary><p>Standort: Wiener Neustadt</p><p>Besonderheiten: Intensivtransport- und Dual-Use-Hubschrauber von HeliAir, einer ÖAMTC-Tochter.</p></details>
 <details><summary>Christophorus 99</summary><p>Standort: Niederöblarn</p><p>Besonderheiten: Saisonaler Zusatzstützpunkt des ÖAMTC zur Abdeckung von Einsatzspitzen im Winter und in der Hochsaison.</p></details>
 <details><summary>Christophorus Europa 3</summary><p>Standort: Suben (gemeinsam mit Deutschland)</p><p>Besonderheiten: Ganzjähriger, grenzüberschreitender Notarzthubschrauber im gemeinsamen Betrieb von ÖAMTC und ADAC für Oberösterreich und Bayern.</p></details>
-<details><summary>Gallus 1</summary><p>Standort: Zürs</p><p>Besonderheiten: Wucher Helicopter stellt Fluggerät und Stützpunkt, die Bergrettung Vorarlberg organisiert Betrieb und medizinische Besatzung; seit 2018 auch Sommerbetrieb, alpines Einsatzprofil am Arlberg.</p></details>
+<details><summary>Gallus 1</summary><p>Standort: Zürs</p><p>Besonderheiten: Wucher Helicopter stellt Fluggerät und Stützpunkt, die Bergrettung Vorarlberg organisiert den Betrieb und die medizinische Besatzung; seit 2018 auch Sommerbetrieb, alpines Einsatzprofil am Arlberg.</p></details>
 <details><summary>Gallus 3</summary><p>Standort: St. Anton am Arlberg</p><p>Besonderheiten: Saisonaler Winterstützpunkt von Wucher Helicopter, hervorgegangen aus dem früheren Alpin-3-Stützpunkt; alpine Wintersportrettung.</p></details>
 <details><summary>Heli 1</summary><p>Standort: Waidring</p><p>Besonderheiten: Aktuell saisonaler Standort des Schider Helicopter Service für alpine Wintersportrettung.</p></details>
 <details><summary>Heli 3</summary><p>Standort: Langkampfen bei Kufstein</p><p>Besonderheiten: Ganzjahresbetrieb des Schider Helicopter Service.</p></details>
@@ -134,7 +135,7 @@ Quelle: <a href="https://www.rth.info/stationen.db/stationen.php">Luftrettungs-S
 <details><summary>RK-1</summary><p>Standort: Fresach</p><p>Besonderheiten: Ganzjahresbetrieb der ARA Flugrettung; H145 mit fester Rettungswinde, 2025 wurden 67 Windeneinsätze, davon 8 bei Nacht, dokumentiert.</p></details>
 <details><summary>RK-2</summary><p>Standort: Reutte</p><p>Besonderheiten: Ganzjahresbetrieb der ARA Flugrettung; H145 mit fester Rettungswinde, regelmäßig auch nachts und im angrenzenden Bayern einsetzbar. 2025 wurden 242 Windeneinsätze, davon 53 bei Nacht, dokumentiert.</p></details>
 <details><summary>Robin 1</summary><p>Standort: Schruns</p><p>Besonderheiten: Saisonaler Schenk-Air-Stützpunkt von Mitte Dezember bis Ostern mit Rettungswinde; neben Skiunfällen auch reguläre Notarzteinsätze.</p></details>
-<details><summary>Robin 3</summary><p>Standort: Ischgl-Idalpe</p><p>Besonderheiten: Saisonaler Schenk-Air-Stützpunkt etwa Ende November bis Anfang Mai direkt im Skigebiet; Rettungswinde, Pistenrettungskooperation und eigene medizinische Erstversorgungsstation.</p></details>
+<details><summary>Robin 3</summary><p>Standort: Ischgl-Idalpe</p><p>Besonderheiten: Saisonaler Schenk-Air-Stützpunkt von etwa Ende November bis Anfang Mai direkt im Skigebiet; Rettungswinde, Pistenrettungskooperation und eigene medizinische Erstversorgungsstation.</p></details>
 
 Quelle: <a href="https://web.helirescue.at/standorte/">HeliRescue – Übersicht aller Standorte</a>. Saisonale Standorte und Betreiber können sich ändern.
 </details>
@@ -144,7 +145,7 @@ Quelle: <a href="https://web.helirescue.at/standorte/">HeliRescue – Übersicht
 <details><summary>Rega 1</summary><p>Standort: Dübendorf / Zürich</p><p>Besonderheiten: 24-Stunden-Rega-Basis im dicht besiedelten Raum Zürich für Primärrettung und medizinische Transporte.</p></details>
 <details><summary>Rega 2</summary><p>Standort: EuroAirport Basel-Mulhouse (Basis Basel; Standort in Frankreich)</p><p>Besonderheiten: Grenzstandort auf französischem Staatsgebiet; grenzüberschreitende Einsätze in der Schweiz, Frankreich und Deutschland.</p></details>
 <details><summary>Rega 3</summary><p>Standort: Belp bei Bern</p><p>Besonderheiten: 24-Stunden-Basis für den Raum Bern, das Mittelland und die angrenzenden Voralpen.</p></details>
-<details><summary>Rega 4</summary><p>Standort: Lausanne</p><p>Besonderheiten: CHUV stellt das medizinische Personal und einen dauerhaft an der Basis stationierten Arzt; mehr als die Hälfte der Einsätze sind Sekundärtransporte. Seit April 2025 erste Rega-Basis mit H145 D3.</p></details>
+<details><summary>Rega 4</summary><p>Standort: Lausanne</p><p>Besonderheiten: CHUV stellt das medizinische Personal und einen dauerhaft an der Basis stationierten Arzt; mehr als die Hälfte der Einsätze sind Sekundärtransporte. Seit April 2025 ist sie die erste Rega-Basis mit H145 D3.</p></details>
 <details><summary>Rega 5</summary><p>Standort: Untervaz</p><p>Besonderheiten: 24-Stunden-Basis im Bündnerland mit ausgeprägtem alpinem Einsatzgebiet.</p></details>
 <details><summary>Rega 6</summary><p>Standort: Locarno</p><p>Besonderheiten: 24-Stunden-Basis für das Tessin mit alpinem Einsatzgebiet in der italienischsprachigen Schweiz.</p></details>
 <details><summary>Rega 7</summary><p>Standort: St. Gallen</p><p>Besonderheiten: 24-Stunden-Basis für die Ostschweiz und das Alpstein- beziehungsweise Voralpengebiet.</p></details>
@@ -154,7 +155,7 @@ Quelle: <a href="https://web.helirescue.at/standorte/">HeliRescue – Übersicht
 <details><summary>Rega 12</summary><p>Standort: Mollis</p><p>Besonderheiten: 24-Stunden-Basis im Glarnerland mit alpinem Einsatzgebiet.</p></details>
 <details><summary>Rega 14</summary><p>Standort: Zweisimmen</p><p>Besonderheiten: 24-Stunden-Basis im Berner Oberland mit alpinem und wintersportbezogenem Einsatzprofil.</p></details>
 <details><summary>Rega 15</summary><p>Standort: Meyrin bei Genf</p><p>Besonderheiten: 24-Stunden-Basis im Genfer Raum für städtische, grenznahe und westschweizerische Einsätze.</p></details>
-<details><summary>Rega 18</summary><p>Standort: Sion</p><p>Besonderheiten: Seit Dezember 2021 jüngste Rega-Basis; rund drei Viertel der Einsätze sind alpine Primäreinsätze. Seit April 2025 H145 D3 für spezielle Intensivtransporte, unter anderem mit Herz-Lungen-Maschine oder Transportinkubator.</p></details>
+<details><summary>Rega 18</summary><p>Standort: Sion</p><p>Besonderheiten: Seit Dezember 2021 ist sie die jüngste Rega-Basis; rund drei Viertel der Einsätze sind alpine Primäreinsätze. Seit April 2025 steht ein H145 D3 für spezielle Intensivtransporte, unter anderem mit Herz-Lungen-Maschine oder Transportinkubator, zur Verfügung.</p></details>
 <details><summary>Air-Glaciers Collombey</summary><p>Standort: Collombey</p><p>Besonderheiten: Air-Glaciers-Standort im Unterwallis mit alpinem Rettungs- und Transportprofil.</p></details>
 <details><summary>Air-Glaciers Lauterbrunnen</summary><p>Standort: Lauterbrunnen</p><p>Besonderheiten: Air-Glaciers-Standort im Berner Oberland mit Hochgebirgs-, Felswand- und Wintersportprofil.</p></details>
 <details><summary>Air-Glaciers Saanen</summary><p>Standort: Saanen</p><p>Besonderheiten: Offiziell als Gstaad-Standort geführt; alpines und wintersportbezogenes Einsatzgebiet.</p></details>
@@ -164,7 +165,7 @@ Quelle: <a href="https://web.helirescue.at/standorte/">HeliRescue – Übersicht
 <details><summary>Air Zermatt Zermatt</summary><p>Standort: Zermatt</p><p>Besonderheiten: Zentrale historische Rettungsbasis im Hochgebirge und Kerngebiet des Oberwalliser Luftrettungsdienstes; hochalpine Rettungen einschließlich Windenrettungen in Zusammenarbeit mit SAC-Rettungsstationen.</p></details>
 <details><summary>Air Zermatt Raron</summary><p>Standort: Raron</p><p>Besonderheiten: Wichtiger Walliser Betriebsstandort für den luftgestützten Rettungsdienst im Oberwallis; zusätzlich werden Rund- und Transportflüge angeboten.</p></details>
 <details><summary>Air Zermatt Gampel</summary><p>Standort: Gampel</p><p>Besonderheiten: Air-Zermatt-Standort mit alpinem Rettungs- und Transportprofil; konkrete stationseigene Betriebszeiten, Windenstatus und medizinische Spezialisierung sind öffentlich nicht belastbar ausgewiesen.</p></details>
-<details><summary>Lions 1</summary><p>Standort: Birrfeld</p><p>Besonderheiten: Standort der Lions Air Group; die Unternehmensgruppe ist mit AAA Alpine Air Ambulance in Luftrettung, Repatriierungen, Spitalverlegungen und Organtransporten tätig.</p></details>
+<details><summary>Lions 1</summary><p>Standort: Birrfeld</p><p>Besonderheiten: Standort der Lions Air Group; die Unternehmensgruppe ist mit AAA Alpine Air Ambulance in der Luftrettung sowie bei Repatriierungen, Spitalverlegungen und Organtransporten tätig.</p></details>
 
 Quellen: <a href="https://www.rega.ch/im-einsatz/standorte-infrastruktur">Rega-Standortübersicht</a> und <a href="https://de.wikipedia.org/wiki/Luftrettung_in_der_Schweiz">Übersicht zur Luftrettung in der Schweiz</a>.
 </details>
