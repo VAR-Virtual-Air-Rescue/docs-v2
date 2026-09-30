@@ -1,3 +1,5 @@
+# Hier findest du eine Liste aller relevanter Spitäler in Österreich
+
 <details>
 <summary>Burgenland</summary>
 
@@ -120,9 +122,6 @@
 
 ### Spitäler mit Hubschrauberlandeplatz
 
-- Allgemeines Krankenhaus Wien (AKH)
-- Krankenhaus Hietzing
-- Wilhelminenspital Wien
 - Allgemeines Krankenhaus Wien (AKH)
 - Krankenhaus Hietzing
 - Wilhelminenspital Wien
