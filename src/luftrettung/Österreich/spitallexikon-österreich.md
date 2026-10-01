@@ -3,19 +3,16 @@
 <details>
 <summary>Burgenland</summary>
 
-### Spitäler mit Hubschrauberlandeplatz
-
 - Krankenhaus Eisenstadt
 - Krankenhaus Güssing
 - Krankenhaus Oberwart
 - Krankenhaus Oberpullendorf
+- Krankenhaus Kittsee
 
 </details>
 
 <details>
 <summary>Kärnten</summary>
-
-### Spitäler mit Hubschrauberlandeplatz
 
 - Krankenhaus Klagenfurt
 - Krankenhaus Villach
@@ -28,8 +25,6 @@
 
 <details>
 <summary>Niederösterreich</summary>
-
-### Spitäler mit Hubschrauberlandeplatz
 
 - Krankenhaus St. Pölten
 - Krankenhaus Wiener Neustadt
@@ -47,8 +42,6 @@
 <details>
 <summary>Oberösterreich</summary>
 
-### Spitäler mit Hubschrauberlandeplatz
-
 - Krankenhaus Linz
 - Krankenhaus Wels
 - Krankenhaus Steyr
@@ -63,8 +56,6 @@
 <details>
 <summary>Salzburg</summary>
 
-### Spitäler mit Hubschrauberlandeplatz
-
 - Krankenhaus Salzburg
 - Krankenhaus Bischofshofen
 - Krankenhaus Hallein
@@ -75,8 +66,6 @@
 
 <details>
 <summary>Steiermark</summary>
-
-### Spitäler mit Hubschrauberlandeplatz
 
 - Krankenhaus Graz
 - Krankenhaus Leoben
@@ -90,8 +79,6 @@
 
 <details>
 <summary>Tirol</summary>
-
-### Spitäler mit Hubschrauberlandeplatz
 
 - Krankenhaus Innsbruck
 - Krankenhaus Kufstein
@@ -107,8 +94,6 @@
 <details>
 <summary>Vorarlberg</summary>
 
-### Spitäler mit Hubschrauberlandeplatz
-
 - Krankenhaus Feldkirch
 - Krankenhaus Bregenz
 - Krankenhaus Dornbirn
@@ -119,8 +104,6 @@
 
 <details>
 <summary>Wien</summary>
-
-### Spitäler mit Hubschrauberlandeplatz
 
 - Allgemeines Krankenhaus Wien (AKH)
 - Krankenhaus Hietzing

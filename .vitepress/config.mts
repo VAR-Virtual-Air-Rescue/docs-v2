@@ -119,7 +119,13 @@ export default defineConfig({
                             { text: "Operationsbetrieb", link: "/luftrettung/Schweiz/operationsbetrieb-schweiz" },
                             { text: "Spitallexikon", link: "/luftrettung/Schweiz/spitallexikon-schweiz.md" },
                         ]
-                    }        
+                    },
+                    { text: "Österreichische Luftrettung",
+                        collapsed: true,
+                        items: [
+                            { text: "Spitallexikon", link: "/luftrettung/Österreich/spitallexikon-österreich.md" },
+                        ]
+                    }
 				]   
 			},
             {   
