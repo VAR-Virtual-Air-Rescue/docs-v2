@@ -32,6 +32,7 @@
 - Krankenhaus Tulln
 - Krankenhaus Mistelbach
 - Krankenhaus Baden
+- Krankenhaus Mödling
 - Krankenhaus Amstetten
 - Krankenhaus Horn
 - Krankenhaus Waidhofen an der Thaya
@@ -71,6 +72,8 @@
 - Krankenhaus Leoben
 - Krankenhaus Kapfenberg
 - Krankenhaus Hartberg
+- Krankenhaus Feldbach
+- Krankenhaus Fürstenfeld
 - Krankenhaus Judenburg
 - Krankenhaus Voitsberg
 - Krankenhaus Murau
@@ -106,11 +109,9 @@
 <summary>Wien</summary>
 
 - Allgemeines Krankenhaus Wien (AKH)
-- Krankenhaus Hietzing
-- Wilhelminenspital Wien
-- Krankenhaus Favoriten (KFJ / SMZ Süd)
-- Krankenhaus Donaustadt
-- Krankenhaus Floridsdorf
-- Krankenhaus Ottakring
+- Klinik Landstraße
+- SMZ Süd, ehemaliges KFJ
+- Donauspital
+- Krankenhaus Nord
 
 </details>
