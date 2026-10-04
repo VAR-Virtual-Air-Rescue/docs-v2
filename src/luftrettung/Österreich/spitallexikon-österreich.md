@@ -4,10 +4,10 @@
 <summary>Burgenland</summary>
 
 - Krankenhaus Eisenstadt
-- Krankenhaus Güssing
-- Krankenhaus Oberwart
-- Krankenhaus Oberpullendorf
-- Krankenhaus Kittsee
+- Klinik Güssing
+- Klinik Oberwart
+- Klinik Oberpullendorf
+- Klinik Kittsee
 
 </details>
 
@@ -28,6 +28,8 @@
 
 - Krankenhaus St. Pölten
 - Krankenhaus Wiener Neustadt
+- Krankenhaus Hainburg
+- Krankenhaus Neunkirchen
 - Krankenhaus Krems
 - Krankenhaus Tulln
 - Krankenhaus Mistelbach
@@ -35,7 +37,6 @@
 - Krankenhaus Mödling
 - Krankenhaus Amstetten
 - Krankenhaus Horn
-- Krankenhaus Waidhofen an der Thaya
 - Krankenhaus Zwettl
 
 </details>
