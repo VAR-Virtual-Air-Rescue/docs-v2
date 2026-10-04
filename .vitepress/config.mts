@@ -124,6 +124,7 @@ export default defineConfig({
                         collapsed: true,
                         items: [
                             { text: "Spitallexikon", link: "/luftrettung/Österreich/spitallexikon-österreich.md" },
+                            { text: "Einsatzgebiete", link: "/luftrettung/Österreich/einsatzgebiet-österreich.md" }
                         ]
                     }
 				]   
