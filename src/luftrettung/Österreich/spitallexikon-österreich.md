@@ -109,9 +109,11 @@
 <summary>Wien</summary>
 
 - Allgemeines Krankenhaus Wien (AKH)
-- Klinik Landstraße
-- SMZ Süd, ehemaliges KFJ
-- Donauspital
-- Krankenhaus Nord
+- Klinik Ottakring (Wilheminenspital)
+- Klinik Landstraße (Rudolfsstiftung)
+- Klinik Donaustadt (SMZ Ost) 
+- Klinik Floridsdorf (KH Nord)
+- Traumazentrum Meidling
+- Unfallkrankenhaus "Lorenz Böhler"
 
 </details>
