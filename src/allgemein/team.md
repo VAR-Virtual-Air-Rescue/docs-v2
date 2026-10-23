@@ -22,15 +22,13 @@ Da die Administration der Community viele Ressourcen bindet, hat sich die Übert
 | Name       | VAR-Nr.  | Zuständigkeit                      |
 |------------|----------|------------------------------------|
 | Johannes   | VAR0000  | Development Department        |
-| Timm    | VAR0001  | Media Department           |
-| Lucas    | VAR0002  | Media Department        |
-| Dominik      | VAR0005  | Development Department      |
-| Patrick      | VAR0006  | Development Department       |
-| Nico         | VAR3263  | Community Department |
-| Gerald       | VAR0996  | Community Department |
-| Moritz       | VAR0660  | Media Department     |
-| Nicolas      | VAR1242  | Development Department |
+| Nicolas      | VAR0008  | Development Department |
+| Nico         | VAR0015  | Community Department |
+| Gerald       | VAR0016  | Community Department |
 |Klaus-Paul    | VAR0012  | Community Department |
+| Moritz       | VAR0013  | Media Department     |
+
+
 
 
 
