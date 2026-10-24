@@ -1,3 +1,14 @@
+.VPHero {
+	--vp-home-hero-name-color: #00113A;
+	--vp-button-brand-bg: #00113A;
+	--vp-button-brand-hover-bg: #000D2E;
+	--vp-button-brand-active-bg: #000820;
+}
+
+:root:not(.dark) .VPNavBarMenuLink[href="/"] {
+	color: #00113A;
+}
+
 .VPHero .image-src {
 	max-width: 50%;
 }

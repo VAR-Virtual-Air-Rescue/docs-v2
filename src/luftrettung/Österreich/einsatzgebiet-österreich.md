@@ -1,5 +1,7 @@
 # Hier findest du eine Übersicht der Einsatzgebiete der österreichischen Notarzthubschrauber
 
+> **Hinweis:** Diese Seite befindet sich noch im Aufbau. Die Angaben zu den Einsatzgebieten sind noch unvollständig und werden laufend ergänzt.
+
 <details>
 <summary>Alpin 1</summary>
 
