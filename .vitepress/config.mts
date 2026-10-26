@@ -286,7 +286,15 @@ export default defineConfig({
         items: [
           { text: "Überblick", link: "/region/" },
           { text: "Deutschland", link: "/region/deutschland" },
-          { text: "Österreich", link: "/region/oesterreich" },
+          {
+            text: "Österreich",
+            collapsed: true,
+            items: [
+              { text: "Überblick", link: "/region/oesterreich" },
+              { text: "Einsatzgebiete", link: `${L}/Österreich/einsatzgebiet-österreich` },
+              { text: "Spitallexikon", link: `${L}/Österreich/spitallexikon-österreich` },
+            ],
+          },
           {
             text: "Schweiz",
             collapsed: true,
