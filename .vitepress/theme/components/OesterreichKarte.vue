@@ -87,7 +87,7 @@ const markerGruppen = computed(() => {
     const { x, y } = mittelpunkt(mitglieder)
     const key = mitglieder.map(spital => spital.id).sort((a, b) => a - b).join('-')
     const aufgeklappt = mitglieder.length > 1 && erweiterteGruppe.value === key
-    const radius = Math.min(32, Math.max(12, mitglieder.length * 1.8)) / zoom.value
+    const radius = Math.min(56, Math.max(16, mitglieder.length * 2.2)) / zoom.value
 
     return {
       key,
@@ -334,7 +334,7 @@ function gruppeUmschalten(gruppe) {
                   v-if="aktiv?.id === marker.spital.id"
                   :cx="marker.x"
                   :cy="marker.y"
-                  :r="11 / zoom"
+                  :r="7 / zoom"
                   class="ok-halo"
                 />
                 <circle
@@ -519,10 +519,9 @@ function gruppeUmschalten(gruppe) {
   stroke-width: 0.8;
   cursor: pointer;
   filter: drop-shadow(0 0.5px 0.8px rgba(0, 17, 58, .35));
-  transition: r .12s ease, filter .12s ease;
+  transition: filter .12s ease;
 }
 .ok-punkt:hover, .ok-punkt:focus-visible {
-  r: 5.5;
   filter: drop-shadow(0 0 2px var(--vp-c-bg));
   outline: none;
 }
@@ -531,7 +530,14 @@ function gruppeUmschalten(gruppe) {
 .ist-university { fill: var(--ok-universitaet); }
 .ist-specialist { fill: var(--ok-fachklinik); }
 .ist-hospital { fill: var(--ok-krankenhaus); }
-.ok-halo { fill: var(--var-gold); opacity: .22; pointer-events: none; }
+.ok-halo {
+  fill: none;
+  stroke: var(--var-gold);
+  stroke-width: 1.5;
+  opacity: .9;
+  pointer-events: none;
+  vector-effect: non-scaling-stroke;
+}
 
 .ok-cluster,
 .ok-cluster-zuklappen { cursor: pointer; }
