@@ -179,6 +179,9 @@
   position: relative;
   border-bottom: 0;
 }
+html .VPNavBar .VPNavBarTitle.has-sidebar .title {
+  border-bottom-color: transparent;
+}
 html .VPNavBar.has-sidebar .content-body {
   background-color: transparent !important;
 }
