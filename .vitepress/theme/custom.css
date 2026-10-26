@@ -1,8 +1,22 @@
-.VPHero {
+:root:not(.dark) .VPHero {
 	--vp-home-hero-name-color: #00113A;
 	--vp-button-brand-bg: #00113A;
 	--vp-button-brand-hover-bg: #000D2E;
 	--vp-button-brand-active-bg: #000820;
+}
+
+:root.dark {
+	--vp-c-brand-1: #D5A507;
+	--vp-c-brand-2: #E5B918;
+	--vp-c-brand-3: #D5A507;
+	--vp-c-brand-soft: color-mix(in srgb, #D5A507 16%, transparent);
+}
+
+:root.dark .VPHero {
+	--vp-home-hero-name-color: #D5A507;
+	--vp-button-brand-bg: #D5A507;
+	--vp-button-brand-hover-bg: #E5B918;
+	--vp-button-brand-active-bg: #B88F00;
 }
 
 :root:not(.dark) .VPNavBarMenuLink[href="/"] {
@@ -33,7 +47,7 @@
   }
   
   :root.dark .VPDoc a:hover {
-	color: #2B6EFF;
+	color: #D5A507;
   }
   
   /* =========================================================
@@ -102,5 +116,22 @@
   
   /* Dark Mode */
   :root.dark .VPDoc ::selection {
-	background: color-mix(in srgb, #2B6EFF 50%, transparent);
+	background: color-mix(in srgb, #D5A507 50%, transparent);
   }
+
+:root:not(.dark) .VPDocAsideOutline {
+	--vp-c-brand-1: #00113A;
+}
+
+:root:not(.dark) .VPDocAsideOutline .outline-link:hover,
+:root:not(.dark) .VPDocAsideOutline .outline-link.active {
+	color: #00113A;
+}
+
+:root:not(.dark) .VPDocAsideOutline .outline-title {
+	color: #00113A;
+}
+
+:root:not(.dark) .VPDocFooter {
+	--vp-c-brand-1: #00113A;
+}
