@@ -162,6 +162,7 @@ for (const station of raw) {
     funkbereich: station.bosRadioArea ?? null,
     betreiber: station.operator ?? null,
     muster: station.aircraft ?? null,
+    icao: station.aircraftIcao ?? null,
     kennung: station.aircraftRegistration ?? null,
     einsatzart: station.bosUse ?? null,
     winde: Boolean(station.hasWinch),

@@ -136,14 +136,6 @@ export default defineConfig({
       },
     },
 
-    // Fehlte bisher: wer einen Tippfehler sieht, musste den Weg über
-    // GitHub Desktop gehen. Ein Link genügt.
-    editLink: {
-      pattern:
-        "https://github.com/VAR-Virtual-Air-Rescue/docs-v2/edit/staging/src/:path",
-      text: "Diese Seite auf GitHub bearbeiten",
-    },
-
     nav: [
       { text: "Start", link: "/" },
       {
@@ -186,7 +178,7 @@ export default defineConfig({
           { text: "How-To Pilot", link: `${P}/how-to-pilot` },
           { text: "Addons", link: `${P}/addons` },
           // Stand bisher in keinem Menü und war nur über die Suche zu finden.
-          { text: "Hubschraubertypen", link: `${P}/Hubschraubertypen` },
+          { text: "Hubschrauber- und Luftfahrzeugtypen", link: `${P}/Hubschraubertypen` },
           { text: "Steuerorgane", link: `${P}/Steuerorgane` },
           {
             text: "Flugbetrieb",
