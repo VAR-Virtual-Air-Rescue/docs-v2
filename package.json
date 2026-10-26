@@ -7,6 +7,7 @@
 		"predev": "node scripts/stationen-aktualisieren.mjs",
 		"docs:dev": "vitepress dev --port 3006",
 		"predocs:dev": "node scripts/stationen-aktualisieren.mjs",
+		"hospitals:aktualisieren": "node scripts/hospitals-aktualisieren.mjs",
 		"build": "vitepress build",
 		"prebuild": "node scripts/stationen-aktualisieren.mjs",
 		"docs:preview": "vitepress preview"
