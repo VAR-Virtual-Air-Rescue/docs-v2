@@ -83,15 +83,6 @@ kann warten, wer ist nicht mehr zu retten. Die dafür verwendeten Kategorien und
 Verfahren sind **regional unterschiedlich** — es gibt kein einheitliches System
 über alle Länder und Bundesländer hinweg.
 
-::: pruefen Was die VAR festlegen sollte
-Ob im VAR-Betrieb ein Sichtungsschema verwendet wird und welches. Ohne
-Festlegung reden Crew und Leitstelle über verschiedene Kategorien.
-
-Ebenso offen: ob die [Webleitstelle](/var-systeme/webleitstelle) eine Lage mit
-mehreren Patienten überhaupt abbilden kann, oder ob dafür mehrere Einsätze
-angelegt werden.
-:::
-
 ## Weiter
 
 - [Disposition](/disponentenbereich/disposition)
