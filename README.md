@@ -24,6 +24,9 @@ Bearbeite die Dateien, oder füge neue Hinzu. Alle Seiten werden mit Markdown al
 Wenn du die Navigation bearbeiten möchtest, kannst du dies unter `.vitepress/config.mts` machen.
 
 Deine Änderungen kannst du mit `npm run dev` live anschauen.
+Dabei werden die Stationsdaten vor dem Start automatisch von der Leitstellen-API
+aktualisiert. Auch `npm run build` aktualisiert die Daten vor dem Build. Dafür
+ist eine Internetverbindung erforderlich.
 
 Wenn du fertig bist, führe vom Hauptverzeichnis folgende Befehle in dieser Reihenfolge aus:
 

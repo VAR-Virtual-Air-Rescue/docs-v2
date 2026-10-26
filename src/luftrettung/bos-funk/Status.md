@@ -48,6 +48,5 @@ In vielen Leitstellen kann ein Gespräch nur über das Senden des Status 5 initi
 :::info Status 9
 Die vergangenen Monate haben gezeigt, dass die Implementierung eines Status 9 sinnvoll ist. In Realität ist das in vielen Leitstellenbereichen die Anmeldung in einer fremden Rufgruppe (analog zu Status 5).
 VAR-intern kann der Status 9 dann genutzt werden, wenn man sich eingeloggt hat und dem Disponenten diesen Umstand mitteilen möchte. Die Reaktion darauf wird dann `u` sein. Somit wird die Rufgruppe frei von
-"Funksprechproben" oder versteckten Hinweisen auf die Einsatzbereitschaft eines Einsatzmittels gehalten. Solltet ihr eure Audio-Einstellungen überprüfen wollen, tut das bitte in den Einstellungen selbst. Das indirekte Betteln nach schnellen Einsätzen mit wiederholtem Drücken von Status 9
-ist nicht erwünscht und wird entsprechend geahndet. Sollte das Rettungsmittel durch Witterung und Zeit nur beschränkt bzw. unter Auflagen alarmierbar sein, ist das nach wie vor mit Status 5 mitzuteilen.
+"Funksprechproben" oder versteckten Hinweisen auf die Einsatzbereitschaft eines Einsatzmittels gehalten. Solltet ihr eure Audio-Einstellungen überprüfen wollen, tut das bitte in den Einstellungen selbst. Sollte das Rettungsmittel durch Witterung und Zeit nur beschränkt bzw. unter Auflagen alarmierbar sein, ist das nach wie vor mit Status 5 mitzuteilen.
 :::

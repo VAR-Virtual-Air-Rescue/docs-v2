@@ -14,11 +14,9 @@ Zuerst benötigst du einen Account bei uns. Registriere dich [in unserem HUB](ht
 
 ## 2. Einsteigerkurs
 
-Nach deiner Registrierung siehst du auf der Startseite im [HUB](https://hub.virtualairrescue.com/) einen verpflichtenden Moodle-Kurs für Piloten (P-1). Klicke diesen an, melde dich mit deinem VAR-Account im Moodle an und schließe den Kurs ab. Für den erfolgreichen Abschluss musst du mindestens 85% der Fragen korrekt beantworten. Im Anschluss erhälst du automatisch die Berechtigungen zum fliegen auf dem VAR Netzwerk. Der Kurs stellt sicher, dass alle Disponenten unseren Mindestanforderungen genügen.
+Nach deiner Registrierung findest du den verpflichtenden Piloten-Grundkurs **P-1** direkt im [HUB](https://hub.virtualairrescue.com/). Schließe den Kurs dort mit deinem VAR-Account ab. Zum Bestehen musst du mindestens **80 %** der Fragen korrekt beantworten. Insgesamt hast du **drei Versuche**: Nach zwei nicht bestandenen Versuchen gilt eine Wartezeit von **zwei Wochen**, danach kannst du den dritten und letzten Versuch absolvieren. Nach bestandenem Kurs erhältst du automatisch die Berechtigung, im VAR-Netzwerk zu fliegen.
 
-:::info
-Wenn du zwei Versuche nicht bestehst, kannst du nach zwei Wochen Wartezeit per Ticket im Discord einen Drittversuch anfragen. Solltest du diesen Versuch nicht bestehen, kannst du kein Pilot bei der VAR werden.
-:::
+Der Kurs stellt sicher, dass alle Piloten unsere Mindestanforderungen erfüllen.
 
 ## 3. Optionale Addons
 

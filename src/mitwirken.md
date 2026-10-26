@@ -76,10 +76,10 @@ Um unsere Arbeit optimal kategorisieren zu können, gibt es im VAR-Projekt viele
 Das Repository, in dem du unterwegs sein wirst, ist das Docs-Repository. Hier findest du alles, was die Docs-Seiten angeht.
 
 Im Docs-Repository haben wir zwei der erwähnten Branches. Sie sind übersetzt die "Zweige" des Repositorys.
-Der Development-Branch ist das, was von allen bearbeitet werden kann. Hier kann man sich austoben, ohne Auswirkungen auf die Website befürchten zu müssen.
-Der Main-Branch spiegelt den aktuellen Stand der Website wieder. Darum darf an ihm nicht gearbeitet werden.
+Der **staging**-Branch ist das, was von allen bearbeitet werden kann. Hier kann man sich austoben, ohne Auswirkungen auf die Website befürchten zu müssen.
+Der **release**-Branch spiegelt den aktuellen Stand der Website wider. Darum darf an ihm nicht gearbeitet werden.
 
-Du kannst dir vorstellen, dass zu Beginn Development- und Main-Branch identisch waren. Der Developemnt-Branch wird durch die Beitrage (=Commits) von Zeit zu Zeit verändert. Sind genug relevante Bearbeitungen zusammengekommen und überprüft, wird der Development-Branch mit dem Main-Branch verbunden - alle neuen Dateien werden auf dem Main-Branch gespeichert und werden veröffentlicht. Dann sind beide wieder identisch.
+Du kannst dir vorstellen, dass zu Beginn beide Branches identisch waren. Der staging-Branch wird durch die Beiträge (=Commits) von Zeit zu Zeit verändert. Sind genug relevante Bearbeitungen zusammengekommen und überprüft, werden sie zusammengeführt - alle neuen Dateien werden veröffentlicht. Dann sind beide wieder identisch.
 Das machst aber nicht du, keine Sorge ;)
 
 Fazit: Übung macht den Meister. Nach einiger Zeit ergibt sich das Meiste von ganz allein und die Fachbegriffe gehen in Fleisch und Blut über.
@@ -92,9 +92,9 @@ Fazit: Übung macht den Meister. Nach einiger Zeit ergibt sich das Meiste von ga
 
 ### Grundlegende Einrichtung
 
-Öffne **GitHub Desktop** und kopiere (="Clone") unten das Repository (="Projekt") "docs".
+Öffne **GitHub Desktop** und kopiere (="Clone") unten das Repository (="Projekt") **docs-v2**.
 
-Wähle dann oben unter **Current branch** den Punkt **Development** aus und klicke auf **Fetch Origin**. Der letzte Schritt ist besonders wichtig, da deine lokale Kopie dann auf Neuerungen geprüfut wird.
+Wähle dann oben unter **Current branch** den Punkt **staging** aus und klicke auf **Fetch Origin**. Der letzte Schritt ist besonders wichtig, da deine lokale Kopie dann auf Neuerungen geprüfut wird.
 
 :::danger Achtung
 Bitte prüfe vor jeder Bearbeitung, dass du wirklich den **Staging**-Branch ausgewählt hast!
@@ -107,7 +107,14 @@ Klicke oben unter **Repository** auf **Open in Visual Studio Code** oder nutze d
 Jetzt öffnet sich **VSC** und **GitHub Desktop** kann erst einmal vernachlässigt werden.
 
 In **VSC** klickst du oben unter **Terminal** auf **New Terminal**. In der unteren Hälfte öffnet sich nun ein neues Terminal.
-Im Terminal gibst du jetzt `npm i` und nach dem Ladevorgang `npm start` ein.
+Im Terminal gibst du jetzt `npm i` und nach dem Ladevorgang `npm run docs:dev` ein.
+
+::: warning Nicht `npm start`
+Diesen Befehl gibt es in diesem Projekt nicht - er stand hier bis August 2026
+und schlug bei jedem fehl, der ihn ausprobiert hat. Die vorhandenen Befehle sind
+`npm run docs:dev` (lokale Vorschau), `npm run build` (bauen) und
+`npm run docs:preview` (das Gebaute ansehen).
+:::
 
 
 Dann sollte sich dein Browser öffnen. Er stellt die lokale Kopie der Docs Website in deinem Browser dar, sodass du in VSC schreiben und parallel mitverfolgen kannst, wie deine Änderungen auf der Website aussehen würden.
@@ -120,7 +127,7 @@ Diese Schritte (außer der Erste) müssen nach jedem Neustart von VSC bzw. GitHu
 
 Um unsere Dokumente anschaulich zu machen, nutzen wir verschiedene optische Elemente.
 
-Wie diese erstellt werden, wie man _kursiv_, **fett** oder **_kursett_** bzw. **_fettsiv_** (?) schreiben kann, erfährst du am besten über die <a href="https://docusaurus.io/docs/markdown-features" target="_blank">Docusaurs Website</a>.
+Wie diese erstellt werden, wie man _kursiv_, **fett** oder **_kursett_** bzw. **_fettsiv_** (?) schreiben kann, erfährst du am besten über die <a href="https://vitepress.dev/guide/markdown" target="_blank">Markdown-Seite von VitePress</a>.
 
 :::tip Kleiner Tipp
 Am besten schaust du dir auf unseren Docs-Pages Elemente an, die es bereits gibt und siehst in **VSC** nach, wie sie gestaltet wurden.
@@ -158,7 +165,7 @@ Zum Löschen nutzt du einen Rechtsklick auf der gewünschten Datei und klickst a
 Bist du fertig mit deiner Bearbeitung siehst du in **GitHub Dekstop** alle deine Bearbeitungen.
 Verfasse unten links eine Überschrift für deinen Vorgang und beschreibe im Feld darunter, was du veröffentlichen willst (optional, aber gewünscht) damit die überprüfende Person weiß um was es sich bei deinen Bearbeitungen im allgemeinen handelt. Als Beispiel: _"Rechtsschreibfehler korrigiert"_ oder _"'Funkbeispiele erweitert'"_.
 
-Danach klickst du auf die blaue Schaltfläche **Commit to Development** und danach oben auf **Push Origin**. Deine Daten werden übermittelt, von uns überprüft und danach veröffentlicht.
+Danach klickst du auf die blaue Schaltfläche **Commit to staging** und danach oben auf **Push Origin**. Deine Daten werden übermittelt, von uns überprüft und danach veröffentlicht.
 
 :::info
 Der Veröffentlichungsprozess kann ein wenig Zeit in Anspruch nehmen. Gedulde dich und bearbeite in der Wartezeit einfach ein paar andere Dokumente ;)
@@ -168,7 +175,13 @@ Der Veröffentlichungsprozess kann ein wenig Zeit in Anspruch nehmen. Gedulde di
 
 Wir hoffen, dass dir dieser kleine Leitfaden hier weitergeholfen hat. Schreib dein Feedback und deine Fragen doch gerne auf unseren Discordserver, wir helfen dir gerne weiter.
 
-Ansonsten hilft während der Bearbeitung auch Google weiter - nicht zuletzt auch die <a href="https://docusaurus.io/docs/markdown-features" target="_blank">Docs Website</a> vom Docusaurus.
+Ansonsten hilft während der Bearbeitung auch Google weiter - nicht zuletzt die <a href="https://vitepress.dev/guide/markdown" target="_blank">Dokumentation von VitePress</a>.
+
+::: tip Wir laufen auf VitePress
+Bis August 2026 stand hier "Docusaurus". Das ist ein anderes System mit anderer
+Syntax - wer dort nachgeschlagen hat, hat sich Dinge angewöhnt, die bei uns
+nicht funktionieren. Diese Wissensdatenbank läuft auf **VitePress**.
+:::
 
 :::danger Wichtig
 Erstelle deine Dokumente bitte nach bestem Wissen und Gewissen und immer mit einem Anspruch auf sprachlich und textliche Richtigkeit. Lösche keine Dokumente, deren Löschung nicht unbedingt nötig ist.
