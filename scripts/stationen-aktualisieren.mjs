@@ -7,6 +7,8 @@ const dataPath = path.join(root, 'src', '.data', 'stationen.json')
 const apiUrl = 'https://ops.virtualairrescue.com/api/stations'
 const airportsUrl = 'https://ops.virtualairrescue.com/api/airports'
 const southTyrolUrl = 'https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ITA/ADM3/geoBoundaries-ITA-ADM3.geojson'
+const austriaOutlineUrl = 'https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/AUT/ADM0/geoBoundaries-AUT-ADM0_simplified.geojson'
+const austriaProvincesUrl = 'https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/AUT/ADM1/geoBoundaries-AUT-ADM1_simplified.geojson'
 
 const lon0 = 2
 const lon1 = 18
@@ -63,6 +65,27 @@ function simplify(points, tolerance = 0.75) {
   return points.filter((_, index) => keep[index])
 }
 
+function boundaryPath(geometry) {
+  if (!['Polygon', 'MultiPolygon'].includes(geometry?.type)) {
+    throw new Error('Unerwarteter Geometrietyp in den österreichischen Grenzdaten')
+  }
+  const polygons = geometry.type === 'Polygon' ? [geometry.coordinates] : geometry.coordinates
+  return polygons.map(polygon => {
+    const ring = polygon[0]
+    if (!Array.isArray(ring) || ring.length < 4) {
+      throw new Error('Österreichische Grenzdaten enthalten keinen gültigen Außenring')
+    }
+    const points = simplify(ring.map(([lon, lat]) => {
+      if (!Number.isFinite(lon) || !Number.isFinite(lat)) {
+        throw new Error('Österreichische Grenzdaten enthalten ungültige Koordinaten')
+      }
+      const { x, y } = project(lon, lat)
+      return [x, y]
+    }), 0.15)
+    return `M${points.map(([x, y]) => `${x.toFixed(2)},${y.toFixed(2)}`).join(' ')}Z`
+  }).join('')
+}
+
 const response = await fetch(apiUrl, { signal: AbortSignal.timeout(30_000) })
 if (!response.ok) {
   throw new Error(`Stations-API antwortete mit HTTP ${response.status}`)
@@ -112,6 +135,33 @@ const southTyrolPath = simplify(
     return [x, y]
   })
 ).map(([x, y]) => `${x.toFixed(1)},${y.toFixed(1)}`).join(' ')
+
+const austriaOutlineResponse = await fetch(austriaOutlineUrl, { signal: AbortSignal.timeout(30_000) })
+if (!austriaOutlineResponse.ok) {
+  throw new Error(`Österreichischer Umriss antwortete mit HTTP ${austriaOutlineResponse.status}`)
+}
+const austriaOutlineData = await austriaOutlineResponse.json()
+const austriaOutlineFeature = austriaOutlineData.features?.find(feature => feature.properties?.shapeType === 'ADM0')
+if (!austriaOutlineFeature) {
+  throw new Error('Österreichischer Außenumriss fehlt in den Grenzdaten')
+}
+const austriaOutline = boundaryPath(austriaOutlineFeature.geometry)
+
+const austriaProvincesResponse = await fetch(austriaProvincesUrl, { signal: AbortSignal.timeout(30_000) })
+if (!austriaProvincesResponse.ok) {
+  throw new Error(`Österreichische Bundesländer antworteten mit HTTP ${austriaProvincesResponse.status}`)
+}
+const austriaProvincesData = await austriaProvincesResponse.json()
+const austriaProvinces = austriaProvincesData.features
+  ?.filter(feature => feature.properties?.shapeType === 'ADM1')
+  .map(feature => ({
+    name: feature.properties.shapeName,
+    d: boundaryPath(feature.geometry)
+  }))
+  .sort((a, b) => a.name.localeCompare(b.name, 'de'))
+if (austriaProvinces?.length !== 9 || austriaProvinces.some(province => !province.name || !province.d)) {
+  throw new Error(`Grenzdaten müssen alle neun österreichischen Bundesländer enthalten; gefunden: ${austriaProvinces?.length ?? 0}`)
+}
 
 const existing = JSON.parse(await readFile(dataPath, 'utf8'))
 const stations = []
@@ -190,6 +240,12 @@ const updated = {
     d: `M${southTyrolPath}Z`,
     quelle: 'geoBoundaries, Italy ADM3 (Bolzano), CC BY 4.0'
   },
+  oesterreichUmriss: {
+    d: austriaOutline,
+    quelle: 'geoBoundaries, Austria ADM0, CC BY 4.0'
+  },
+  bundeslaenderQuelle: 'geoBoundaries, Austria ADM1, CC BY 4.0',
+  bundeslaender: austriaProvinces,
   ausgelassen: excluded,
   stationen: stations
 }
