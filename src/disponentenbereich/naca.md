@@ -42,13 +42,6 @@ Ab dann trägt er drei Entscheidungen:
 3. **Nachalarmierung.** Ein hoher Wert bei mehreren Patienten verändert die
    ganze Lage. → [MANV](/disponentenbereich/manv)
 
-::: funk So kommt er über Funk
-Leitstelle: „Christoph 51, Lagemeldung.“
-
-Christoph 51: „Christoph 51 — ein Patient, NACA vier, intubiert, Transport in
-eine Klinik mit Neurochirurgie erforderlich.“
-:::
-
 ## Was er nicht ist
 
 - **Keine Dringlichkeitsstufe für die Alarmierung.** Dafür gibt es das Stichwort.
@@ -61,12 +54,6 @@ eine Klinik mit Neurochirurgie erforderlich.“
 Der Wert gehört in die Lagemeldung und ins Einsatzprotokoll. Er ist der kürzeste
 Weg, der Leitstelle zu sagen, wie ernst die Lage ist, ohne den Funkkreis mit
 Beschreibungen zu belegen.
-
-::: pruefen Was die VAR festlegen sollte
-Ob der NACA-Wert im Einsatzdatensatz der [Webleitstelle](/var-systeme/webleitstelle)
-ein eigenes Feld bekommt. Heute steht er, wenn überhaupt, im Freitext — und ist
-damit nicht auswertbar.
-:::
 
 ## Weiter
 

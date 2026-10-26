@@ -21,18 +21,20 @@ echt sein, sie wird geprüft. Danach [verknüpfst du Discord](/var-systeme/how-t
 
 ## 2 · Der Grundkurs P-1
 
-Auf der Startseite des Hubs liegt der Moodle-Kurs **P-1**. Er behandelt MRT und
-DME, Status und SDS, BOS-Funk und die Frage, wie ein Hubschrauber überhaupt
-fliegt. Zum Bestehen brauchst du **85 %**, du hast **zwei Versuche**. Wer beide
-nicht besteht, kann nach zwei Wochen per Ticket im Discord einen dritten
-beantragen; auch der dritte Fehlversuch ist endgültig.
+Den Grundkurs **P-1** findest du direkt im [Hub](https://hub.virtualairrescue.com).
+Er behandelt MRT und DME, Status und SDS, BOS-Funk und die Frage, wie ein
+Hubschrauber überhaupt fliegt. Zum Bestehen brauchst du **80 %**. Insgesamt hast
+du **drei Versuche**. Nach zwei nicht bestandenen Versuchen gilt eine
+Wartezeit von **zwei Wochen**, bevor du den dritten und letzten Versuch
+absolvieren kannst.
 
 Erst danach bekommst du die Flugfreigabe — automatisch, es muss niemand etwas von
 Hand freischalten.
 
-> Für die Leitstelle gilt ein eigener Kurs, **D-1**, mit 90 %. Davor steht aber
-> eine Bedingung, die sich nicht lernen lässt: berufliche Erfahrung aus dem
-> Rettungsdienst oder einer Leitstelle. Siehe
+> Für die Tätigkeit als Disponent in der Leitstelle absolvierst du im
+> [Hub](https://hub.virtualairrescue.com) zuerst den **BOS-Funkttest** und danach
+> den **D-1-Test**.<br>
+> Für beide Kurse gilt eine Bestehensgrenze von **80 %**. Siehe
 > [How-To Disponent](/disponentenbereich/how-to-disponent).
 
 ## 3 · Simulator, Hubschrauber, Client
@@ -53,8 +55,7 @@ Sobald du eingeloggt bist, meldest du dich bei der Leitstelle an:
 Die Meldung nach dem Einloggen. Die Leitstelle quittiert mit der Anweisung **u**
 (verstanden). Damit bleibt die Rufgruppe frei von Funksprechproben.
 
-Das wiederholte Drücken von Status 9 in der Hoffnung auf einen schnellen Einsatz
-ist **nicht erwünscht**. Siehe [Status](/luftrettung/bos-funk/Status).
+Siehe [Status](/luftrettung/bos-funk/Status).
 :::
 
 Danach setzt du **Status 2** — einsatzbereit auf Wache. Ab jetzt bist du
@@ -67,16 +68,17 @@ Leitstelle sagen.
 
 ## 5 · Die Alarmierung
 
-Irgendwann legt ein Disponent einen Einsatz an: Stichwort aus dem
-[Katalog](/disponentenbereich/Stichworte), Einsatzort auf der Karte, Angaben zum
-Patienten. Die Leitstelle sucht das nächstgelegene geeignete Rettungsmittel —
-Reichweite, Winde, Nachtflugfähigkeit — und alarmiert.
+Ein Disponent legt den Einsatz mit einem Stichwort aus dem
+[Katalog](/disponentenbereich/Stichworte) an, markiert den Einsatzort auf der
+Karte und ergänzt die Patientendaten. Anschließend alarmiert der Disponent das
+nächstgelegene geeignete Rettungsmittel. Dabei berücksichtigt er Reichweite,
+Windenfähigkeit und Nachtflugtauglichkeit.
 
 ::: status Anweisung C — Einsatzübernahme melden
 Die Aufforderung, mit **Status 3** zu quittieren.
 :::
 
-Mit Status 3 bist du auf Anfahrt. Die Einsatzstelle erscheint als Objekt in
+Mit Status 3 bist du auf Anflug. Die Einsatzstelle erscheint als Objekt in
 deiner Simulatorwelt, deine Spur läuft über das Lagebild.
 
 ## 6 · Am Einsatzort
