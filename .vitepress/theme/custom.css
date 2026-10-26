@@ -152,19 +152,60 @@
    gerade.** Eine feste Kopfleiste ist ein kurzer Kasten. Geneigt wird sie zur
    schiefen Schachtel — hier sogar zu einem Balken quer durchs Bild.
 
-   Was die Kopfleiste stattdessen bekommt: eine gerade Goldlinie in der Stärke
-   der Kante. Der Winkel bleibt dem vorbehalten, was ihn tragen kann.
+   Unter der Kopfleiste läuft die gerade Goldlinie über die volle Breite.
+   Der Winkel bleibt dem vorbehalten, was ihn tragen kann.
    ===================================================================== */
 
 .VPNav {
   position: relative;
 }
+.VPNavBar::after {
+  position: absolute;
+  z-index: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: var(--var-kante);
+  background: var(--var-akz);
+  content: "";
+  pointer-events: none;
+}
+@media (min-width: 960px) {
+  .VPNavBar::after {
+    background: linear-gradient(
+      to right,
+      var(--var-akz) 0,
+      var(--var-akz) calc(var(--vp-sidebar-width) - (100vw - 100%)),
+      transparent calc(var(--vp-sidebar-width) - (100vw - 100%)),
+      transparent var(--vp-sidebar-width),
+      var(--var-akz) var(--vp-sidebar-width)
+    );
+  }
+}
+.VPNavBar.has-sidebar:not(.home) {
+  --vp-nav-bg-color: var(--vp-sidebar-bg-color);
+  background-color: var(--vp-sidebar-bg-color);
+}
 .VPNavBar {
-  border-bottom: var(--var-kante) solid var(--var-gold);
+  position: relative;
+  border-bottom: 0;
+}
+html .VPNavBar.has-sidebar .content-body {
+  background-color: transparent !important;
+}
+.VPNavBarMenu .VPFlyout {
+  position: relative;
+  z-index: 2;
 }
 .VPNavBar.has-sidebar .curtain,
 .VPNavBar .divider {
   display: none;
+}
+@media (min-width: 768px) {
+  .VPNavBarSearch #local-search {
+    flex: 1;
+    min-width: 0;
+  }
 }
 
 /* Das Startbild trägt den Winkel: sein Abschluss ist die Kante, randabfallend
