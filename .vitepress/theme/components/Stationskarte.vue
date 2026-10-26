@@ -2,11 +2,9 @@
 /**
  * Stationskarte der VAR.
  *
- * Daten: `src/.data/stationen.json`, erzeugt von `scripts/karte-bauen.py` aus
- * dem Endpunkt der Leitstelle. **Eingebacken, nicht live geladen** -- der
- * Endpunkt schickt kein `Access-Control-Allow-Origin`, ein Browser auf
- * docs.virtualairrescue.com darf ihn also gar nicht abfragen. Nebenwirkung:
- * die Karte ist sofort da und funktioniert auch, wenn die Leitstelle klemmt.
+ * Stationsdaten werden vor Dev-Server-Start und Build aus dem Endpunkt der
+ * Leitstelle geladen und in `src/.data/stationen.json` fuer die Karte aufbereitet.
+ * Die Laenderumrisse bleiben lokal in dieser Datei.
  *
  * Umrisse: Natural Earth, gemeinfrei, beim Erzeugen auf den Einsatzraum
  * beschnitten und vereinfacht.
@@ -45,7 +43,7 @@ const laenderListe = computed(() => {
 })
 
 function istAmbulanzjet (s) {
-  return s.name.trim().endsWith('#')
+  return s.ambulanzjet ?? s.name.trim().endsWith('#')
 }
 
 function einsatzart (s) {
@@ -92,6 +90,7 @@ const auswertung = computed(() => {
 const aktiv = computed(() => gewaehlt.value || beruehrt.value)
 
 function farbe (s) {
+  if (istAmbulanzjet(s)) return 'var(--var-navy)'
   if (s.einsatzart === 'SECONDARY') return 'var(--var-signal)'
   if (s.einsatzart === 'DUAL_USE') return 'var(--var-gold)'
   return 'var(--kt-primaer)'
@@ -167,6 +166,9 @@ function zuruecksetzen () {
           <path v-for="l in daten.laender" :key="l.iso" :d="l.d"
                 :class="['kt-flaeche', l.einsatzgebiet ? 'ist-einsatz' : 'ist-nachbar']"/>
         </g>
+        <g v-if="daten.suedtirol" class="kt-suedtirol">
+          <path :d="daten.suedtirol.d"/>
+        </g>
 
         <!-- Erst die ausgefilterten, damit die sichtbaren obenauf liegen -->
         <g class="kt-punkte">
@@ -218,6 +220,7 @@ function zuruecksetzen () {
       <span><i style="background:var(--kt-primaer)"></i> Primärrettung</span>
       <span><i style="background:var(--var-gold)"></i> Primär und Verlegung</span>
       <span><i style="background:var(--var-signal)"></i> Verlegung (ITH)</span>
+      <span><i style="background:var(--var-navy)"></i> Ambulanzjets</span>
       <span class="kt-hinweis">Zeiger darüber oder mit der Tabulatortaste ansteuern.
         Klick heftet die Karte fest.</span>
     </div>
@@ -285,7 +288,8 @@ function zuruecksetzen () {
       Quelle: Lagebild der Leitstelle (<code>/api/stations</code>), Stand
       <b>{{ daten.stand || 'unbekannt' }}</b>. Eingebacken beim Bauen — der Endpunkt
       erlaubt keine Abfrage aus dem Browser einer anderen Adresse.
-      Umrisse: Natural Earth, gemeinfrei.
+      Länderumrisse: Natural Earth, gemeinfrei. Südtirol-Grenze: geoBoundaries
+      (CC BY 4.0).
     </p>
   </div>
 </template>
@@ -342,6 +346,12 @@ function zuruecksetzen () {
 .kt-flaeche { stroke: var(--vp-c-divider); stroke-width: 1; }
 .ist-einsatz { fill: var(--vp-c-bg); }
 .ist-nachbar { fill: transparent; stroke-dasharray: 3 4; }
+.kt-suedtirol path {
+  fill: var(--vp-c-bg);
+  stroke: var(--vp-c-divider);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
 
 .kt-punkt {
   stroke: var(--vp-c-bg); stroke-width: 1.5;
