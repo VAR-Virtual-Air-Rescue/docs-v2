@@ -31,6 +31,13 @@ Die Administratoren übernehmen die Gesamtverantwortung für ihr jeweiliges Depa
 
 Supporter bilden die Schnittstelle zwischen Community und Administration. Sie führen neue Mitglieder an die VAR heran, unterstützen beim Onboarding, moderieren die Chats und tragen die Werte der VAR in die Community. Als erste Ansprechpartner stehen sie sowohl der Community als auch der Administration zur Verfügung. Supporter werden bei Bedarf durch das Community Department ernannt.
 
+Unsere Supporter sind:
+
+| Name       | VAR-Nr.  |    
+|------------|----------|
+| Kevin   | VAR1032  | 
+| Yannick   | VAR1390  | 
+| Maximilian      | VAR0774  | 
 ---
 
 Generell werden Entscheidungen, wo möglich, gemeinsam und immer im Sinne der Community getroffen. Feedback ist jederzeit willkommen, erwünscht und unbedingt nötig. Wir setzen in allen Bereichen auf **Transparenz, Qualität und Engagement**, weisen aber auch darauf hin, dass die VAR nur funktioniert, wenn *alle* mitmachen.
