@@ -139,5 +139,7 @@ weitergeflogen werden kann.
 koppelt.
 → [Voraussetzungen](/var-systeme/hpg-h145/r-e-integration/Voraussetzungen)
 
-**P-1 / D-1** — die Grundkurse für Piloten (85 %) und Disponenten (90 %) in
-Moodle.
+**P-1 / BOS-Funkttest / D-1** — Der P-1-Grundkurs für Piloten hat eine
+Bestehensgrenze von 80 %. Für die Tätigkeit als Disponent in der Leitstelle
+musst du im [Hub](https://hub.virtualairrescue.com) zuerst den **BOS-Funkttest**
+und danach den **D-1-Test** bestehen. Für beide gilt eine Bestehensgrenze von 80 %.

@@ -25,7 +25,7 @@ features:
     link: /pilotenbereich/how-to-pilot
     linkText: Zum Pilotenbereich
   - title: Ich will disponieren
-    details: Einsätze aufnehmen, Rettungsmittel wählen, Funkverkehr führen. Voraussetzung ist berufliche Erfahrung aus Rettungsdienst oder Leitstelle.
+    details: Einsätze aufnehmen, Rettungsmittel wählen, Funkverkehr führen. BOS-Funkttest und D-1-Test absolvierst du direkt im HUB.
     link: /disponentenbereich/how-to-disponent
     linkText: Zum Disponentenbereich
   - title: Status und Funk
