@@ -24,12 +24,12 @@ Bearbeite die Dateien, oder füge neue Hinzu. Alle Seiten werden mit Markdown al
 Wenn du die Navigation bearbeiten möchtest, kannst du dies unter `.vitepress/config.mts` machen.
 
 Deine Änderungen kannst du mit `npm run dev` live anschauen.
-Dabei werden die Stationsdaten vor dem Start automatisch von der Leitstellen-API
-aktualisiert. Auch `npm run build` aktualisiert die Daten vor dem Build. Dafür
-ist eine Internetverbindung erforderlich.
-Die Krankenhäuser lassen sich separat mit `npm run hospitals:aktualisieren`
-aus der Hospitals-API aktualisieren; die Daten werden unter
-`src/.data/hospitals.json` gespeichert.
+Dabei werden die Stations- und Hospital-Daten vor dem Start automatisch von den
+jeweiligen APIs aktualisiert. Auch `npm run build` aktualisiert die Daten vor
+dem Build. Dafür ist eine Internetverbindung erforderlich.
+Die Hospital-Daten lassen sich weiterhin separat mit
+`npm run hospitals:aktualisieren` aus der Hospitals-API aktualisieren; sie
+werden unter `src/.data/hospitals.json` gespeichert.
 
 Wenn du fertig bist, führe vom Hauptverzeichnis folgende Befehle in dieser Reihenfolge aus:
 

@@ -4,12 +4,12 @@
 	"description": "",
 	"scripts": {
 		"dev": "vitepress dev --port 3006",
-		"predev": "node scripts/stationen-aktualisieren.mjs",
+		"predev": "node scripts/stationen-aktualisieren.mjs && node scripts/hospitals-aktualisieren.mjs",
 		"docs:dev": "vitepress dev --port 3006",
-		"predocs:dev": "node scripts/stationen-aktualisieren.mjs",
+		"predocs:dev": "node scripts/stationen-aktualisieren.mjs && node scripts/hospitals-aktualisieren.mjs",
 		"hospitals:aktualisieren": "node scripts/hospitals-aktualisieren.mjs",
 		"build": "vitepress build",
-		"prebuild": "node scripts/stationen-aktualisieren.mjs",
+		"prebuild": "node scripts/stationen-aktualisieren.mjs && node scripts/hospitals-aktualisieren.mjs",
 		"docs:preview": "vitepress preview"
 	},
 	"keywords": [],
