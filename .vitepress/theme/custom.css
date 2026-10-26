@@ -152,7 +152,8 @@
    gerade.** Eine feste Kopfleiste ist ein kurzer Kasten. Geneigt wird sie zur
    schiefen Schachtel — hier sogar zu einem Balken quer durchs Bild.
 
-   Unter der Kopfleiste läuft die gerade Goldlinie über die volle Breite.
+   Unter der Kopfleiste läuft die gerade Goldlinie durchgehend über die
+   volle Breite.
    Der Winkel bleibt dem vorbehalten, was ihn tragen kann.
    ===================================================================== */
 
@@ -169,18 +170,6 @@
   background: var(--var-akz);
   content: "";
   pointer-events: none;
-}
-@media (min-width: 960px) {
-  .VPNavBar::after {
-    background: linear-gradient(
-      to right,
-      var(--var-akz) 0,
-      var(--var-akz) calc(var(--vp-sidebar-width) - (100vw - 100%)),
-      transparent calc(var(--vp-sidebar-width) - (100vw - 100%)),
-      transparent var(--vp-sidebar-width),
-      var(--var-akz) var(--vp-sidebar-width)
-    );
-  }
 }
 .VPNavBar.has-sidebar:not(.home) {
   --vp-nav-bg-color: var(--vp-sidebar-bg-color);
@@ -200,6 +189,31 @@ html .VPNavBar.has-sidebar .content-body {
 .VPNavBar.has-sidebar .curtain,
 .VPNavBar .divider {
   display: none;
+}
+.VPSidebar {
+  scrollbar-color: var(--vp-c-text-3) transparent;
+  scrollbar-width: thin;
+}
+.VPSidebar::-webkit-scrollbar {
+  width: 10px;
+}
+.VPSidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.VPSidebar::-webkit-scrollbar-thumb {
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background: var(--vp-c-text-3);
+  background-clip: content-box;
+}
+.VPSidebar::-webkit-scrollbar-thumb:hover {
+  background-color: var(--vp-c-text-2);
+}
+@media (min-width: 960px) {
+  .Layout > .VPSidebar {
+    top: var(--vp-nav-height);
+    padding-top: 0;
+  }
 }
 @media (min-width: 768px) {
   .VPNavBarSearch #local-search {
