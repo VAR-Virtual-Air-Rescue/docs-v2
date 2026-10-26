@@ -26,6 +26,10 @@ os.makedirs(ZIEL, exist_ok=True)
 API = "https://ops.virtualairrescue.com/api/stations"
 NE = ("https://raw.githubusercontent.com/nvkelso/natural-earth-vector/"
       "master/geojson/ne_50m_admin_0_countries.geojson")
+AT_ADM0 = ("https://github.com/wmgeolab/geoBoundaries/raw/9469f09/"
+           "releaseData/gbOpen/AUT/ADM0/geoBoundaries-AUT-ADM0_simplified.geojson")
+AT_ADM1 = ("https://github.com/wmgeolab/geoBoundaries/raw/9469f09/"
+           "releaseData/gbOpen/AUT/ADM1/geoBoundaries-AUT-ADM1_simplified.geojson")
 
 # Der Einsatzraum: Deutschland, Oesterreich, Schweiz, Niederlande, Luxemburg,
 # Belgien -- plus die Nachbarn, damit die Karte nicht in der Luft haengt.
@@ -145,23 +149,26 @@ def vereinfache(punkte, eps=1.2):
     """Douglas-Peucker, damit aus 3 MB GeoJSON ein paar KB Pfad werden."""
     if len(punkte) < 3:
         return punkte
-    ax, ay = punkte[0]
-    bx, by = punkte[-1]
-    dx, dy = bx - ax, by - ay
-    laenge = math.hypot(dx, dy)
-    weit, idx = 0.0, 0
-    for i in range(1, len(punkte) - 1):
-        px, py = punkte[i]
-        if laenge == 0:
-            d = math.hypot(px - ax, py - ay)
-        else:
-            d = abs(dy * px - dx * py + bx * ay - by * ax) / laenge
-        if d > weit:
-            weit, idx = d, i
-    if weit <= eps:
-        return [punkte[0], punkte[-1]]
-    return (vereinfache(punkte[:idx + 1], eps)[:-1]
-            + vereinfache(punkte[idx:], eps))
+    behalten = [False] * len(punkte)
+    behalten[0] = behalten[-1] = True
+    offen = [(0, len(punkte) - 1)]
+    while offen:
+        start, ende = offen.pop()
+        ax, ay = punkte[start]
+        bx, by = punkte[ende]
+        dx, dy = bx - ax, by - ay
+        laenge = math.hypot(dx, dy)
+        weit, idx = eps, -1
+        for i in range(start + 1, ende):
+            px, py = punkte[i]
+            abstand = (math.hypot(px - ax, py - ay) if laenge == 0 else
+                       abs(dy * px - dx * py + bx * ay - by * ax) / laenge)
+            if abstand > weit:
+                weit, idx = abstand, i
+        if idx != -1:
+            behalten[idx] = True
+            offen.extend(((start, idx), (idx, ende)))
+    return [punkt for i, punkt in enumerate(punkte) if behalten[i]]
 
 
 def zu_pfad(polys):
@@ -209,16 +216,71 @@ for f in geo["features"]:
 
 laender.sort(key=lambda l: (not l["einsatzgebiet"], l["iso"]))
 
+# -------------------------------------------------- Umriss und Bundeslaender AT
+print("Oesterreichische Grenzen holen ...")
+admin0 = hole(AT_ADM0)
+admin1 = hole(AT_ADM1)
+
+
+def grenzpfad(geometry):
+    if geometry["type"] == "Polygon":
+        polys = [geometry["coordinates"]]
+    elif geometry["type"] == "MultiPolygon":
+        polys = geometry["coordinates"]
+    else:
+        raise ValueError("Unerwarteter Geometrietyp in den oesterreichischen Grenzdaten")
+    ringe = []
+    for poly in polys:
+        aussen = poly[0]
+        if len(aussen) < 4:
+            raise ValueError("Oesterreichische Grenzdaten enthalten keinen gueltigen Aussenring")
+        punkte = []
+        for lon, lat in aussen:
+            if not (math.isfinite(lon) and math.isfinite(lat)):
+                raise ValueError("Oesterreichische Grenzdaten enthalten ungueltige Koordinaten")
+            punkte.append(projiziere(lon, lat))
+        ringe.append(vereinfache(punkte, 0.15))
+    return zu_pfad(ringe)
+
+
+umriss_feature = next(
+    (f for f in admin0["features"] if f["properties"].get("shapeType") == "ADM0"),
+    None,
+)
+if not umriss_feature:
+    raise ValueError("Oesterreichischer Aussenumriss fehlt in den Grenzdaten")
+oesterreich_umriss = grenzpfad(umriss_feature["geometry"])
+
+bundeslaender = []
+for f in admin1["features"]:
+    p = f["properties"]
+    if p.get("shapeType") != "ADM1":
+        continue
+    bundeslaender.append({
+        "name": p.get("shapeName"),
+        "d": grenzpfad(f["geometry"]),
+    })
+
+if len(bundeslaender) != 9 or any(not land["name"] or not land["d"] for land in bundeslaender):
+    raise ValueError("Grenzdaten muessen alle neun oesterreichischen Bundeslaender enthalten")
+bundeslaender.sort(key=lambda land: land["name"])
+
 # ------------------------------------------------------------------ schreiben
 daten = {
     "stand": None,       # wird vom Aufrufer gesetzt, siehe unten
     "quelle": API,
     "umrissQuelle": "Natural Earth (gemeinfrei), ne_50m_admin_0_countries",
+    "oesterreichUmriss": {
+        "d": oesterreich_umriss,
+        "quelle": "geoBoundaries, Austria ADM0, CC BY 4.0",
+    },
+    "bundeslaenderQuelle": "geoBoundaries, Austria ADM1, CC BY 4.0",
     "ausschnitt": {"lon": [LON0, LON1], "lat": [LAT0, LAT1]},
     "breite": round(BREITE, 1),
     "hoehe": round(HOEHE, 1),
     "ausgelassen": [{"name": n, "grund": g} for n, g in ausgelassen],
     "laender": laender,
+    "bundeslaender": bundeslaender,
     "stationen": stationen,
 }
 

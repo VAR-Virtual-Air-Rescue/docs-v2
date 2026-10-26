@@ -79,12 +79,6 @@ Zuordnung von Zentrumsversorgung und eigenen Bezeichnungen. Dafür gibt es ein
 eigenes Kapitel:
 → [Spitallexikon](/luftrettung/Schweiz/spitallexikon-schweiz)
 
-::: pruefen Was der Doku fehlt
-Für **Deutschland, Österreich und die Benelux-Länder** gibt es kein Gegenstück
-zum Schweizer Spitallexikon — obwohl dort der größte Teil der Einsätze läuft.
-Die Gerüste dafür liegen unter [Region](/region/).
-:::
-
 ## Weiter
 
 - [Disposition](/disponentenbereich/disposition)

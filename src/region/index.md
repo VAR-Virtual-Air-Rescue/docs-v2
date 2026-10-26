@@ -19,12 +19,6 @@ Funk.
 Gezählt aus dem Stationsbestand der Leitstelle, Stand 29.08.2026 — die Karte
 dazu steht unter [Luftrettungszentren](/luftrettung/luftrettungszentren).
 
-::: pruefen Belgien oder Italien?
-Die [FAQ](/faq) nennt **Belgien** als Einsatzgebiet und **Italien** nicht. Im
-Stationsbestand ist es genau umgekehrt: keine belgische Station, dafür vier in
-Südtirol und eine in Liechtenstein. Eines von beidem gehört nachgezogen.
-:::
-
 Bis August 2026 gab es hier nur die Schweiz. Der Rest fehlte — obwohl dort der
 größte Teil der Einsätze läuft.
 

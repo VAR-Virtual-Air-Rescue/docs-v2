@@ -40,7 +40,8 @@ Der VAR Client stellt die Verbindung zwischen deinem Flugsimulator und der Leits
 
 ::: details In welcher Region kann ich fliegen?
 
-Unsere Leitstelle deckt das gesamte Gebiet von Deutschland, Österreich, Schweiz, Niederlande, Luxemburg und Belgien ab.
+Unsere Leitstelle deckt Deutschland, Österreich, die Schweiz, die Niederlande,
+Luxemburg, Italien und Liechtenstein ab.
 Die Kommunikation findet ausschließlich auf Deutsch statt.
 
 :::
@@ -48,12 +49,6 @@ Die Kommunikation findet ausschließlich auf Deutsch statt.
 ::: details Kann ich mit dem HPG H145 fliegen?
 
 Ja natürlich.
-
-:::
-
-::: details Wie kann ich derzeit am besten mit dem HPG H145 mitmachen?
-
-Eine Integration mit unserer Leitstelle und dem Random & Everywhere Script existiert nun auch, [für mehr Infos siehe hier](/var-systeme/hpg-h145/r-e-integration/Voraussetzungen.md)!
 
 :::
 
