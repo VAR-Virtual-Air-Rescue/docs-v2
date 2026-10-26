@@ -20,10 +20,6 @@ Auch andere Zahlen oder Buchstaben (siehe **REA**) sind möglich.
 
 Im folgenden werden alle Stichworte nach Kategorie sortiert und mit einigen typischen Indikationen aufgelistet. Natürlich sind weitere Indikationen möglich und realistisch.
 
-::: warning Update
-Bitte lest euch die Informationen zu den neuen Stichworten [hier](https://nextcloud.virtualairrescue.com/s/F92Xg5BP8aBdqxq) durch!
-:::
-
 <details>
   <summary>Einsatzstichworte</summary>
   <div>
