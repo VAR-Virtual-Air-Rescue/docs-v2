@@ -9,9 +9,6 @@ Die VAR gliedert sich in folgende Hauptbereiche („Departments“):
 - **Development Department** – Technische Entwicklung, Plattformen, Tools
 - **Media Department** – Mediengestaltung, Social Media, Öffentlichkeitsarbeit
 - **Community Department** – Community Management, Support, Leitfäden
-- **Development Department** – Technische Entwicklung, Plattformen, Tools
-- **Media Department** – Mediengestaltung, Social Media, Öffentlichkeitsarbeit
-- **Community Department** – Community Management, Support, Leitfäden
 
 Die Administratoren übernehmen die Gesamtverantwortung für ihr jeweiliges Department, treffen strategische Entscheidungen und koordinieren die Aufgaben. Da die Administration der Community viele Ressourcen bindet, ist die Übertragung von Kompetenzen auf Mitglieder aus der Community eine wertvolle Unterstützung. Diese engagieren sich freiwillig als **Supporter**.
 

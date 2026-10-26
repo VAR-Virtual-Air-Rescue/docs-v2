@@ -6,7 +6,6 @@ next: false
 # VAR FAIR PLAY
 
 **VAR FAIR PLAY** stellt die allgemeinen Verhaltensregeln unserer Community dar. Wir bitten dich, diese Regeln stets zu befolgen, um ein offenes, freundliches und gemeinschaftliches Miteinander zu pflegen. Beachte dabei, dass **VAR FAIR PLAY** nicht alle üblichen Verhaltensregeln gesondert mit einschließt.
-**VAR FAIR PLAY** stellt die allgemeinen Verhaltensregeln unserer Community dar. Wir bitten dich, diese Regeln stets zu befolgen, um ein offenes, freundliches und gemeinschaftliches Miteinander zu pflegen. Beachte dabei, dass **VAR FAIR PLAY** nicht alle üblichen Verhaltensregeln gesondert mit einschließt.
 
 ## Allgemeine Regeln
 
