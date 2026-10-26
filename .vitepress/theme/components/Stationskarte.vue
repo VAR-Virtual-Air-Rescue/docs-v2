@@ -26,6 +26,7 @@ const ART = {
 
 const suche = ref('')
 const land = ref('')
+const kategorie = ref('')
 const art = ref('')
 const nurWinde = ref(false)
 const nurRund = ref(false)
@@ -43,11 +44,21 @@ const laenderListe = computed(() => {
     .map(k => ({ k, name: LAENDER[k] || k, n: z[k] }))
 })
 
+function istAmbulanzjet (s) {
+  return s.name.trim().endsWith('#')
+}
+
+function einsatzart (s) {
+  return istAmbulanzjet(s) ? 'AMBULANZJET' : s.einsatzart
+}
+
 const gefiltert = computed(() => {
   const q = suche.value.trim().toLowerCase()
   return daten.stationen.filter(s => {
     if (land.value && s.land !== land.value) return false
-    if (art.value && s.einsatzart !== art.value) return false
+    if (kategorie.value === 'AMBULANZJET' && !istAmbulanzjet(s)) return false
+    if (kategorie.value === 'HUBSCHRAUBER' && istAmbulanzjet(s)) return false
+    if (art.value && einsatzart(s) !== art.value) return false
     if (nurWinde.value && !s.winde) return false
     if (nurRund.value && !s.rund) return false
     if (nurNvg.value && !s.nvg) return false
@@ -74,7 +85,8 @@ const auswertung = computed(() => {
     tau: st.filter(s => s.tau).length,
     primaer: st.filter(s => s.einsatzart === 'PRIMARY').length,
     doppelt: st.filter(s => s.einsatzart === 'DUAL_USE').length,
-    verlegung: st.filter(s => s.einsatzart === 'SECONDARY').length
+    verlegung: st.filter(s => s.einsatzart === 'SECONDARY' && !istAmbulanzjet(s)).length,
+    ambulanzjets: st.filter(istAmbulanzjet).length
   }
 })
 const aktiv = computed(() => gewaehlt.value || beruehrt.value)
@@ -100,7 +112,7 @@ const kartePos = computed(() => {
 })
 
 function zuruecksetzen () {
-  suche.value = ''; land.value = ''; art.value = ''
+  suche.value = ''; land.value = ''; kategorie.value = ''; art.value = ''
   nurWinde.value = nurRund.value = nurNvg.value = false
   gewaehlt.value = null
 }
@@ -121,11 +133,18 @@ function zuruecksetzen () {
         </option>
       </select>
 
+      <select v-model="kategorie" aria-label="Kategorie">
+        <option value="">Alle Kategorien</option>
+        <option value="HUBSCHRAUBER">Hubschrauber</option>
+        <option value="AMBULANZJET">Ambulanzjets</option>
+      </select>
+
       <select v-model="art" aria-label="Einsatzart">
         <option value="">Jede Einsatzart</option>
         <option value="PRIMARY">Primärrettung</option>
         <option value="DUAL_USE">Primär und Verlegung</option>
         <option value="SECONDARY">Verlegung (ITH)</option>
+        <option value="AMBULANZJET">Ambulanzjet</option>
       </select>
 
       <label class="kt-schalter"><input type="checkbox" v-model="nurWinde"> Winde</label>
@@ -182,8 +201,9 @@ function zuruecksetzen () {
           <dt>Betreiber</dt><dd>{{ aktiv.betreiber || '—' }}</dd>
           <dt>Muster</dt><dd>{{ aktiv.muster || '—' }}<span v-if="aktiv.kennung"> · {{ aktiv.kennung }}</span></dd>
           <dt>Ort</dt><dd>{{ aktiv.region || '—' }}<span v-if="aktiv.land"> · {{ LAENDER[aktiv.land] || aktiv.land }}</span></dd>
+          <dt>Kategorie</dt><dd>{{ istAmbulanzjet(aktiv) ? 'Ambulanzjet' : 'Hubschrauber' }}</dd>
           <dt v-if="aktiv.funkbereich">Funkbereich</dt><dd v-if="aktiv.funkbereich">{{ aktiv.funkbereich }}</dd>
-          <dt>Einsatzart</dt><dd>{{ ART[aktiv.einsatzart] || aktiv.einsatzart || '—' }}</dd>
+          <dt>Einsatzart</dt><dd>{{ ART[einsatzart(aktiv)] || 'Ambulanzjet' }}</dd>
         </dl>
         <div class="kt-merkmale">
           <span :class="['kt-m', aktiv.rund && 'an']">24 h</span>
@@ -208,7 +228,7 @@ function zuruecksetzen () {
       <div class="kt-rollen">
         <table>
           <thead>
-            <tr><th>Funkrufname</th><th>Betreiber</th><th>Muster</th><th>Kennung</th>
+            <tr><th>Funkrufname</th><th>Kategorie</th><th>Betreiber</th><th>Muster</th><th>Kennung</th>
                 <th>Ort</th><th>Art</th><th>Merkmale</th></tr>
           </thead>
           <tbody>
@@ -216,11 +236,12 @@ function zuruecksetzen () {
                 :class="{ 'ist-aktiv': aktiv && aktiv.id === s.id }"
                 @mouseenter="beruehrt = s" @mouseleave="beruehrt = null">
               <td><b>{{ s.name }}</b></td>
+              <td>{{ istAmbulanzjet(s) ? 'Ambulanzjet' : 'Hubschrauber' }}</td>
               <td>{{ s.betreiber || '—' }}</td>
               <td>{{ s.muster || '—' }}</td>
               <td class="kt-kennung">{{ s.kennung || '—' }}</td>
               <td>{{ s.region || '—' }}<span class="kt-land-kurz"> {{ s.land }}</span></td>
-              <td>{{ (ART[s.einsatzart] || '—').replace(' und Verlegung', '+V') }}</td>
+              <td>{{ einsatzart(s) === 'DUAL_USE' ? 'Dual Use' : ART[einsatzart(s)] || 'Ambulanzjet' }}</td>
               <td class="kt-mini">
                 <span v-if="s.rund">24 h</span><span v-if="s.winde">Winde</span>
                 <span v-if="s.tau">Tau</span><span v-if="s.nvg">NVG</span>
@@ -255,21 +276,10 @@ function zuruecksetzen () {
           <li><span>Primärrettung</span><b>{{ auswertung.primaer }}</b></li>
           <li><span>Primär und Verlegung</span><b>{{ auswertung.doppelt }}</b></li>
           <li><span>Verlegung (ITH)</span><b>{{ auswertung.verlegung }}</b></li>
+          <li><span>Ambulanzjet</span><b>{{ auswertung.ambulanzjets }}</b></li>
         </ul>
       </div>
     </div>
-
-    <details v-if="daten.ausgelassen && daten.ausgelassen.length" class="kt-ausgelassen">
-      <summary>{{ daten.ausgelassen.length }} Einträge aus dem Bestand nicht übernommen</summary>
-      <ul>
-        <li v-for="(a, i) in daten.ausgelassen" :key="i">
-          <b>{{ a.name }}</b> — {{ a.grund }}
-        </li>
-      </ul>
-      <p>Der Bestand der Leitstelle führt {{ daten.stationen.length + daten.ausgelassen.length }}
-        Einträge. Was hier herausfällt und warum, steht in
-        <code>scripts/karte-bauen.py</code>.</p>
-    </details>
 
     <p class="kt-quelle">
       Quelle: Lagebild der Leitstelle (<code>/api/stations</code>), Stand
@@ -300,7 +310,7 @@ function zuruecksetzen () {
   background: var(--vp-c-bg);
   color: var(--vp-c-text-1);
 }
-.kt-suche { flex: 1 1 260px; min-width: 0; }
+.kt-suche { flex: 1 1 460px; min-width: 0; }
 .kt-schalter {
   display: inline-flex; align-items: center; gap: 6px;
   font-size: 14px; padding: 7px 11px;
@@ -441,10 +451,6 @@ function zuruecksetzen () {
 }
 @media (max-width: 720px) { .kt-auswertung { grid-template-columns: 1fr; } }
 
-.kt-ausgelassen { margin-top: 14px; font-size: 13.5px; }
-.kt-ausgelassen summary { cursor: pointer; color: var(--vp-c-text-2); padding: 6px 0; }
-.kt-ausgelassen ul { margin: 6px 0 8px; padding-left: 20px; color: var(--vp-c-text-2); }
-.kt-ausgelassen p { color: var(--vp-c-text-3); font-size: 12.5px; margin: 0; }
 
 .kt-quelle { font-size: 12.5px; color: var(--vp-c-text-3); margin-top: 14px; }
 
