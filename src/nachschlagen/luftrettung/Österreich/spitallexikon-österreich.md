@@ -2,7 +2,7 @@
 Hier findest du alle relevanten Spitäler im Bundesgebiet von Österreich.
 
 <script setup>
-import OesterreichKarte from '../../../.vitepress/theme/components/OesterreichKarte.vue'
+import OesterreichKarte from '../../../../.vitepress/theme/components/OesterreichKarte.vue'
 </script>
 
 <OesterreichKarte />

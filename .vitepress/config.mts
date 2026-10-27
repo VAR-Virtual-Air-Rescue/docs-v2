@@ -49,9 +49,9 @@ function eigeneBloecke(md: MarkdownIt) {
 // Länderkunde. Der Funk gehört zum Fach, die Länderkunde in einen eigenen
 // Bereich — sonst sucht ein Neuling dreimal für einen Weg.
 //
-// Dateien wurden dabei NICHT verschoben: jeder bestehende Link, jedes
-// Lesezeichen und jeder Suchtreffer bleibt gültig. Umsortiert ist die
-// Navigation, nicht die Ablage.
+// Die Ablage folgt derselben Trennung: Wege liegen unter `wege/`,
+// Nachschlagewerke unter `nachschlagen/` und Community-Themen unter
+// `community/`. Die Rewrite-Regeln halten die bisherigen URLs stabil.
 // =====================================================================
 
 const P = "/pilotenbereich";
@@ -60,12 +60,33 @@ const L = "/luftrettung";
 const S = "/var-systeme";
 const A = "/allgemein";
 
+const rewriteLegacyRoute = (id: string) => {
+  const prefixes: Array<[string, string]> = [
+    ["wege/start/", "start/"],
+    ["wege/pilotenbereich/", "pilotenbereich/"],
+    ["wege/disponentenbereich/", "disponentenbereich/"],
+    ["nachschlagen/luftrettung/", "luftrettung/"],
+    ["nachschlagen/region/", "region/"],
+    ["nachschlagen/var-systeme/", "var-systeme/"],
+    ["nachschlagen/allgemein/", "allgemein/"],
+  ];
+
+  for (const [source, destination] of prefixes) {
+    if (id.startsWith(source)) {
+      return `${destination}${id.slice(source.length)}`;
+    }
+  }
+
+  return id.startsWith("community/") ? id.slice("community/".length) : id;
+};
+
 export default defineConfig({
   title: "VAR Knowledgebase",
   description:
     "Wissensdatenbank der Virtual Air Rescue: BOS-Funk, Flugbetrieb, " +
     "Disposition und die Systeme, mit denen wir Luftrettung simulieren.",
   srcDir: "src",
+  rewrites: rewriteLegacyRoute,
   lang: "de-DE",
   cleanUrls: false,
   sitemap: { hostname: "https://docs.virtualairrescue.com" },

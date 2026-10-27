@@ -20,7 +20,7 @@ Der Kurs stellt sicher, dass alle Piloten unsere Mindestanforderungen erfüllen.
 
 ## 3. Optionale Addons
 
-Seit neuestem und als erste und bisher einzige Luftrettungs Simulation bieten wir eine vollständige Integration des Random & Everywhere Script in unsere Leitstelle an. Heißt, dass ein Einsatz, welcher von unserer Leitstelle disponiert wird, automatisch als Szenerie mit zugehörger Navigation etc. in deinem Simulator erscheint. Wie genau du das einrichtest, [siehst du hier](../var-systeme/hpg-h145/r-e-integration/Einrichtung.md). Daneben lohnt es sich, auf Webseiten wie [flightsim.to](https://flightsim.to) nach Szenerien für Krankenhäuser oder Luftrettungszentren zu suchen.
+Seit neuestem und als erste und bisher einzige Luftrettungs Simulation bieten wir eine vollständige Integration des Random & Everywhere Script in unsere Leitstelle an. Heißt, dass ein Einsatz, welcher von unserer Leitstelle disponiert wird, automatisch als Szenerie mit zugehörger Navigation etc. in deinem Simulator erscheint. Wie genau du das einrichtest, [siehst du hier](/var-systeme/hpg-h145/r-e-integration/Einrichtung). Daneben lohnt es sich, auf Webseiten wie [flightsim.to](https://flightsim.to) nach Szenerien für Krankenhäuser oder Luftrettungszentren zu suchen.
 
 ## 4. Endlich Fliegen
 
