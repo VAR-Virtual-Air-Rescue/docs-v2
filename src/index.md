@@ -42,10 +42,14 @@ features:
 
 Die VAR ist eine Gemeinschaft von Leuten, die Luftrettung im Flugsimulator
 betreiben — mit eigener Leitstelle, eigenem Funk und Disponenten aus Fleisch und
-Blut. Kein Skript und keine Zufallsmission: Wer alarmiert wird, wird von einem
-Menschen alarmiert.
+Blut.
+Sollte einmal kein Disponent online sein, können Piloten trotzdem fliegen: Sie
+erhalten einen Einsatz aus unserer Datenbank mit Einsätzen, die zuvor von
+Disponenten disponiert wurden.
+Wenn du Ideen für neue Szenarien hast, kannst du sie gerne
+[hier einreichen](https://hub.virtualairrescue.com/scenarios).
 
-Geflogen wird an **178 Stationen in sieben Ländern**: Deutschland, Österreich,
+Geflogen wird an **195 Stationen in sieben Ländern**: Deutschland, Österreich,
 der Schweiz, den Niederlanden, Italien (Südtirol), Luxemburg und Liechtenstein.
 Gefunkt wird ausschließlich auf Deutsch.
 

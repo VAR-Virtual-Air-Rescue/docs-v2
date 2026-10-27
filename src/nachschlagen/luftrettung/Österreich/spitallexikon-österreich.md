@@ -2,9 +2,9 @@
 Hier findest du alle relevanten Spitäler im Bundesgebiet von Österreich.
 
 <script setup>
-import OesterreichKarte from '../../../../.vitepress/theme/components/OesterreichKarte.vue'
+import SpitalKarte from '../../../../.vitepress/theme/components/SpitalKarte.vue'
 </script>
 
-<OesterreichKarte />
+<SpitalKarte land="AT" />
 
 Grenzdaten: geoBoundaries, Austria ADM0/ADM1 (CC BY 4.0).

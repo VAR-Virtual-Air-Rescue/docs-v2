@@ -163,7 +163,7 @@ function zuruecksetzen () {
       <svg :viewBox="`0 0 ${daten.breite} ${daten.hoehe}`" class="kt-svg"
            role="img" aria-label="Karte der Luftrettungszentren im Einsatzraum der VAR">
         <g class="kt-land">
-          <path v-for="l in daten.laender" :key="l.iso" :d="l.d"
+          <path v-for="l in daten.laender.filter(land => land.iso !== 'BE')" :key="l.iso" :d="l.d"
                 :class="['kt-flaeche', l.einsatzgebiet ? 'ist-einsatz' : 'ist-nachbar']"/>
         </g>
         <g v-if="daten.suedtirol" class="kt-suedtirol">
