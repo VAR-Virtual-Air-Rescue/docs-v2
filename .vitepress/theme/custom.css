@@ -225,6 +225,25 @@ html .VPNavBar.has-sidebar .content-body {
   }
 }
 
+@media (max-width: 359px) {
+  .VPNavBar .content-body {
+    column-gap: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 959px) {
+  .VPNavBar .VPNavBarMenu,
+  .VPNavBar .VPNavBarExtra {
+    display: none;
+  }
+  .VPNavBar .VPNavBarHamburger {
+    display: flex;
+  }
+  .VPNav .VPNavScreen {
+    display: block;
+  }
+}
+
 /* Das Startbild trägt den Winkel: sein Abschluss ist die Kante, randabfallend
    über die volle Breite und ohne etwas zu kreuzen.
 
