@@ -1,11 +1,30 @@
 <script setup>
 import { computed, ref } from 'vue'
 import daten from '../../../src/.data/stationen.json'
-import spitaeler from '../../../src/.data/oesterreich-spitaeler.json'
+import oesterreichSpitaeler from '../../../src/.data/oesterreich-spitaeler.json'
+import schweizSpitaeler from '../../../src/.data/schweiz-spitaeler.json'
 
-const KARTENBEREICH = { x: 460, y: 665, width: 500, height: 315 }
+const props = defineProps({
+  land: {
+    type: String,
+    default: 'AT',
+    validator: land => land === 'AT' || land === 'CH'
+  }
+})
+const LAND = props.land
+const LANDNAME = LAND === 'CH' ? 'Schweiz' : 'Österreich'
+const KARTENBEREICHE = {
+  AT: { x: 460, y: 665, width: 500, height: 315 },
+  CH: { x: 240, y: 785, width: 300, height: 190 }
+}
+const KARTENBEREICH = KARTENBEREICHE[LAND]
 const MAX_ZOOM = 8
 const KARTENRAND = 16
+const spitaeler = LAND === 'CH' ? schweizSpitaeler : oesterreichSpitaeler
+const umriss = LAND === 'CH'
+  ? daten.laender.find(land => land.iso === 'CH')
+  : daten.oesterreichUmriss
+const verwaltungsgrenzen = LAND === 'CH' ? daten.kantoneSchweiz : daten.bundeslaender
 const kategorien = [
   { id: 'UNIVERSITY', name: 'Universitätsklinik', plural: 'Universitätskliniken' },
   { id: 'SPECIALIST', name: 'Fachklinik', plural: 'Fachkliniken' },
@@ -28,14 +47,19 @@ let ziehStart = null
 let karteGezogen = false
 const erweiterteGruppe = ref(null)
 
-if (!daten.oesterreichUmriss?.d) {
-  throw new Error('Umriss von Österreich fehlt in den Stationsdaten')
+if (!umriss?.d) {
+  throw new Error(`Umriss von ${LANDNAME} fehlt in den Stationsdaten`)
 }
-if (daten.bundeslaender?.length !== 9 || daten.bundeslaender.some(bundesland => !bundesland.d)) {
+const erwarteteVerwaltungsgrenzen = LAND === 'CH' ? 26 : 9
+if (verwaltungsgrenzen?.length !== erwarteteVerwaltungsgrenzen ||
+    verwaltungsgrenzen.some(grenze => !grenze.name || !grenze.d)) {
+  if (LAND === 'CH') {
+    throw new Error('Grenzen der 26 Schweizer Kantone fehlen in den Stationsdaten')
+  }
   throw new Error('Grenzen der neun österreichischen Bundesländer fehlen in den Stationsdaten')
 }
 if (!spitaeler.length) {
-  throw new Error('Österreichische Spitäler fehlen in den Kartendaten')
+  throw new Error(`Spitäler aus ${LANDNAME} fehlen in den Kartendaten`)
 }
 
 const gefiltert = computed(() => {
@@ -265,7 +289,7 @@ function gruppeUmschalten(gruppe) {
         class="ok-svg"
         :class="{ 'ist-gezoomt': zoom > 1 }"
         role="img"
-        aria-label="Karte der neun österreichischen Bundesländer und Spitäler mit Hubschrauberlandeplatz"
+        :aria-label="`Karte von ${LANDNAME} und Spitälern mit Hubschrauberlandeplatz`"
         @wheel.prevent="zoomRad"
         @pointerdown="zieheStarten"
         @pointermove="karteZiehen"
@@ -274,20 +298,20 @@ function gruppeUmschalten(gruppe) {
         @lostpointercapture="ziehenBeenden"
       >
         <defs>
-          <clipPath id="oesterreichkarte-umriss">
-            <path :d="daten.oesterreichUmriss.d" />
+          <clipPath id="spitalkarte-umriss">
+            <path :d="umriss.d" />
           </clipPath>
         </defs>
-        <path :d="daten.oesterreichUmriss.d" class="ok-flaeche" />
-        <g clip-path="url(#oesterreichkarte-umriss)">
+        <path :d="umriss.d" class="ok-flaeche" />
+        <g clip-path="url(#spitalkarte-umriss)">
           <path
-            v-for="bundesland in daten.bundeslaender"
-            :key="bundesland.name"
-            :d="bundesland.d"
+            v-for="grenze in verwaltungsgrenzen"
+            :key="grenze.name"
+            :d="grenze.d"
             class="ok-grenze"
           />
           </g>
-          <path :d="daten.oesterreichUmriss.d" class="ok-umriss" />
+          <path :d="umriss.d" class="ok-umriss" />
           <g v-for="gruppe in markerGruppen" :key="gruppe.key">
             <g
               v-if="gruppe.mitglieder.length > 1 && !gruppe.aufgeklappt"
@@ -517,16 +541,20 @@ function gruppeUmschalten(gruppe) {
 .ok-punkt {
   stroke: var(--vp-c-bg-alt);
   stroke-width: 0.8;
+  vector-effect: non-scaling-stroke;
   cursor: pointer;
-  filter: drop-shadow(0 0.5px 0.8px rgba(0, 17, 58, .35));
-  transition: filter .12s ease;
 }
 .ok-punkt:hover, .ok-punkt:focus-visible {
-  filter: drop-shadow(0 0 2px var(--vp-c-bg));
   outline: none;
 }
 .ok-punkt:focus-visible { stroke: var(--var-gold); stroke-width: 1.5; }
-.ok-punkt-ring { fill: var(--vp-c-bg); pointer-events: none; }
+.ok-punkt-ring {
+  fill: none;
+  stroke: var(--vp-c-bg-alt);
+  stroke-width: 1.5;
+  vector-effect: non-scaling-stroke;
+  pointer-events: none;
+}
 .ist-university { fill: var(--ok-universitaet); }
 .ist-specialist { fill: var(--ok-fachklinik); }
 .ist-hospital { fill: var(--ok-krankenhaus); }
@@ -546,7 +574,6 @@ function gruppeUmschalten(gruppe) {
   stroke: var(--vp-c-divider);
   stroke-width: 1.5;
   vector-effect: non-scaling-stroke;
-  filter: drop-shadow(0 1px 2px rgba(0, 17, 58, .25));
 }
 .ok-cluster text,
 .ok-cluster-zuklappen text {
@@ -667,8 +694,5 @@ function gruppeUmschalten(gruppe) {
   .ok-suche { flex-basis: 100%; }
   .ok-karte { min-width: 0; max-width: min(250px, calc(100% - 24px)); }
   .ok-zoom { top: 6px; right: 6px; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .ok-punkt { transition: none; }
 }
 </style>
