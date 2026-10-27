@@ -9,6 +9,7 @@ const airportsUrl = 'https://ops.virtualairrescue.com/api/airports'
 const southTyrolUrl = 'https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ITA/ADM3/geoBoundaries-ITA-ADM3.geojson'
 const austriaOutlineUrl = 'https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/AUT/ADM0/geoBoundaries-AUT-ADM0_simplified.geojson'
 const austriaProvincesUrl = 'https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/AUT/ADM1/geoBoundaries-AUT-ADM1_simplified.geojson'
+const swissCantonsUrl = 'https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/CHE/ADM1/geoBoundaries-CHE-ADM1_simplified.geojson'
 
 const lon0 = 2
 const lon1 = 18
@@ -67,17 +68,17 @@ function simplify(points, tolerance = 0.75) {
 
 function boundaryPath(geometry) {
   if (!['Polygon', 'MultiPolygon'].includes(geometry?.type)) {
-    throw new Error('Unerwarteter Geometrietyp in den österreichischen Grenzdaten')
+    throw new Error('Unerwarteter Geometrietyp in den Grenzdaten')
   }
   const polygons = geometry.type === 'Polygon' ? [geometry.coordinates] : geometry.coordinates
   return polygons.map(polygon => {
     const ring = polygon[0]
     if (!Array.isArray(ring) || ring.length < 4) {
-      throw new Error('Österreichische Grenzdaten enthalten keinen gültigen Außenring')
+      throw new Error('Grenzdaten enthalten keinen gültigen Außenring')
     }
     const points = simplify(ring.map(([lon, lat]) => {
       if (!Number.isFinite(lon) || !Number.isFinite(lat)) {
-        throw new Error('Österreichische Grenzdaten enthalten ungültige Koordinaten')
+        throw new Error('Grenzdaten enthalten ungültige Koordinaten')
       }
       const { x, y } = project(lon, lat)
       return [x, y]
@@ -163,6 +164,22 @@ if (austriaProvinces?.length !== 9 || austriaProvinces.some(province => !provinc
   throw new Error(`Grenzdaten müssen alle neun österreichischen Bundesländer enthalten; gefunden: ${austriaProvinces?.length ?? 0}`)
 }
 
+const swissCantonsResponse = await fetch(swissCantonsUrl, { signal: AbortSignal.timeout(30_000) })
+if (!swissCantonsResponse.ok) {
+  throw new Error(`Schweizer Kantonsgrenzen antworteten mit HTTP ${swissCantonsResponse.status}`)
+}
+const swissCantonsData = await swissCantonsResponse.json()
+const swissCantons = swissCantonsData.features
+  ?.filter(feature => feature.properties?.shapeType === 'ADM1')
+  .map(feature => ({
+    name: feature.properties.shapeName,
+    d: boundaryPath(feature.geometry)
+  }))
+  .sort((a, b) => a.name.localeCompare(b.name, 'de'))
+if (swissCantons?.length !== 26 || swissCantons.some(canton => !canton.name || !canton.d)) {
+  throw new Error(`Grenzdaten müssen alle 26 Schweizer Kantone enthalten; gefunden: ${swissCantons?.length ?? 0}`)
+}
+
 const existing = JSON.parse(await readFile(dataPath, 'utf8'))
 const stations = []
 const excluded = []
@@ -246,6 +263,8 @@ const updated = {
   },
   bundeslaenderQuelle: 'geoBoundaries, Austria ADM1, CC BY 4.0',
   bundeslaender: austriaProvinces,
+  kantoneSchweizQuelle: 'geoBoundaries, Switzerland ADM1, CC BY 4.0',
+  kantoneSchweiz: swissCantons,
   ausgelassen: excluded,
   stationen: stations
 }

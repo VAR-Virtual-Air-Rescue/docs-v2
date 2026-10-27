@@ -30,10 +30,12 @@ AT_ADM0 = ("https://github.com/wmgeolab/geoBoundaries/raw/9469f09/"
            "releaseData/gbOpen/AUT/ADM0/geoBoundaries-AUT-ADM0_simplified.geojson")
 AT_ADM1 = ("https://github.com/wmgeolab/geoBoundaries/raw/9469f09/"
            "releaseData/gbOpen/AUT/ADM1/geoBoundaries-AUT-ADM1_simplified.geojson")
+CH_ADM1 = ("https://github.com/wmgeolab/geoBoundaries/raw/9469f09/"
+           "releaseData/gbOpen/CHE/ADM1/geoBoundaries-CHE-ADM1_simplified.geojson")
 
-# Der Einsatzraum: Deutschland, Oesterreich, Schweiz, Niederlande, Luxemburg,
-# Belgien -- plus die Nachbarn, damit die Karte nicht in der Luft haengt.
-EINSATZ = {"DE", "AT", "CH", "NL", "LU", "BE"}
+# Der Einsatzraum: Deutschland, Oesterreich, Schweiz, Niederlande und Luxemburg
+# -- plus die Nachbarn, damit die Karte nicht in der Luft haengt.
+EINSATZ = {"DE", "AT", "CH", "NL", "LU"}
 NACHBARN = {"FR", "IT", "CZ", "PL", "DK", "SI", "LI", "GB", "SK", "HU", "HR"}
 
 # Ausschnitt in Grad
@@ -216,10 +218,11 @@ for f in geo["features"]:
 
 laender.sort(key=lambda l: (not l["einsatzgebiet"], l["iso"]))
 
-# -------------------------------------------------- Umriss und Bundeslaender AT
-print("Oesterreichische Grenzen holen ...")
+# ------------------------------------------ Umriss und Verwaltungsgrenzen
+print("Oesterreichische und Schweizer Grenzen holen ...")
 admin0 = hole(AT_ADM0)
 admin1 = hole(AT_ADM1)
+kantone_ch = hole(CH_ADM1)
 
 
 def grenzpfad(geometry):
@@ -228,16 +231,16 @@ def grenzpfad(geometry):
     elif geometry["type"] == "MultiPolygon":
         polys = geometry["coordinates"]
     else:
-        raise ValueError("Unerwarteter Geometrietyp in den oesterreichischen Grenzdaten")
+        raise ValueError("Unerwarteter Geometrietyp in den Grenzdaten")
     ringe = []
     for poly in polys:
         aussen = poly[0]
         if len(aussen) < 4:
-            raise ValueError("Oesterreichische Grenzdaten enthalten keinen gueltigen Aussenring")
+            raise ValueError("Grenzdaten enthalten keinen gueltigen Aussenring")
         punkte = []
         for lon, lat in aussen:
             if not (math.isfinite(lon) and math.isfinite(lat)):
-                raise ValueError("Oesterreichische Grenzdaten enthalten ungueltige Koordinaten")
+                raise ValueError("Grenzdaten enthalten ungueltige Koordinaten")
             punkte.append(projiziere(lon, lat))
         ringe.append(vereinfache(punkte, 0.15))
     return zu_pfad(ringe)
@@ -265,6 +268,20 @@ if len(bundeslaender) != 9 or any(not land["name"] or not land["d"] for land in 
     raise ValueError("Grenzdaten muessen alle neun oesterreichischen Bundeslaender enthalten")
 bundeslaender.sort(key=lambda land: land["name"])
 
+kantone = []
+for f in kantone_ch["features"]:
+    p = f["properties"]
+    if p.get("shapeType") != "ADM1":
+        continue
+    kantone.append({
+        "name": p.get("shapeName"),
+        "d": grenzpfad(f["geometry"]),
+    })
+
+if len(kantone) != 26 or any(not kanton["name"] or not kanton["d"] for kanton in kantone):
+    raise ValueError("Grenzdaten muessen alle 26 Schweizer Kantone enthalten")
+kantone.sort(key=lambda kanton: kanton["name"])
+
 # ------------------------------------------------------------------ schreiben
 daten = {
     "stand": None,       # wird vom Aufrufer gesetzt, siehe unten
@@ -281,6 +298,8 @@ daten = {
     "ausgelassen": [{"name": n, "grund": g} for n, g in ausgelassen],
     "laender": laender,
     "bundeslaender": bundeslaender,
+    "kantoneSchweizQuelle": "geoBoundaries, Switzerland ADM1, CC BY 4.0",
+    "kantoneSchweiz": kantone,
     "stationen": stationen,
 }
 

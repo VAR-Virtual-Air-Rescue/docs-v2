@@ -23,7 +23,7 @@ Die folgende Übersicht zeigt die Flugzeugmodelle, die aktuell bei der VAR
 geflogen werden können.
 
 <script setup>
-import daten from '../.data/stationen.json'
+import daten from '../../.data/stationen.json'
 
 const ausgeblendeteMuster = new Set([
   'A109', 'AS350', 'AS365', 'B429', 'BK117', 'EC135', 'EC155',
