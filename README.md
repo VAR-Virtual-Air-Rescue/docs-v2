@@ -40,3 +40,6 @@ Wenn du fertig bist, führe vom Hauptverzeichnis folgende Befehle in dieser Reih
 Deine Änderungen werden nun auf GitHub in einem neuen Branch hochgeladen und werden, nachdem wir drüber geschaut haben, in die Docs hinzugefügt.
 
 **Vielen Dank für dein Engagement!**
+## Zugriffsschutz
+
+Die Docs werden von `server/gateway.mjs` ausgeliefert und sind nur nach Hub-Login (OAuth, Client-ID 5) erreichbar. Gesperrte Nutzer (Zeit- oder permanente Strafe) erhalten keinen Zugriff; der Sperrstatus wird alle 5 Minuten beim Hub neu geprüft. Benötigte Variablen: siehe `.env.example` (Werte müssen zu `DOCS_OAUTH_CLIENT_SECRET` / `HUB_INTERNAL_API_SECRET` im Hub passen).

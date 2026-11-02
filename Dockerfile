@@ -17,13 +17,14 @@ RUN npm install
 RUN npm run build
 
 # --- Serve stage ---
-FROM nginx:alpine
+# Node-Gateway statt nginx: Hub-Login (OAuth) und Sperrprüfung vor der Auslieferung
+FROM node:24-alpine3.21
 
-# Copy built site to nginx public folder
-COPY --from=builder /app/.vitepress/dist /usr/share/nginx/html
+WORKDIR /app
+COPY --from=builder /app/.vitepress/dist ./.vitepress/dist
+COPY --from=builder /app/server ./server
 
-# Expose port
+ENV PORT=80
 EXPOSE 80
 
-# Start nginx
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["node", "server/gateway.mjs"]
