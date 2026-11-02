@@ -2,15 +2,16 @@
 /**
  * Stationskarte der VAR.
  *
- * Stationsdaten werden vor Dev-Server-Start und Build aus dem Endpunkt der
- * Leitstelle geladen und in `src/.data/stationen.json` fuer die Karte aufbereitet.
- * Die Laenderumrisse bleiben lokal in dieser Datei.
+ * Stationsdaten werden beim Seitenaufruf live geladen und für die Karte
+ * aufbereitet. Bei API-Ausfall dienen die gespeicherten Daten als Fallback.
+ * Die Länderumrisse bleiben lokal in der Fallback-Datei.
  *
  * Umrisse: Natural Earth, gemeinfrei, beim Erzeugen auf den Einsatzraum
  * beschnitten und vereinfacht.
  */
 import { ref, computed, onMounted } from 'vue'
-import daten from '../../../src/.data/stationen.json'
+import { stationenAufbereiten } from '../../../scripts/stationen-aufbereiten.mjs'
+import stationsFallback from '../../../src/.data/stationen.json'
 
 const LAENDER = {
   DE: 'Deutschland', AT: 'Österreich', CH: 'Schweiz', NL: 'Niederlande',
@@ -31,13 +32,43 @@ const nurRund = ref(false)
 const nurNvg = ref(false)
 const gewaehlt = ref(null)      // angeheftet per Klick
 const beruehrt = ref(null)      // unter dem Zeiger
-const bereit = ref(false)
+const daten = ref(stationsFallback)
+const datenHinweis = ref('Gespeicherte Daten werden verwendet.')
 
-onMounted(() => { bereit.value = true })
+onMounted(async () => {
+  try {
+    const [stationsAntwort, flughaefenAntwort] = await Promise.all([
+      fetch('/api/stations', { cache: 'no-store', signal: AbortSignal.timeout(30_000) }),
+      fetch('/api/airports', { cache: 'no-store', signal: AbortSignal.timeout(30_000) })
+    ])
+    if (!stationsAntwort.ok) {
+      throw new Error(`Stations-API antwortete mit HTTP ${stationsAntwort.status}.`)
+    }
+    if (!flughaefenAntwort.ok) {
+      throw new Error(`Flughafen-API antwortete mit HTTP ${flughaefenAntwort.status}.`)
+    }
+
+    const [stations, flughaefen] = await Promise.all([
+      stationsAntwort.json(),
+      flughaefenAntwort.json()
+    ])
+    const liveDaten = stationenAufbereiten(stations, flughaefen)
+    daten.value = {
+      ...daten.value,
+      stand: new Date().toISOString().slice(0, 10),
+      stationen: liveDaten.stations,
+      ausgelassen: liveDaten.excluded
+    }
+    datenHinweis.value = 'Live-Daten von Stations- und Flughafen-API.'
+  } catch (fehler) {
+    const grund = fehler instanceof Error ? fehler.message : 'unbekannter Fehler'
+    datenHinweis.value = `Live-Aktualisierung fehlgeschlagen (${grund}); gespeicherte Daten werden angezeigt.`
+  }
+})
 
 const laenderListe = computed(() => {
   const z = {}
-  for (const s of daten.stationen) z[s.land] = (z[s.land] || 0) + 1
+  for (const s of daten.value.stationen) z[s.land] = (z[s.land] || 0) + 1
   return Object.keys(z).sort((a, b) => z[b] - z[a])
     .map(k => ({ k, name: LAENDER[k] || k, n: z[k] }))
 })
@@ -52,7 +83,7 @@ function einsatzart (s) {
 
 const gefiltert = computed(() => {
   const q = suche.value.trim().toLowerCase()
-  return daten.stationen.filter(s => {
+  return daten.value.stationen.filter(s => {
     if (land.value && s.land !== land.value) return false
     if (kategorie.value === 'AMBULANZJET' && !istAmbulanzjet(s)) return false
     if (kategorie.value === 'HUBSCHRAUBER' && istAmbulanzjet(s)) return false
@@ -70,7 +101,7 @@ const sichtbar = computed(() => new Set(gefiltert.value.map(s => s.id)))
 
 /** Kennzahlen aus den Daten statt von Hand im Text -- sonst driften sie. */
 const auswertung = computed(() => {
-  const st = daten.stationen
+  const st = daten.value.stationen
   const je = {}
   for (const s of st) je[s.land] = (je[s.land] || 0) + 1
   return {
@@ -100,13 +131,13 @@ function farbe (s) {
 const kartePos = computed(() => {
   const s = aktiv.value
   if (!s) return null
-  const rechts = s.x > daten.breite * 0.58
-  const unten = s.y > daten.hoehe * 0.62
+  const rechts = s.x > daten.value.breite * 0.58
+  const unten = s.y > daten.value.hoehe * 0.62
   return {
-    left: rechts ? 'auto' : (s.x / daten.breite * 100) + '%',
-    right: rechts ? ((1 - s.x / daten.breite) * 100) + '%' : 'auto',
-    top: unten ? 'auto' : (s.y / daten.hoehe * 100) + '%',
-    bottom: unten ? ((1 - s.y / daten.hoehe) * 100) + '%' : 'auto'
+    left: rechts ? 'auto' : (s.x / daten.value.breite * 100) + '%',
+    right: rechts ? ((1 - s.x / daten.value.breite) * 100) + '%' : 'auto',
+    top: unten ? 'auto' : (s.y / daten.value.hoehe * 100) + '%',
+    bottom: unten ? ((1 - s.y / daten.value.hoehe) * 100) + '%' : 'auto'
   }
 })
 
@@ -157,6 +188,7 @@ function zuruecksetzen () {
       <b>{{ gefiltert.length }}</b> von {{ daten.stationen.length }} Stationen
       <span v-if="gefiltert.length !== daten.stationen.length"> · gefiltert</span>
     </p>
+    <p class="kt-datenhinweis" role="status">{{ datenHinweis }}</p>
 
     <!-- --------------------------------------------------------- Karte -->
     <div class="kt-buehne">
@@ -286,8 +318,8 @@ function zuruecksetzen () {
 
     <p class="kt-quelle">
       Quelle: Lagebild der Leitstelle (<code>/api/stations</code>), Stand
-      <b>{{ daten.stand || 'unbekannt' }}</b>. Eingebacken beim Bauen — der Endpunkt
-      erlaubt keine Abfrage aus dem Browser einer anderen Adresse.
+      <b>{{ daten.stand || 'unbekannt' }}</b>. Stationsdaten werden beim Aufruf
+      live aktualisiert; bei API-Ausfall erscheinen die gespeicherten Daten.
       Länderumrisse: Natural Earth, gemeinfrei. Südtirol-Grenze: geoBoundaries
       (CC BY 4.0).
     </p>
@@ -299,6 +331,7 @@ function zuruecksetzen () {
   --kt-primaer: #2e7d46;
   margin: 24px 0 8px;
 }
+.kt-datenhinweis { margin: -4px 0 12px; color: var(--vp-c-text-2); font-size: 13px; }
 :global(.dark) .kt { --kt-primaer: #3fbf74; }
 
 /* ----------------------------------------------------------- Filter */

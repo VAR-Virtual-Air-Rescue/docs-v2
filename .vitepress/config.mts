@@ -59,6 +59,12 @@ const D = "/disponentenbereich";
 const L = "/luftrettung";
 const S = "/var-systeme";
 const A = "/allgemein";
+const apiProxy = {
+  "/api": {
+    target: "https://ops.virtualairrescue.com",
+    changeOrigin: true,
+  },
+};
 
 const rewriteLegacyRoute = (id: string) => {
   const prefixes: Array<[string, string]> = [
@@ -90,6 +96,9 @@ export default defineConfig({
   lang: "de-DE",
   cleanUrls: false,
   sitemap: { hostname: "https://docs.virtualairrescue.com" },
+  vite: {
+    server: { proxy: apiProxy },
+  },
 
   head: [
     // Das alte var_logo.png war eine 4096x4096-Datei mit 420 KB -- eingesetzt
@@ -176,6 +185,7 @@ export default defineConfig({
           { text: "Webleitstelle", link: `${S}/webleitstelle` },
         ],
       },
+      { text: "HUB-Login", link: "https://hub.virtualairrescue.com/login" },
       { text: "FAQ", link: "/faq" },
     ],
 
@@ -276,6 +286,7 @@ export default defineConfig({
           },
           { text: "Außenlandungen", link: `${L}/aussenlandung` },
           { text: "Landestellen", link: `${L}/landeplatz` },
+          { text: "Flughäfen", link: `${L}/flughafenverzeichnis` },
           { text: "Windenbetrieb", link: `${L}/windenbetrieb` },
           { text: "Nachtflug und NVIS", link: `${L}/nachtflug-nvis` },
           { text: "Intensivtransport (ITH)", link: `${L}/intensivtransport` },

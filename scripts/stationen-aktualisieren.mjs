@@ -1,11 +1,12 @@
 import { readFile, writeFile } from 'node:fs/promises'
 import { fileURLToPath } from 'node:url'
 import path from 'node:path'
+import { aktualisiereFlughafenDaten } from './flughafen-daten.mjs'
+import { stationenAufbereiten } from './stationen-aufbereiten.mjs'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const dataPath = path.join(root, 'src', '.data', 'stationen.json')
 const apiUrl = 'https://ops.virtualairrescue.com/api/stations'
-const airportsUrl = 'https://ops.virtualairrescue.com/api/airports'
 const southTyrolUrl = 'https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ITA/ADM3/geoBoundaries-ITA-ADM3.geojson'
 const austriaOutlineUrl = 'https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/AUT/ADM0/geoBoundaries-AUT-ADM0_simplified.geojson'
 const austriaProvincesUrl = 'https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/AUT/ADM1/geoBoundaries-AUT-ADM1_simplified.geojson'
@@ -21,7 +22,6 @@ const yTop = mercatorY(lat1)
 const yBottom = mercatorY(lat0)
 const ySpan = yTop - yBottom
 const height = width * ySpan / ((lon1 - lon0) * Math.PI / 180)
-const excludedName = /NICHT NUTZEN|DEV[ ]*[0-9]|(^|[ ])Test([ ]|$)/i
 
 function project(lon, lat) {
   return {
@@ -100,16 +100,7 @@ if (raw.length === 0) {
   throw new Error('Stations-API lieferte keine Datensätze')
 }
 
-const airportResponse = await fetch(airportsUrl, { signal: AbortSignal.timeout(30_000) })
-if (!airportResponse.ok) {
-  throw new Error(`Flughafen-API antwortete mit HTTP ${airportResponse.status}`)
-}
-
-const airportData = await airportResponse.json()
-if (!Array.isArray(airportData)) {
-  throw new Error('Unerwartetes Format der Flughafen-API: Array erwartet')
-}
-const airportsByIcao = new Map(airportData.map(airport => [airport.icao, airport]))
+const airportData = await aktualisiereFlughafenDaten()
 
 const boundaryResponse = await fetch(southTyrolUrl, { signal: AbortSignal.timeout(30_000) })
 if (!boundaryResponse.ok) {
@@ -181,69 +172,7 @@ if (swissCantons?.length !== 26 || swissCantons.some(canton => !canton.name || !
 }
 
 const existing = JSON.parse(await readFile(dataPath, 'utf8'))
-const stations = []
-const excluded = []
-
-for (const station of raw) {
-  const name = station.bosCallsign || station.bosCallsignShort
-  const ambulanzjet = (station.bosCallsign || station.bosCallsignShort || '').trim().endsWith('#')
-  const homeAirport = ambulanzjet
-    ? airportsByIcao.get(station.HomeAirport?.icao)
-    : null
-  if (ambulanzjet && !homeAirport) {
-    throw new Error(`Heimatflughafen ${station.HomeAirport?.icao || '(unbekannt)'} für "${name || '?'}" nicht gefunden`)
-  }
-
-  const latitude = homeAirport?.lat ?? station.latitude
-  const longitude = homeAirport?.lng ?? station.longitude
-  if (latitude == null || longitude == null) {
-    excluded.push({ name, grund: 'ohne Koordinate' })
-    continue
-  }
-
-  if (excludedName.test(`${station.bosCallsign || ''} ${station.bosCallsignShort || ''}`)) {
-    excluded.push({ name, grund: 'Platzhalter oder Testeintrag' })
-    continue
-  }
-
-  if (!Number.isFinite(latitude) || !Number.isFinite(longitude)) {
-    throw new Error(`Ungültige Koordinate für Station "${name || '?'}"`)
-  }
-  if (!(lat0 <= latitude && latitude <= lat1 && lon0 <= longitude && longitude <= lon1)) {
-    excluded.push({
-      name,
-      grund: `liegt ausserhalb des Einsatzraums (${latitude.toFixed(2)} N, ${longitude.toFixed(2)} O)`
-    })
-    continue
-  }
-
-  const { x, y } = project(longitude, latitude)
-  const atcCallsignSpoken = station.atcCallsignSpoken?.trim()
-  stations.push({
-    id: station.id,
-    name: ambulanzjet && atcCallsignSpoken ? atcCallsignSpoken : name || '?',
-    kurz: station.bosCallsignShort ?? null,
-    ambulanzjet,
-    land: homeAirport?.country ?? station.country ?? null,
-    region: homeAirport?.name ?? station.locationState ?? null,
-    funkbereich: station.bosRadioArea ?? null,
-    betreiber: station.operator ?? null,
-    muster: station.aircraft ?? null,
-    icao: station.aircraftIcao ?? null,
-    kennung: station.aircraftRegistration ?? null,
-    einsatzart: station.bosUse ?? null,
-    winde: Boolean(station.hasWinch),
-    tau: Boolean(station.hasRope),
-    nvg: Boolean(station.hasNvg),
-    rund: Boolean(station.is24h),
-    lat: Number(latitude.toFixed(5)),
-    lon: Number(longitude.toFixed(5)),
-    x: Number(x.toFixed(1)),
-    y: Number(y.toFixed(1))
-  })
-}
-
-stations.sort((a, b) => (a.land || '').localeCompare(b.land || '') || a.name.localeCompare(b.name))
+const { stations, excluded } = stationenAufbereiten(raw, airportData)
 
 const updated = {
   ...existing,

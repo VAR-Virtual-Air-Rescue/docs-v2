@@ -1,5 +1,6 @@
 <script setup>
-import { computed, ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
+import { spitaelerFuerKarte } from '../../../scripts/spitaeler-aufbereiten.mjs'
 import daten from '../../../src/.data/stationen.json'
 import oesterreichSpitaeler from '../../../src/.data/oesterreich-spitaeler.json'
 import schweizSpitaeler from '../../../src/.data/schweiz-spitaeler.json'
@@ -20,7 +21,8 @@ const KARTENBEREICHE = {
 const KARTENBEREICH = KARTENBEREICHE[LAND]
 const MAX_ZOOM = 8
 const KARTENRAND = 16
-const spitaeler = LAND === 'CH' ? schweizSpitaeler : oesterreichSpitaeler
+const spitaeler = ref(LAND === 'CH' ? schweizSpitaeler : oesterreichSpitaeler)
+const datenHinweis = ref('Gespeicherte Daten werden verwendet.')
 const umriss = LAND === 'CH'
   ? daten.laender.find(land => land.iso === 'CH')
   : daten.oesterreichUmriss
@@ -58,13 +60,32 @@ if (verwaltungsgrenzen?.length !== erwarteteVerwaltungsgrenzen ||
   }
   throw new Error('Grenzen der neun österreichischen Bundesländer fehlen in den Stationsdaten')
 }
-if (!spitaeler.length) {
+if (!spitaeler.value.length) {
   throw new Error(`Spitäler aus ${LANDNAME} fehlen in den Kartendaten`)
 }
 
+onMounted(async () => {
+  try {
+    const antwort = await fetch('/api/hospitals', {
+      cache: 'no-store',
+      signal: AbortSignal.timeout(30_000)
+    })
+    if (!antwort.ok) {
+      throw new Error(`Hospitals-API antwortete mit HTTP ${antwort.status}.`)
+    }
+
+    const hospitals = await antwort.json()
+    spitaeler.value = spitaelerFuerKarte(hospitals, LAND)
+    datenHinweis.value = 'Live-Daten von der Hospitals-API.'
+  } catch (fehler) {
+    const grund = fehler instanceof Error ? fehler.message : 'unbekannter Fehler'
+    datenHinweis.value = `Live-Aktualisierung fehlgeschlagen (${grund}); gespeicherte Daten werden angezeigt.`
+  }
+})
+
 const gefiltert = computed(() => {
   const q = suche.value.trim().toLocaleLowerCase('de')
-  return spitaeler.filter(spital => {
+  return spitaeler.value.filter(spital => {
     if (kategorie.value && spital.category !== kategorie.value) return false
     return !q || `${spital.name} ${spital.city || ''} ${spital.state || ''}`
       .toLocaleLowerCase('de').includes(q)
@@ -131,12 +152,12 @@ const markerGruppen = computed(() => {
   })
 })
 
-const kategorienAnzahl = Object.fromEntries(
+const kategorienAnzahl = computed(() => Object.fromEntries(
   kategorien.map(eintrag => [
     eintrag.id,
-    spitaeler.filter(spital => spital.category === eintrag.id).length
+    spitaeler.value.filter(spital => spital.category === eintrag.id).length
   ])
-)
+))
 
 const aktiv = computed(() =>
   gefiltert.value.find(spital => spital.id === gewaehlt.value) || beruehrt.value
@@ -276,6 +297,7 @@ function gruppeUmschalten(gruppe) {
       <b>{{ gefiltert.length }}</b> von {{ spitaeler.length }} Spitälern
       <span v-if="gefiltert.length !== spitaeler.length"> · gefiltert</span>
     </p>
+    <p class="ok-datenhinweis" role="status">{{ datenHinweis }}</p>
 
     <div class="ok-kartenrahmen">
       <div class="ok-zoom" role="group" aria-label="Kartenzoom">
@@ -481,6 +503,7 @@ function gruppeUmschalten(gruppe) {
 .ok-zurueck:hover { border-color: var(--var-gold); color: var(--vp-c-text-1); }
 .ok-zahl { margin: 0 0 10px; font-size: 14px; color: var(--vp-c-text-2); }
 .ok-zahl b { color: var(--vp-c-text-1); }
+.ok-datenhinweis { margin: -4px 0 12px; color: var(--vp-c-text-2); font-size: 13px; }
 
 .ok-kartenrahmen {
   position: relative;
