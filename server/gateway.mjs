@@ -17,7 +17,7 @@ const CLIENT_SECRET = env("DOCS_OAUTH_CLIENT_SECRET", "");
 const INTERNAL_SECRET = env("HUB_INTERNAL_API_SECRET", "");
 const SESSION_SECRET = env("DOCS_SESSION_SECRET", "");
 const SESSION_MAX_AGE = 12 * 3600 * 1000; // maximale Sitzungsdauer
-const RECHECK_AFTER = 5 * 60 * 1000; // Sperrstatus alle 5 Minuten neu beim Hub prüfen
+const RECHECK_AFTER = 30 * 1000; // Sperrstatus alle 30 Sekunden neu beim Hub prüfen
 const GRACE = 15 * 60 * 1000; // so lange darf der Hub bei der Prüfung ausfallen
 const SECURE = DOCS_URL.startsWith("https://");
 
@@ -70,16 +70,18 @@ const send = (res, status, body, headers = {}) => {
 };
 const redirect = (res, location, headers = {}) => send(res, 302, "", { Location: location, ...headers });
 
-const lockedPage = (info) => {
-	const text = info?.permanent === false && info.until
-		? `Dein Account ist bis ${new Date(info.until).toLocaleString("de-DE", { timeZone: "Europe/Berlin" })} gesperrt.`
-		: "Dein Account ist permanent gesperrt.";
-	return `<!doctype html><html lang="de"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Zugriff gesperrt</title>
-<body style="font-family:system-ui,sans-serif;max-width:32rem;margin:15vh auto;padding:0 1rem"><h1>Zugriff gesperrt</h1><p>${text}</p><p>Solange die Sperre aktiv ist, hast du keinen Zugriff auf die Dokumentation.</p></body></html>`;
-};
+const lockedPage = () => `<!doctype html><html lang="de"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Zugriff gesperrt</title>
+<body style="font-family:system-ui,sans-serif;max-width:32rem;margin:15vh auto;padding:0 1rem"><h1>Zugriff gesperrt</h1><p>Dein Account ist permanent gesperrt.</p><p>Daher hast du keinen Zugriff auf die Dokumentation.</p></body></html>`;
 
-// Fragt den Hub, ob der Nutzer aktuell gesperrt ist. Wirft bei Netzwerk-/Serverfehlern.
-const checkUser = async (userId) => {
+// Fragt den Hub, ob der Nutzer dauerhaft gesperrt ist (Zeitstrafen sperren die Docs nicht). Wirft bei Netzwerk-/Serverfehlern.
+const pendingChecks = new Map();
+const checkUser = (userId) => {
+	if (!pendingChecks.has(userId)) {
+		pendingChecks.set(userId, fetchCheck(userId).finally(() => pendingChecks.delete(userId)));
+	}
+	return pendingChecks.get(userId);
+};
+const fetchCheck = async (userId) => {
 	const r = await fetch(`${HUB_INTERNAL_URL}/api/internal/auth/check`, {
 		method: "POST",
 		headers: { "Content-Type": "application/json", Authorization: `Bearer ${INTERNAL_SECRET}` },
@@ -115,13 +117,13 @@ const handleCallback = async (req, res, url) => {
 			body: new URLSearchParams({ code, client_id: CLIENT_ID, client_secret: CLIENT_SECRET }),
 			signal: AbortSignal.timeout(5000),
 		});
-		if (tokenRes.status === 403) return send(res, 403, lockedPage(null), { "Content-Type": "text/html; charset=utf-8" });
+		if (tokenRes.status === 403) return send(res, 403, lockedPage(), { "Content-Type": "text/html; charset=utf-8" });
 		if (!tokenRes.ok) return send(res, 401, "Anmeldung fehlgeschlagen. Bitte erneut versuchen.");
 		const { access_token } = await tokenRes.json();
 		// Token kam direkt vom Hub (Server-zu-Server), wir brauchen nur die Nutzer-ID
 		const userId = JSON.parse(Buffer.from(access_token.split(".")[1], "base64url").toString()).id;
 		const check = await checkUser(userId);
-		if (!check.allowed) return send(res, 403, lockedPage(check), { "Content-Type": "text/html; charset=utf-8" });
+		if (!check.allowed) return send(res, 403, lockedPage(), { "Content-Type": "text/html; charset=utf-8" });
 		const now = Date.now();
 		redirect(res, target, {
 			"Set-Cookie": [
@@ -189,7 +191,7 @@ createServer(async (req, res) => {
 			return redirect(res, "/", { "Set-Cookie": cookie("docs_session", "", 0) });
 		}
 		const { session, locked, unavailable } = await getSession(req, res);
-		if (locked) return send(res, 403, lockedPage(locked), { "Content-Type": "text/html; charset=utf-8", "Set-Cookie": cookie("docs_session", "", 0) });
+		if (locked) return send(res, 403, lockedPage(), { "Content-Type": "text/html; charset=utf-8", "Set-Cookie": cookie("docs_session", "", 0) });
 		if (unavailable) return send(res, 503, "Anmeldung momentan nicht möglich. Bitte später erneut versuchen.");
 		if (!session) return startLogin(req, res, url.pathname + url.search);
 		return await serveFile(req, res, url.pathname);
