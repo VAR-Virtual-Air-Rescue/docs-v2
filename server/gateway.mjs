@@ -20,6 +20,9 @@ const SESSION_MAX_AGE = 12 * 3600 * 1000; // maximale Sitzungsdauer
 const RECHECK_AFTER = 30 * 1000; // Sperrstatus alle 30 Sekunden neu beim Hub prüfen
 const GRACE = 15 * 60 * 1000; // so lange darf der Hub bei der Prüfung ausfallen
 const SECURE = DOCS_URL.startsWith("https://");
+// Live-Daten für Flughafenliste, Stationskarte und Spitalkarte (nur angemeldet erreichbar)
+const OPS_API_URL = env("OPS_API_URL", "https://ops.virtualairrescue.com").replace(/\/$/, "");
+const API_PATHS = new Set(["/api/airports", "/api/stations", "/api/hospitals"]);
 
 if (!CLIENT_SECRET || !INTERNAL_SECRET || SESSION_SECRET.length < 32) {
 	console.error("DOCS_OAUTH_CLIENT_SECRET, HUB_INTERNAL_API_SECRET und DOCS_SESSION_SECRET (>=32 Zeichen) sind Pflicht.");
@@ -181,6 +184,23 @@ const serveFile = async (req, res, pathname) => {
 	}
 };
 
+// Leitet freigegebene /api/-Abfragen an die OPS-API weiter. Cookies und Login-Daten werden nicht mitgeschickt.
+const proxyApi = async (req, res, url) => {
+	try {
+		const r = await fetch(`${OPS_API_URL}${url.pathname}${url.search}`, {
+			headers: { Accept: "application/json" },
+			signal: AbortSignal.timeout(30_000),
+		});
+		const body = Buffer.from(await r.arrayBuffer());
+		return send(res, r.status, req.method === "HEAD" ? "" : body, {
+			"Content-Type": r.headers.get("content-type") || "application/json; charset=utf-8",
+		});
+	} catch (e) {
+		console.error("API-Weiterleitung fehlgeschlagen:", url.pathname, e.message);
+		return send(res, 502, "API nicht erreichbar");
+	}
+};
+
 createServer(async (req, res) => {
 	try {
 		const url = new URL(req.url || "/", DOCS_URL);
@@ -193,7 +213,9 @@ createServer(async (req, res) => {
 		const { session, locked, unavailable } = await getSession(req, res);
 		if (locked) return send(res, 403, lockedPage(), { "Content-Type": "text/html; charset=utf-8", "Set-Cookie": cookie("docs_session", "", 0) });
 		if (unavailable) return send(res, 503, "Anmeldung momentan nicht möglich. Bitte später erneut versuchen.");
-		if (!session) return startLogin(req, res, url.pathname + url.search);
+		const isApi = url.pathname.startsWith("/api/");
+		if (!session) return isApi ? send(res, 401, "Nicht angemeldet") : startLogin(req, res, url.pathname + url.search);
+		if (isApi) return API_PATHS.has(url.pathname) ? await proxyApi(req, res, url) : send(res, 404, "Not found");
 		return await serveFile(req, res, url.pathname);
 	} catch (e) {
 		console.error(e);
