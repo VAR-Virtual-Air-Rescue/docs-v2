@@ -11,7 +11,9 @@
 		"hospitals:aktualisieren": "node scripts/hospitals-aktualisieren.mjs",
 		"build": "vitepress build",
 		"prebuild": "node scripts/stationen-aktualisieren.mjs && node scripts/hospitals-aktualisieren.mjs",
-		"docs:preview": "vitepress preview"
+		"docs:preview": "vitepress preview",
+		"gateway": "node --env-file=.env server/gateway.mjs",
+		"dev:gateway": "npm run build && npm run gateway"
 	},
 	"keywords": [],
 	"author": "",
