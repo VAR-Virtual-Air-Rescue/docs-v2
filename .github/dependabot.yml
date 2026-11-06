@@ -1,0 +1,14 @@
+version: 2
+updates:
+  # Öffnet einen PR, sobald eine neue stabile VitePress-Version erscheint (keine Alpha-/Beta-Versionen).
+  # Hintergrund: Die Vite-Warnungen #7, #9, #10, #19, #20 sind erst mit Vite 6 behoben,
+  # das VitePress 2 voraussetzt. Nach dem Update diese Warnungen erneut prüfen.
+  - package-ecosystem: npm
+    directory: /
+    target-branch: staging
+    schedule:
+      interval: weekly
+    allow:
+      - dependency-name: vitepress
+    labels:
+      - dependencies
