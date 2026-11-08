@@ -375,6 +375,7 @@ export default defineConfig({
         items: [
           { text: "Mitwirken", link: "/mitwirken" },
           { text: "VAR FAIR PLAY", link: "/fair-play" },
+          { text: "Feedback", link: "/feedback" },
         ],
       },
     ],
