@@ -58,8 +58,8 @@ lebt davon, dass alle dieselbe Phraseologie benutzen.
   lies [Registrierung](/allgemein/vatsim/registrierung) und
   [Prefile](/allgemein/vatsim/prefile) — und beachte, dass die VAR **noch keine
   offizielle vSOA** ist.
-- **Keine Vorerfahrung im Rettungsdienst** — außer du willst
-  [disponieren](/disponentenbereich/how-to-disponent). Dort ist sie Bedingung.
+- **Keine Vorerfahrung im Rettungsdienst** — weder zum Fliegen noch zum
+  [Disponieren](/disponentenbereich/how-to-disponent).
 
 ## Danach
 
