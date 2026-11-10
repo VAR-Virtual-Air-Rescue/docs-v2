@@ -39,7 +39,7 @@ unsere Einsatzdaten koppeln. Die Einrichtung steht unter
 
 ## Konto
 
-Ein Konto im [Hub](https://hub.virtualairrescue.com) mit **echter E-Mail-Adresse**
+Ein Konto im [HUB](https://hub.virtualairrescue.com) mit **echter E-Mail-Adresse**
 — sie wird geprüft. Dazu ein verknüpfter
 [Discord-Zugang](/var-systeme/how-to-discord): dort laufen Support, Kurse und die
 Absprachen.

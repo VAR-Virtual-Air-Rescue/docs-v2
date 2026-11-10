@@ -14,7 +14,7 @@ niemand zu.
 | | BOS-Funk | Flugfunk |
 |---|---|---|
 | Mit wem | Leitstelle, andere Rettungsmittel, Feuerwehr | Flugverkehrskontrolle, andere Luftfahrzeuge |
-| Worüber | Einsatz, Status, Patient, Transportziel | Luftraum, Freigaben, Verkehr, Wetter |
+| Worüber | Einsatz, Status (Patient und Transportziel per Telefon) | Luftraum, Freigaben, Verkehr, Wetter |
 | Sprache | Deutsch, BOS-Phraseologie | ICAO-Phraseologie, Deutsch oder Englisch |
 | Kennung | [OPTA](/luftrettung/bos-funk/OPTA), z. B. „Christoph 51“ | Luftfahrzeugkennzeichen oder Rufzeichen |
 | Statusmeldungen | ja, [Statusziffern](/luftrettung/bos-funk/Status) | nein |
@@ -66,7 +66,8 @@ der Flugfunk Vorrang, weil dort die Sicherheit hängt.
 Freigaben, Steig- und Sinkflug, Verkehr, Wetter, Notlagen des Luftfahrzeugs.
 
 **Alles, was mit dem Einsatz zu tun hat**, geht an die Leitstelle: Status,
-Lagemeldung, Transportziel, Nachforderung.
+Lagemeldung, Nachforderung über Funk, Patientendaten und Transportziel per
+Telefon.
 :::
 
 ## Notmeldungen

@@ -1,29 +1,119 @@
+---
+title: How To Pilot
+description: Vom Konto bis zum ersten Einsatz — was du brauchst, wie du dich vorbereitest, die P-1-Prüfung und dein erster Flug.
+---
+
 # How To Pilot
 
-Auf dieser Seite erfährst du schnell, wie du bei uns mitfliegen kannst.
+Auf dieser Seite erfährst du, wie du bei uns Pilot wirst, vom Konto bis zum
+ersten Einsatz.
 
 ## 0. Voraussetzungen
 
-Damit du bei uns anfangen kannst zu fliegen, benötigst du einen Simulator (MSFS2020 / 2024 oder XPlane 12 / 11) sowie mindestens einen Hubschrauber. Für den MSFS empfiehlt es sich, die [HPG H145](https://www.hypeperformancegroup.com/products/xxxx) und optional das [Action Pack](https://www.hypeperformancegroup.com/products/hpg-h145-action-pack-expansion-early-access) zu kaufen, als kostenfreie alternative bietet sich die [HPG H135](https://de.flightsim.to/file/8970/airbus-h135-helicopter-project) an.
+- **Windows.** Der VAR Desktop Client läuft nur unter Windows. Eine Version für
+  macOS oder Linux ist nicht geplant.
+- **Ein Simulator:** Microsoft Flight Simulator 2020 oder 2024 oder X-Plane 11
+  oder 12.
+- **Mindestens ein Hubschrauber.** Für den MSFS empfehlen wir die
+  [HPG H145](https://www.hypeperformancegroup.com/), optional mit dem
+  [Action Pack](https://www.hypeperformancegroup.com/products/hpg-h145-action-pack-expansion-early-access).
+  Kostenlos ist die [HPG H135](https://de.flightsim.to/file/8970/airbus-h135-helicopter-project).
+  Welche Muster sonst in Frage kommen, steht unter
+  [Hubschraubertypen](/pilotenbereich/Hubschraubertypen) und
+  [Addons](/pilotenbereich/addons).
+- **Ein Konto im [HUB](https://hub.virtualairrescue.com/)** mit echter
+  E-Mail-Adresse (siehe Schritt 1).
+- **Ein verknüpfter Discord-Account.** Die Verknüpfung ist für alle Mitglieder
+  Pflicht.
+- **Deutsch.** Gefunkt und geschrieben wird ausschließlich auf Deutsch.
 
-Damit unser Desktop Client ordnungsgemäß funktioniert, benötigst du außerdem ein Windows Betriebssystem. Eine alternative für MacOS oder Linux Distributionen ist nicht geplant.
+Vorerfahrung im Rettungsdienst brauchst du nicht.
 
 ## 1. Registrierung
 
-Zuerst benötigst du einen Account bei uns. Registriere dich [in unserem HUB](https://hub.virtualairrescue.com/). Beachte, dass deine Angaben, insbesondere deine E-Mailadresse, echt sein müssen, da du sonst deine Registrierung nicht abschließen kannst. Im Anschluss musst du deinen VAR-Account mit deinem Discord-Account verknüpfen, das ist für alle Mitglieder Pflicht. Wie das geht, steht unter [How-To Discord](/var-systeme/how-to-discord). Über Discord bekommst du Support und bist mit unserer Community in Verbindung.
+Registriere dich [in unserem HUB](https://hub.virtualairrescue.com/). Deine
+Angaben, insbesondere deine E-Mail-Adresse, müssen echt sein, sonst kannst du die
+Registrierung nicht abschließen.
 
-## 2. Einsteigerkurs
+Verknüpfe im Anschluss deinen VAR-Account mit deinem Discord-Account. Wie das
+geht, steht unter [How-To Discord](/var-systeme/how-to-discord). Über Discord
+bekommst du Support und stimmst dich mit anderen Piloten und der Leitstelle ab.
 
-Nach deiner Registrierung findest du den verpflichtenden Piloten-Grundkurs **P-1** direkt im [HUB](https://hub.virtualairrescue.com/). Schließe den Kurs dort mit deinem VAR-Account ab. Zum Bestehen musst du mindestens **80 %** der Fragen korrekt beantworten. Insgesamt hast du **drei Versuche**: Nach zwei nicht bestandenen Versuchen gilt eine Wartezeit von **zwei Wochen**, danach kannst du den dritten und letzten Versuch absolvieren. Nach bestandenem Kurs erhältst du automatisch die Berechtigung, im VAR-Netzwerk zu fliegen.
+## 2. Vorbereitung
 
-Der Kurs stellt sicher, dass alle Piloten unsere Mindestanforderungen erfüllen.
+Alles, was in der P-1-Prüfung abgefragt wird, findest du in unserer
+Wissensdatenbank. Lies vor der Prüfung mindestens die folgenden Seiten gründlich
+durch:
 
-## 3. Optionale Addons
+| Thema | Seiten |
+|---|---|
+| BOS-Funk | [Grundlagen](/luftrettung/bos-funk/Grundlagen), [Funkverkehr](/luftrettung/bos-funk/Funkverkehr), [Status](/luftrettung/bos-funk/Status), [Funkbeispiel](/luftrettung/bos-funk/Funkbeispiel) |
+| Werkzeug | [Pilotenansicht](/var-systeme/pilot) mit MRT und Melder |
+| Fliegen | [Außenlandung](/luftrettung/aussenlandung), [Wirbelringstadium](/pilotenbereich/flugbetrieb/wirbelringstadium) |
+| Ablauf | [Die ersten 30 Minuten](/start/erste-30-minuten) |
 
-Seit neuestem und als erste und bisher einzige Luftrettungs Simulation bieten wir eine vollständige Integration des Random & Everywhere Script in unsere Leitstelle an. Heißt, dass ein Einsatz, welcher von unserer Leitstelle disponiert wird, automatisch als Szenerie mit zugehörger Navigation etc. in deinem Simulator erscheint. Wie genau du das einrichtest, [siehst du hier](/var-systeme/hpg-h145/r-e-integration/Einrichtung). Daneben lohnt es sich, auf Webseiten wie [flightsim.to](https://flightsim.to) nach Szenerien für Krankenhäuser oder Luftrettungszentren zu suchen.
+Begriffe, die du nicht kennst, findest du im [Glossar](/start/glossar).
 
-## 4. Endlich Fliegen
+## 3. P-1-Prüfung
 
-Wenn du alles vorbereitet hast, vergewissere dich, dass die Station, welche du gleich übernehmen möchtest, nicht bereits von jemand anderem blockiert ist. [Finde dies z.B. im Tracker heraus](https://ops.virtualairrescue.com/tracker). Starte deinen Simulator, setze dich an dein LRZ der Wahl, starte den VAR Desktop Client, starte ggf. die Random & Everywhere Mission und verbinde dich im Browser mit [unserer Leistelle](https://ops.virtualairrescue.com/pilot). Alles weitere wurde zu diesem Zeitpunkt bereits im Einsteiger Moodle Kurs erklärt. Weitere Informationen zu unserem Piloten-Interface findest du [hier](/var-systeme/pilot).
+Den Piloten-Grundkurs **P-1** findest du im
+[HUB](https://hub.virtualairrescue.com/). Die Bestehensgrenze liegt bei
+**80 %**. Mit bestandener Prüfung bekommst du automatisch die Berechtigung, dich
+als Pilot zu verbinden.
+
+::: info Versuche bei der P-1-Prüfung
+Für die P-1-Prüfung hast du zwei Versuche. Bestehst du beide nicht, gilt eine
+Wartezeit von **zwei Wochen**. Danach wird der dritte und letzte Versuch im HUB
+automatisch freigeschaltet.
+
+Die genaue Regel und den Zeitpunkt deines nächsten Versuchs siehst du jederzeit
+auf der Kursseite im HUB. Sind alle Versuche aufgebraucht, ist die Prüfung
+gesperrt. Dann kann dir nur noch das Support-Team weiterhelfen. Erstelle dafür
+ein [Ticket im HUB](https://hub.virtualairrescue.com/tickets).
+:::
+
+Nutze die Wartezeit, um die Themen aus Schritt 2 noch einmal gezielt
+durchzugehen.
+
+## 4. Optionale Ergänzungen
+
+- **Random & Everywhere:** Mit dem Skript erscheint ein Einsatz der Leitstelle
+  automatisch als Szenerie mit Navigation in deinem Simulator. Wie du es
+  einrichtest, steht unter
+  [Einrichtung](/var-systeme/hpg-h145/r-e-integration/Einrichtung).
+- **Szenerien:** Auf Seiten wie [flightsim.to](https://flightsim.to) findest du
+  Szenerien für Kliniken und Luftrettungszentren.
+- **Alarmierung aufs Handy:** Einsätze auch auf dem Smartphone empfangen, siehe
+  [Mobile App-Alarmierung](/var-systeme/app-alarmierung).
+- **Wegpunkte:** Landeplätze und Wegpunkte für deinen Simulator, siehe
+  [Flugpläne und Landeplätze](/var-systeme/FlugplanUndWegpunkte).
+
+## 5. Dein erster Flug
+
+1. **Freie Station suchen.** Prüfe im
+   [Tracker](https://ops.virtualairrescue.com/tracker), dass die Station nicht
+   schon belegt ist. Stationen kannst du im HUB auch im Voraus buchen.
+2. **Simulator starten** und dich an das Luftrettungszentrum der Station
+   setzen.
+3. **VAR Desktop Client starten**, gegebenenfalls auch die Random &
+   Everywhere-Mission.
+4. **In der [Pilotenansicht](https://ops.virtualairrescue.com/pilot) verbinden**
+   und die Station wählen. Ist kein Disponent online, kannst du dort
+   **Automatische Einsätze erhalten** anhaken.
+5. **Bei der Leitstelle anmelden:** Status 9 (Fahrzeuganmeldung), danach
+   Status 2 (einsatzbereit auf Wache).
+
+Wie ein Einsatz von der Alarmierung bis zur Übergabe abläuft, steht kompakt
+unter [Die ersten 30 Minuten](/start/erste-30-minuten). Alle Funktionen der
+Pilotenansicht, vom MRT über das Diensthandy bis zum Flugbuch, erklärt die Seite
+[Pilotenansicht](/var-systeme/pilot).
+
+::: tip Ambulanz-Jets
+Mit der Pilotenberechtigung kannst du auch Organtransporte und Ambulanzflüge mit
+Jets fliegen. Wie das funktioniert, steht unter
+[Jet-Ansicht](/var-systeme/jet).
+:::
+
+Wenn du unsicher bist: Frag im Discord. Es sitzt fast immer jemand da.
 
 Wir wünschen dir viel Spaß!

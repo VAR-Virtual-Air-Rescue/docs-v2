@@ -173,7 +173,6 @@ export default defineConfig({
         items: [
           { text: "… fliegen", link: `${P}/how-to-pilot` },
           { text: "… disponieren", link: `${D}/how-to-disponent` },
-          { text: "… mitschreiben", link: "/mitwirken" },
         ],
       },
       {
@@ -186,10 +185,29 @@ export default defineConfig({
         ],
       },
       { text: "HUB-Login", link: "https://hub.virtualairrescue.com/login" },
+      { text: "VAR FAIR PLAY", link: "/fair-play" },
       { text: "FAQ", link: "/faq" },
     ],
 
     sidebar: [
+      {
+        // Ganz oben und offen, damit VAR FAIR PLAY sofort sichtbar ist.
+        text: "Allgemein",
+        collapsed: false,
+        items: [
+          { text: "VAR FAIR PLAY", link: "/fair-play" },
+          {
+            text: "VATSIM",
+            collapsed: true,
+            items: [
+              { text: "Registrierung", link: `${A}/vatsim/registrierung` },
+              { text: "Prefile", link: `${A}/vatsim/prefile` },
+            ],
+          },
+          { text: "Live-Streaming", link: `${A}/streaming` },
+          { text: "Das Team & Struktur", link: `${A}/team` },
+        ],
+      },
       {
         // Offen, nicht zugeklappt: wer neu ist, soll hier etwas sehen.
         text: "Erste Schritte",
@@ -197,7 +215,7 @@ export default defineConfig({
         items: [
           { text: "Die ersten 30 Minuten", link: "/start/erste-30-minuten" },
           { text: "Was du brauchst", link: "/start/voraussetzungen" },
-          { text: "Hub und Discord", link: `${S}/how-to-discord` },
+          { text: "HUB und Discord", link: `${S}/how-to-discord` },
           { text: "Glossar", link: "/start/glossar" },
           { text: "FAQ", link: "/faq" },
         ],
@@ -254,7 +272,6 @@ export default defineConfig({
           { text: "How-To Disponent", link: `${D}/how-to-disponent` },
           { text: "Disposition", link: `${D}/disposition` },
           { text: "Stichworte", link: `${D}/Stichworte` },
-          { text: "NACA-Score", link: `${D}/naca` },
           { text: "Zielklinik wählen", link: `${D}/zielklinik` },
           { text: "MANV und Großschadenslage", link: `${D}/manv` },
         ],
@@ -285,7 +302,7 @@ export default defineConfig({
             ],
           },
           { text: "Außenlandungen", link: `${L}/aussenlandung` },
-          { text: "Landestellen", link: `${L}/landeplatz` },
+          { text: "Landeplätze und Landestellen", link: `${L}/landeplatz` },
           { text: "Flughäfen", link: `${L}/flughafenverzeichnis` },
           { text: "Windenbetrieb", link: `${L}/windenbetrieb` },
           { text: "Nachtflug und NVIS", link: `${L}/nachtflug-nvis` },
@@ -337,6 +354,7 @@ export default defineConfig({
         items: [
           { text: "Webleitstelle", link: `${S}/webleitstelle` },
           { text: "Pilotenansicht", link: `${S}/pilot` },
+          { text: "Jet-Ansicht", link: `${S}/jet` },
           { text: "Mobile App-Alarmierung", link: `${S}/app-alarmierung` },
           { text: "Flugpläne und Landeplätze", link: `${S}/FlugplanUndWegpunkte` },
           // Lag bisher nur im Kopfmenü — und dort auf einem Pfad, den es nicht
@@ -353,34 +371,6 @@ export default defineConfig({
           },
         ],
       },
-      {
-        text: "Allgemein",
-        collapsed: true,
-        items: [
-          {
-            text: "VATSIM",
-            collapsed: true,
-            items: [
-              { text: "Registrierung", link: `${A}/vatsim/registrierung` },
-              { text: "Prefile", link: `${A}/vatsim/prefile` },
-            ],
-          },
-          { text: "Live-Streaming", link: `${A}/streaming` },
-          { text: "Das Team & Struktur", link: `${A}/team` },
-        ],
-      },
-      {
-        text: "Regeln und Mitarbeit",
-        collapsed: true,
-        items: [
-          { text: "Mitwirken", link: "/mitwirken" },
-          { text: "VAR FAIR PLAY", link: "/fair-play" },
-        ],
-      },
-    ],
-
-    socialLinks: [
-      { icon: "github", link: "https://github.com/VAR-Virtual-Air-Rescue/docs-v2" },
     ],
 
     docFooter: { prev: "Vorherige Seite", next: "Nächste Seite" },

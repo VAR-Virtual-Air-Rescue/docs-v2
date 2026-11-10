@@ -44,7 +44,7 @@ Wichtigsten anfängt und nicht mit dem Anfang der Geschichte.
 | **R** | Recommendation | Was jetzt gebraucht wird |
 
 ::: funk Beispiel einer Übergabe
-„Notarzt Christoph 51. Patient männlich, etwa 45 Jahre, **NACA vier**.
+„Notarzt Christoph 51. Patient männlich, etwa 45 Jahre.
 
 Verkehrsunfall, Pkw gegen Baum, eingeklemmt, Rettungszeit 25 Minuten.
 
@@ -68,25 +68,22 @@ Das ist eine vollständige Übergabe in unter einer Minute.
   gekennzeichnet.
 - **Zahlen ohne Zeitpunkt.** „Blutdruck 90“ — wann?
 
-## Der NACA-Wert gehört an den Anfang
-
-Er sagt in einer Zahl, wie ernst es steht, und stellt das aufnehmende Team
-sofort richtig ein.
-→ [NACA-Score](/disponentenbereich/naca)
-
 ## Für die Leitstelle
 
-Dieselbe Struktur trägt auch die **Lagemeldung** über Funk — nur kürzer. Was die
-Leitstelle braucht, ist das S, das A in Kurzform und das R:
+Dieselbe Struktur trägt auch die **Patientenanmeldung** bei der Leitstelle —
+nur kürzer. Patientendaten gibst du **ausschließlich per Telefon** durch, nie
+über Funk: Ruf die Leitstelle über dein Diensthandy an. Was sie braucht, ist das
+S, das A in Kurzform und das R:
 
-::: funk Lagemeldung, kurz
-„Christoph 51 — ein Patient, NACA vier, intubiert und beatmet, Kreislauf stabil.
-Transport in eine Klinik mit Neurochirurgie erforderlich.“
+::: funk Telefonat mit der Leitstelle, kurz
+„Leitstelle, hier Christoph 51 mit der Patientenanmeldung. Ein Patient,
+intubiert und beatmet, Kreislauf stabil. Transport in eine Klinik mit
+Neurochirurgie erforderlich.“
 :::
 
 Daraus wählt die Leitstelle die
-[Zielklinik](/disponentenbereich/zielklinik) und meldet sie mit der Anweisung
-**h** als verständigt zurück.
+[Zielklinik](/disponentenbereich/zielklinik) und ruft dich mit dem Ziel zurück,
+ebenfalls per Telefon.
 
 ## Weiter
 

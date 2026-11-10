@@ -123,14 +123,16 @@ const handleCallback = async (req, res, url) => {
 		if (tokenRes.status === 403) return send(res, 403, lockedPage(), { "Content-Type": "text/html; charset=utf-8" });
 		if (!tokenRes.ok) return send(res, 401, "Anmeldung fehlgeschlagen. Bitte erneut versuchen.");
 		const { access_token } = await tokenRes.json();
-		// Token kam direkt vom Hub (Server-zu-Server), wir brauchen nur die Nutzer-ID
-		const userId = JSON.parse(Buffer.from(access_token.split(".")[1], "base64url").toString()).id;
+		// Token kam direkt vom Hub (Server-zu-Server). Wir brauchen die Nutzer-ID und den Vornamen für die Begrüßung.
+		const payload = JSON.parse(Buffer.from(access_token.split(".")[1], "base64url").toString());
+		const userId = payload.id;
+		const firstname = typeof payload.firstname === "string" ? payload.firstname.trim().slice(0, 40) : "";
 		const check = await checkUser(userId);
 		if (!check.allowed) return send(res, 403, lockedPage(), { "Content-Type": "text/html; charset=utf-8" });
 		const now = Date.now();
 		redirect(res, target, {
 			"Set-Cookie": [
-				cookie("docs_session", seal({ uid: userId, iat: now, chk: now }), SESSION_MAX_AGE / 1000),
+				cookie("docs_session", seal({ uid: userId, fn: firstname, iat: now, chk: now }), SESSION_MAX_AGE / 1000),
 				cookie("docs_oauth", "", 0),
 			],
 		});
@@ -213,6 +215,12 @@ createServer(async (req, res) => {
 		const { session, locked, unavailable } = await getSession(req, res);
 		if (locked) return send(res, 403, lockedPage(), { "Content-Type": "text/html; charset=utf-8", "Set-Cookie": cookie("docs_session", "", 0) });
 		if (unavailable) return send(res, 503, "Anmeldung momentan nicht möglich. Bitte später erneut versuchen.");
+		// Vorname für die Begrüßung auf der Startseite (Cookie ist HttpOnly, der Browser fragt hier nach)
+		if (url.pathname === "/auth/me") {
+			return send(res, session ? 200 : 401, JSON.stringify({ firstname: session?.fn || null }), {
+				"Content-Type": "application/json; charset=utf-8",
+			});
+		}
 		const isApi = url.pathname.startsWith("/api/");
 		if (!session) return isApi ? send(res, 401, "Nicht angemeldet") : startLogin(req, res, url.pathname + url.search);
 		if (isApi) return API_PATHS.has(url.pathname) ? await proxyApi(req, res, url) : send(res, 404, "Not found");

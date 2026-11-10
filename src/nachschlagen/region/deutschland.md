@@ -85,7 +85,8 @@ Ausführlich steht das unter
 - **Regionale Besonderheiten**, etwa Bergregionen, Küste und Offshore, Ballungsräume
 - Wie **grenzüberschreitende Einsätze** im VAR-Betrieb ablaufen sollen
 
-Wer eines davon beitragen kann: [Mitwirken](/mitwirken).
+Wer eines davon beitragen kann, meldet sich per
+[Ticket im HUB](https://hub.virtualairrescue.com/tickets).
 :::
 
 ## Weiter

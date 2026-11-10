@@ -60,5 +60,5 @@ ein Platzhalter.
 Wer eines der Länder kennt — beruflich oder aus Interesse — kann hier am meisten
 beitragen. Was gebraucht wird, steht auf jeder Länderseite als Liste.
 
-Wie das geht, steht unter [Mitwirken](/mitwirken).
+Melde dich dafür per [Ticket im HUB](https://hub.virtualairrescue.com/tickets).
 :::

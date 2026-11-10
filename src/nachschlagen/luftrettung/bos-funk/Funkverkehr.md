@@ -128,11 +128,11 @@ Besser in dieser Situation: **"von"**. Ein unmissverständliches Betriebswort, w
 
 #### Erst Gedrückt, dann Gesprochen
 
-> **Don't:** "Ähm, Christoph Ähm 69, wir ähm, fliegen jetzt in - Moment - die Uniklinik in - Moment - Erfurt mit Ankunft in ähm 5 Minuten, kommen"
+> **Don't:** "Ähm, Christoph Ähm 69, wir ähm, sind jetzt in - Moment - etwa ähm 5 Minuten am - Moment - Einsatzort, kommen"
 
 Beachtet die ricthige Reihenfolge von "Denken, Drücken, Sprechen"!
 
-> **Do:** "Christoph 69, Transportziel Uniklinik mit Ankunft in 5 Minuten, kommen"
+> **Do:** "Christoph 69, Ankunft Einsatzort in 5 Minuten, kommen"
 
 #### Falscher Status/Notrufmissbrauch
 

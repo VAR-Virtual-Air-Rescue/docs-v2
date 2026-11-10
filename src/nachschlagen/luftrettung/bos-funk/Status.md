@@ -19,8 +19,8 @@ Der Vorteil dieser Statusnummern ist die deutliche Reduktion des Funkverkehrs in
 |     4      |       Einsatzort an        | Das Einsatzmittel ist mit der Abarbeitung vor Ort beschäftigt und nur bedingt erreichbar.         |
 |     5      |        Sprechwunsch        | Das Einsatzmittel möchte Kontakt mit der Leitstelle aufnehmen.                                    |
 |     6      |    Nicht einsatzbereit     | Das Einsatzmittel kann nicht alarmiert werden.                                                    |
-|     7      |      Einsatzgebunden       | Das Einsatzmittel hat einen Patienten aufgenommen und kann nicht alarmiert werden.                |
-|     8      |     Bedingt verfügbar      | Das Einsatzmittel kann mit einer längeren Reaktionszeit nach Rücksprache alarmiert werden.        |
+|     7      |      Einsatzgebunden       | Das Einsatzmittel hat einen Patienten aufgenommen und kann nicht alarmiert werden. Bei der VAR: während des Transports zur Klinik. |
+|     8      |     Bedingt verfügbar      | Das Einsatzmittel kann mit einer längeren Reaktionszeit nach Rücksprache alarmiert werden. Bei der VAR: am Zielort, während der Übergabe. |
 |     9      |     Fahrzeuganmeldung      | Das Einsatzmittel meldet sich im Funkverkehrsbereich an. Bei der VAR: Meldung nach dem Einloggen. |
 
 ## Statusanweisungen
@@ -29,15 +29,13 @@ Der Vorteil dieser Statusnummern ist die deutliche Reduktion des Funkverkehrs in
 | :--------: | :-------------------------------: | :---------------------------------------------------------------------------------------------- |
 |     E      |          Einsatzabbruch           | Das Einsatzmittel wird vom Einsatz abgezogen und quittiert mit `2` oder `1`.                     |
 |     C      |      Einsatzübernahme melden      | Dem Disponenten muss mit Status `3` die Übernahme des Einsatzes quittiert werden.                      |
-|     F      |       Kommen Sie über Draht       | Das Einsatzmittel muss sich telefonisch (per Discord) beim Disponenten melden.                  |
+|     F      |       Kommen Sie über Draht       | Das Einsatzmittel ruft die Leitstelle über das Telefon (Diensthandy) an.                        |
 |     H      |        Fahren Sie Wache an        | Keine Nutzung in der VAR                                                                        |
 |     J      | Sprechaufforderung (nach Status `5`/`0`) | Nicht-mündliche Aufforderung, mit dem Sprechen zu beginnen.                                     |
 |     L      |       Geben Sie Lagemeldung       | Die Leitstelle fordert eine Lagemeldung vom Rettungsmittel an.                                  |
 |     P      | Einsatz mit Polizei/Pause nehmen  | Keine Nutzung in der VAR                                                                        |
 |     U      |      Unerlaubte Statusfolge       | Keine Nutzung in der VAR                                                                        |
 |     c      |        Status korrigieren         | Das Einsatzmittel hat einen offensichtlich falschen Status gesetzt und muss diesen korrigieren. |
-|     d      |     Transportziel durchgeben      | Die Leitstelle erfragt das Transportziel des Rettungsmittels.                                   |
-|     h      |      Zielklinik verständigt       | Die Leitstelle hat die Zielklinik verständigt und positive Rückmeldung erhalten.                |
 |     o      | Warten, alle Abfrageplätze belegt | Das Rettungsmittel muss auf die Sprechaufforderung warten.                                      |
 |     u      |            Verstanden             | Die Leitstelle hat die Informationen aufgenommen und verstanden.                                |
 
