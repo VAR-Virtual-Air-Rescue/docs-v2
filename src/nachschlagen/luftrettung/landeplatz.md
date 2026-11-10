@@ -1,46 +1,114 @@
+---
+title: Landeplätze und Landestellen
+description: Hubschrauberlandeplatz, Landestelle im öffentlichen Interesse oder Außenlandung — was der Unterschied ist, wie Klinik-Landeplätze in ops angezeigt werden und wo du die Daten für den Simulator bekommst.
+---
+
 # Landeplätze und Landestellen
 
-## Situation in Deutschland
+Ein Hubschrauber braucht keine Start- und Landebahn. Er kann direkt an der
+Einsatzstelle landen. Trotzdem ist ein fester Landeplatz fast immer die
+sicherere Wahl: Dort sind Hindernisse bekannt, der Wind wird angezeigt, Verkehr
+und Schaulustige sind ferngehalten, und oft ist der Brandschutz gesichert.
 
-Hubschrauber haben in der Luftrettung den taktischen Vorteil, dass sie zum Starten und Landen - anders als Flächenflugzeuge - keine Start- und Landebahnen benötigen. So können sie an der Einsatzstelle direkt ins Gelände landen und von dort wieder starten.
+## Die drei Arten
 
-Außenlandungen sind aber nicht ideal. Durch das meist unbekannte Umfeld an der Einsatzstelle muss der Pilot innerhalb weniger Minuten entscheiden, wo er am besten landet, welche Hindernisse es dabei zu beachten gilt, wo der Hubschrauber gut gegen Schaulustige, Tiere oder den Verkehr gesichert steht, wie gut er für einen späteren Transport zu Fuß mit Trage zu erreichen ist, oder welcher Richtung der Wind kommt. Diese Faktoren sind nur einige derer, die eine Außenlandung immer auch gefährlich und risikoreich macht.
-Um die Gefahr für aufgenommene Patienten und Crew im weiteren Einsatzveraluf zu minimieren ist es notwendig, Landeplätze zu schaffen, an denen eine Hindernis- und Verkehrsfreiheit gegeben ist, an der die Windrichtung angezeigt wird, oder etwa der Brandschutz sichergestellt werden kann, um Start und Landung risikoarm gestalten zu können.
+| Art | Was es ist | Wo du sie findest |
+|---|---|---|
+| **Hubschrauberlandeplatz** | genehmigter Flugplatz für Hubschrauber, z. B. an großen Kliniken | AIP VFR, HEL AD |
+| **Landestelle im öffentlichen Interesse (PIS)** | vom Luftfahrt-Bundesamt geprüfte Landestelle, wo ein Flugplatz nicht möglich oder sinnvoll ist | PIS-Masterliste des LBA |
+| **Außenlandung** | Landung im Gelände ohne vorbereiteten Platz, meist an der Einsatzstelle | — |
 
-<details>
-<summary>Rechtliches</summary>
-Dazu unterliegen Hubschrauberlandeplätze in Deutschland speziellen Anforderungen nach der <a href="https://www.verwaltungsvorschriften-im-internet.de/bsvwvbund_19122005_LR116116413.htm">Allgemeinen Verwaltungsvorschrift
-zur Genehmigung der Anlage und des Betriebs
-von Hubschrauberflugplätzen</a>. Sie schreibt vor, wie Flugplätze dimensioniert sein müssen, um einen risikoarmen Betrieb von Hubschraubern zu gewährleisten.
-An vielen Orten hierzulande ist die Schaffung eines solchen Flugplatzes aber nicht sinnvoll oder einfach nicht ohne weiteres möglich. Solche Landestellen entsprechen den Mindesanforderungen aus <a href="https://www.gesetze-im-internet.de/luftvo_2015/anlage_3.html">Anlage 3 der Luftverkehrsordnung</a>. Solche sogenannten <i>Landestellen im öffentlichen Interesse</i> (kurz "PIS" für "Public-Interest-Site") werden einzeln vom Luftfahrt-Bundesamt geprüft und für den Betrieb zertifiziert. Einige dieser Landeplätze sind sogar nur für Vorhaben nach <a href="https://www.gesetze-im-internet.de/luftvg/__25.html">§ 25 Absatz 2 Nummer 3 LuftVG</a> zugelassen, also nur, wenn "<i>die Landung aus Gründen der Sicherheit oder zur Hilfeleistung bei einer Gefahr für Leib oder Leben einer Person erforderlich ist; das Gleiche gilt für den Wiederstart nach einer solchen Landung mit Ausnahme des Wiederstarts nach einer Notlandung.</i>"
-</details>
+Wie eine Außenlandung sicher abläuft, steht unter
+[Außenlandung](/luftrettung/aussenlandung).
 
-### Anflugkarten
-Anflug- und Lagekarten der Hubschrauberlandeplätze findet man in der [AIP VFR Deutschland - HEL AD](https://aip.dfs.de/BasicVFR/) der DFS unter **HEL AD Hubschrauberlandeplätze**.
+::: details Rechtlicher Hintergrund (Deutschland)
+Hubschrauberlandeplätze müssen die Anforderungen der
+[Allgemeinen Verwaltungsvorschrift zur Genehmigung der Anlage und des Betriebs von Hubschrauberflugplätzen](https://www.verwaltungsvorschriften-im-internet.de/bsvwvbund_19122005_LR116116413.htm)
+erfüllen. Sie legt unter anderem fest, wie groß ein Landeplatz sein muss.
 
-### Liste der Landestellen
-Eine [Liste der PIS-Landestellen](https://www.lba.de/SharedDocs/Downloads/DE/B/B2_Flugbetrieb/PIS/PIS_Masterliste.pdf?__blob=publicationFile&v=18) gibt das Luftfahrt-Bundeamt heraus.
-Die einzelnen Landestellen sind farbcodiert:
+Wo ein solcher Flugplatz nicht möglich ist, gibt es Landestellen nach den
+Mindestanforderungen aus
+[Anlage 3 der Luftverkehrsordnung](https://www.gesetze-im-internet.de/luftvo_2015/anlage_3.html).
+Diese **Landestellen im öffentlichen Interesse** (*Public Interest Site*, PIS)
+prüft und zertifiziert das Luftfahrt-Bundesamt einzeln.
 
-Grün: Die Landestelle entspricht den aktuellen Anforderungen - der Landeplatz ist freigegeben.
+Manche Landestellen sind nur für Landungen nach
+[§ 25 Absatz 2 Nummer 3 LuftVG](https://www.gesetze-im-internet.de/luftvg/__25.html)
+zugelassen, also nur, wenn „die Landung aus Gründen der Sicherheit oder zur
+Hilfeleistung bei einer Gefahr für Leib oder Leben einer Person erforderlich
+ist“.
+:::
 
-Gelb: Die Landestelle wird momentan angepasst, die Nutzung ist wenn überhaupt nur eingeschränkt möglich.
+## Landeplätze an Kliniken
 
-Rot: Die Landestelle entspricht den aktuellen Anforderungen - der Landeplatz aber noch nicht freigegeben.
+Für die [Zielklinik](/disponentenbereich/zielklinik) zählt, wie der Patient ins
+Haus kommt. Im Klinik-Popup von ops steht deshalb beim Eintrag **H**, welchen
+Landeplatz die Klinik hat:
 
-## Karte
+| Angabe | Bedeutung |
+|---|---|
+| **Dachlandeplatz** | auf dem Dach, kurzer Weg in den Schockraum |
+| **Bodenlandeplatz** | auf dem Klinikgelände |
+| **Landeplatz in der Nähe** | außerhalb des Geländes, die Übergabe braucht einen Bodentransport |
+| **kein Landeplatz** | Landung nur abseits, mit bodengebundener Übergabe |
 
-<details>
-    <summary>Karte aller Landeplätze und -stellen in Deutschland</summary>
+Dazu steht dort, ob der Landeplatz **nachtflugtauglich** ist oder **nur
+tagsüber** angeflogen werden kann, und gegebenenfalls seine Kennung.
 
+Auf der Karte erkennst du Kliniken mit Landeplatz am **grünen Punkt** am
+Kliniksymbol. Setzt die Leitstelle dir eine Zielklinik, führt die Route auf
+deiner Karte direkt zu deren Landeplatz.
+
+::: tip Falsche Angaben melden
+Stimmt der Landeplatz einer Klinik nicht, etwa Lage, Art oder Kennung, meldest du
+es im Klinik-Popup über den Reiter **Klinikdaten melden**.
+:::
+
+## Landeplätze in ops
+
+- Die Kartenebene **Heliports** zeigt die meisten Landeplätze mit ihren
+  Kennungen.
+- Das **Flugbuch** erkennt Start und Landung an Kliniken, Landeplätzen und
+  Flughäfen automatisch und trägt sie als Start- und Zielort ein.
+
+## Quellen und Karten
+
+### Anflug- und Lagekarten
+
+Die Karten der Hubschrauberlandeplätze in Deutschland findest du in der
+[AIP VFR Deutschland](https://aip.dfs.de/BasicVFR/) der DFS unter **HEL AD
+Hubschrauberlandeplätze**.
+
+### PIS-Masterliste
+
+Die [Liste der Landestellen im öffentlichen Interesse](https://www.lba.de/SharedDocs/Downloads/DE/B/B2_Flugbetrieb/PIS/PIS_Masterliste.pdf?__blob=publicationFile&v=18)
+gibt das Luftfahrt-Bundesamt heraus. Die Einträge sind farbig markiert:
+
+| Farbe | Bedeutung |
+|---|---|
+| Grün | entspricht den Anforderungen, freigegeben |
+| Gelb | wird gerade angepasst, Nutzung höchstens eingeschränkt |
+| Rot | entspricht den Anforderungen, aber noch nicht freigegeben |
+
+### Karte aller Landeplätze in Deutschland
+
+::: details Karte öffnen
 <iframe src="https://www.google.com/maps/d/embed?mid=13kR56v4fHbzfOSVXG1WrH25yEk-w2MU&ehbc=2E312F" width="100%" height="800"></iframe>
-</details>
+:::
 
-## Nutzung im Flugsimulator
+## Im Flugsimulator
 
-Für eine Nutzung im Flugsimulator stellen wir Euch eine Datenbank der meisten Landeplätze in Deutschland, Österreich und der Schweiz zur Verfügung.
-Die dieser Datenbank zugrunde liegenden Daten entstammen in Deutschland der [AIP VFR](https://aip.dfs.de/BasicVFR) der DFS bzw. der PIS-Masterliste des LBA.
-Für die Landeplätze in Österreich haben wir auf das [austroCONTROL Geodatenportal](https://www.austrocontrol.at/piloten/vor_dem_flug/aim_services/geodatenportal) zurückgegriffer,
-die Landeplätze der Schweiz entstammen dem [Sachplan Verkehr, Teil Infrastruktur Luftfahrt (SIL)](https://inspire-geoportal.ec.europa.eu/srv/api/records/ae5fa63c-c153-496a-b8a6-c896126398b1?language=ger) des BAZL.
+Für dein Navigationsgerät stellen wir eine **Wegpunktdatenbank** mit den meisten
+Landeplätzen in Deutschland, Österreich und der Schweiz bereit. Du findest sie im
+HUB unter **Downloads / Links > Wegpunktdatenbank**. Dort filterst du die
+Landeplätze und exportierst sie, zum Beispiel für LittleNavMap. Die Datenbank
+enthält nur Lage und Kennung, **keine Szenerien**.
 
-Mehr zur Datenbank erfahrt ihr [hier](/var-systeme/FlugplanUndWegpunkte).
+Wie Export und Import funktionieren, steht unter
+[Flugpläne und Landeplätze](/var-systeme/FlugplanUndWegpunkte).
+
+| Land | Quelle der Daten |
+|---|---|
+| Deutschland | [AIP VFR](https://aip.dfs.de/BasicVFR) der DFS und PIS-Masterliste des LBA |
+| Österreich | [Geodatenportal](https://www.austrocontrol.at/piloten/vor_dem_flug/aim_services/geodatenportal) der Austro Control |
+| Schweiz | [Sachplan Verkehr, Teil Infrastruktur Luftfahrt (SIL)](https://inspire-geoportal.ec.europa.eu/srv/api/records/ae5fa63c-c153-496a-b8a6-c896126398b1?language=ger) des BAZL |

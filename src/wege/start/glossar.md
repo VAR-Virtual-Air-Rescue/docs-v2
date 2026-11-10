@@ -32,9 +32,8 @@ Einsatzmittels im Digitalfunk.
 reden.
 
 **Statusanweisung** — was aus der Leitstelle zurückkommt: Buchstaben statt
-Ziffern. **C** (Übernahme melden), **d** (Transportziel durchgeben), **h**
-(Zielklinik verständigt), **u** (verstanden), **E** (Einsatzabbruch), **L**
-(Lagemeldung), **F** (über Draht melden).
+Ziffern. **C** (Übernahme melden), **u** (verstanden), **E** (Einsatzabbruch), **L**
+(Lagemeldung), **F** (Leitstelle per Telefon anrufen).
 → [Status](/luftrettung/bos-funk/Status)
 
 **Lagemeldung** — eine kurze, strukturierte Rückmeldung an die Leitstelle über
@@ -64,10 +63,6 @@ Pilot und Notarzt: Navigation, Funk, Windenbedienung, Unterstützung am Patiente
 Einsatzort.
 
 **RTW** — Rettungswagen.
-
-**NACA** — Bewertungsskala für die Schwere einer Verletzung oder Erkrankung, 0
-bis 7.
-→ [NACA-Score](/disponentenbereich/naca)
 
 **MANV** — Massenanfall von Verletzten. Die Lage, in der die Zahl der Patienten
 die verfügbaren Mittel übersteigt.
@@ -126,7 +121,7 @@ weitergeflogen werden kann.
 
 ## VAR-Systeme
 
-**Hub** — hub.virtualairrescue.com. Konto, Kurse, Einstellungen.
+**HUB** — hub.virtualairrescue.com. Konto, Kurse, Einstellungen.
 
 **Webleitstelle** — die Disponentenoberfläche.
 → [Webleitstelle](/var-systeme/webleitstelle)
@@ -141,6 +136,6 @@ koppelt.
 
 **P-1 / BOS-Funktest / D-1** — Der P-1-Grundkurs für Piloten hat eine
 Bestehensgrenze von 80 %. Für die Tätigkeit als Disponent in der Leitstelle
-musst du im [Hub](https://hub.virtualairrescue.com) zuerst den **BOS-Funktest**
+musst du im [HUB](https://hub.virtualairrescue.com) zuerst den **BOS-Funktest**
 bestehen, dann an einem Einschulungstermin teilnehmen und erst danach den
 **D-1-Test** bestehen. Für beide Tests gilt eine Bestehensgrenze von 80 %.

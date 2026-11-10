@@ -46,13 +46,13 @@ Deine Änderungen werden nun auf GitHub in einem neuen Branch hochgeladen und we
 **Vielen Dank für dein Engagement!**
 ## Zugriffsschutz
 
-Die öffentliche Seite wird von `server/gateway.mjs` ausgeliefert und ist nur nach Hub-Login (OAuth, Client-ID 5) erreichbar. Nur permanent gesperrte Nutzer erhalten keinen Zugriff (Zeitstrafen sperren die Docs nicht); der Sperrstatus wird alle 30 Sekunden beim Hub neu geprüft. Benötigte Variablen: siehe `.env.example`.
+Die öffentliche Seite wird von `server/gateway.mjs` ausgeliefert und ist nur nach HUB-Login (OAuth, Client-ID 5) erreichbar. Nur permanent gesperrte Nutzer erhalten keinen Zugriff (Zeitstrafen sperren die Docs nicht); der Sperrstatus wird alle 30 Sekunden beim HUB neu geprüft. Benötigte Variablen: siehe `.env.example`.
 
-**Als Contributor brauchst du davon nichts.** `npm run dev` startet nur VitePress (http://localhost:3006), ohne Gateway, ohne Login und ohne Hub.
+**Als Contributor brauchst du davon nichts.** `npm run dev` startet nur VitePress (http://localhost:3006), ohne Gateway, ohne Login und ohne HUB.
 
 ### Login lokal testen (Maintainer)
 
-Voraussetzung: Der Hub läuft lokal (`pnpm dev` im Monorepo, http://localhost:3000).
+Voraussetzung: Der HUB läuft lokal (`pnpm dev` im Monorepo, http://localhost:3000).
 
 1. `.env.example` nach `.env` kopieren und füllen:
    - `HUB_URL=http://localhost:3000`, `DOCS_URL=http://localhost:3006`, `PORT=3006`

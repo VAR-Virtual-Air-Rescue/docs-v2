@@ -27,7 +27,7 @@ Nach der Alarmierung wird dann eine Flugplan-Datei erstellt, die folgendermaßen
 Die Downloadfunktion fügt deinem Navigationsgerät nur die geografischen Informationen der Landeplätze und ihre jeweiligen Designator hinzu. **Die Funktion installiert keine Simulatorszenerien.**
 :::
 #### Datenbank anzeigen
-Zum Anzeigen dieser Datenbank navigiert ihr im Hub zu **Downloads / Links > Wegpunktdatenbank** und klickt dann auf den entsprechenden Link.
+Zum Anzeigen dieser Datenbank navigiert ihr im HUB zu **Downloads / Links > Wegpunktdatenbank** und klickt dann auf den entsprechenden Link.
 Alternativ findet ihr [hier](https://hub.virtualairrescue.com/resources/waypoint-export) schnell dorthin.
 Angezeigt wird die Gesamtheit aller verfügbaren Daten in Seiten zu anfangs je 30 Landeplätzen.
 #### Filter

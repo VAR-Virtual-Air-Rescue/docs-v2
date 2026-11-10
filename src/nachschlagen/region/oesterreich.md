@@ -62,7 +62,8 @@ Einsatzleitung am Boden, die nicht die Leitstelle ist.
 - **Winterbetrieb**: Whiteout, Lawinenlagen, Landung auf Schnee
 - Ob im VAR-Betrieb eigene Verfahren für den alpinen Einsatz gelten sollen
 
-Wer im Alpenraum unterwegs ist und das beitragen kann: [Mitwirken](/mitwirken).
+Wer im Alpenraum unterwegs ist und das beitragen kann, meldet sich per
+[Ticket im HUB](https://hub.virtualairrescue.com/tickets).
 :::
 
 ## Weiter

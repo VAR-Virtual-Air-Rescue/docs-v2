@@ -39,7 +39,7 @@ durch:
 | Thema | Seiten |
 |---|---|
 | BOS-Funk | [Grundlagen](/luftrettung/bos-funk/Grundlagen), [Funkverkehr](/luftrettung/bos-funk/Funkverkehr), [Status](/luftrettung/bos-funk/Status), [Funkbeispiel](/luftrettung/bos-funk/Funkbeispiel) |
-| Disposition | [Disposition von Einsätzen](/disponentenbereich/disposition), [Stichworte](/disponentenbereich/Stichworte), [NACA-Score](/disponentenbereich/naca) |
+| Disposition | [Disposition von Einsätzen](/disponentenbereich/disposition), [Stichworte](/disponentenbereich/Stichworte) |
 | Transport und Lagen | [Zielklinik wählen](/disponentenbereich/zielklinik), [MANV](/disponentenbereich/manv) |
 | Werkzeug | [Webleitstelle](/var-systeme/webleitstelle) |
 

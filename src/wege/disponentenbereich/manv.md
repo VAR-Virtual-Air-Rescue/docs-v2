@@ -86,5 +86,4 @@ Verfahren sind **regional unterschiedlich** — es gibt kein einheitliches Syste
 ## Weiter
 
 - [Disposition](/disponentenbereich/disposition)
-- [NACA-Score](/disponentenbereich/naca)
 - [Zielklinik wählen](/disponentenbereich/zielklinik)
