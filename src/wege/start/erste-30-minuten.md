@@ -32,9 +32,10 @@ Erst danach bekommst du die Flugfreigabe — automatisch, es muss niemand etwas 
 Hand freischalten.
 
 > Für die Tätigkeit als Disponent in der Leitstelle absolvierst du im
-> [Hub](https://hub.virtualairrescue.com) zuerst den **BOS-Funkttest** und danach
-> den **D-1-Test**.<br>
-> Für beide Kurse gilt eine Bestehensgrenze von **80 %**. Siehe
+> [Hub](https://hub.virtualairrescue.com) zuerst den **BOS-Funktest**, nimmst
+> dann an einem **Einschulungstermin** teil und legst erst danach den
+> **D-1-Test** ab.<br>
+> Für beide Tests gilt eine Bestehensgrenze von **80 %**. Siehe
 > [How-To Disponent](/disponentenbereich/how-to-disponent).
 
 ## 3 · Simulator, Hubschrauber, Client

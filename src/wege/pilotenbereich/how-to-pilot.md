@@ -10,7 +10,7 @@ Damit unser Desktop Client ordnungsgemäß funktioniert, benötigst du außerdem
 
 ## 1. Registrierung
 
-Zuerst benötigst du einen Account bei uns. Registriere dich [in unserem HUB](https://hub.virtualairrescue.com/). Beachte, dass deine Angaben, insbesondere deine E-Mailadresse, echt sein müssen, da du sonst deine Registrierung nicht abschließen kannst. Du kannst im Anschluss optional deinen VAR-Account mit deinem Discord-Account verknüpfen um dich dort mit unserer Community in Verbindung zu setzen oder Support zu bekommen.
+Zuerst benötigst du einen Account bei uns. Registriere dich [in unserem HUB](https://hub.virtualairrescue.com/). Beachte, dass deine Angaben, insbesondere deine E-Mailadresse, echt sein müssen, da du sonst deine Registrierung nicht abschließen kannst. Im Anschluss musst du deinen VAR-Account mit deinem Discord-Account verknüpfen, das ist für alle Mitglieder Pflicht. Wie das geht, steht unter [How-To Discord](/var-systeme/how-to-discord). Über Discord bekommst du Support und bist mit unserer Community in Verbindung.
 
 ## 2. Einsteigerkurs
 

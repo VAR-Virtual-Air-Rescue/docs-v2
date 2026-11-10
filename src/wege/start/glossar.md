@@ -139,7 +139,8 @@ weitergeflogen werden kann.
 koppelt.
 → [Voraussetzungen](/var-systeme/hpg-h145/r-e-integration/Voraussetzungen)
 
-**P-1 / BOS-Funkttest / D-1** — Der P-1-Grundkurs für Piloten hat eine
+**P-1 / BOS-Funktest / D-1** — Der P-1-Grundkurs für Piloten hat eine
 Bestehensgrenze von 80 %. Für die Tätigkeit als Disponent in der Leitstelle
-musst du im [Hub](https://hub.virtualairrescue.com) zuerst den **BOS-Funkttest**
-und danach den **D-1-Test** bestehen. Für beide gilt eine Bestehensgrenze von 80 %.
+musst du im [Hub](https://hub.virtualairrescue.com) zuerst den **BOS-Funktest**
+bestehen, dann an einem Einschulungstermin teilnehmen und erst danach den
+**D-1-Test** bestehen. Für beide Tests gilt eine Bestehensgrenze von 80 %.
