@@ -29,6 +29,6 @@ next: false
 
 - Die VAR ist ein Hobby – gehe respektvoll mit der Zeit anderer um.
 - Melde dich korrekt bei den Piloten und Disponenten an und ab.
-- Gib konstruktives Feedback bei Problemen.
+- Gib konstruktives [Feedback](/feedback): Lob, wenn etwas gut lief, einen Hinweis, wenn etwas besser laufen kann.
 - Blockiere Stationen nur, wenn du einsatzbereit bist.
-- Melde Fehlverhalten über die Report-Funktion.
+- Melde Vorsatz, Beleidigungen oder Störungen des Betriebs über **Verstoß melden** in der [Feedback-Funktion](/feedback).
